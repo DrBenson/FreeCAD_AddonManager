@@ -22,22 +22,9 @@
 # ***************************************************************************
 import re
 
-import FreeCAD
+import addonmanager_freecad_interface as fci
 
-# Get whatever version of PySide we can
-try:
-    import PySide  # Use the FreeCAD wrapper
-except ImportError:
-    try:
-        import PySide6  # Outside FreeCAD, try Qt6 first
-
-        PySide = PySide6
-    except ImportError:
-        import PySide2  # Fall back to Qt5 (if this fails, Python will kill this module's import)
-
-        PySide = PySide2
-
-from PySide import QtCore, QtGui, QtWidgets
+from PySideWrapper import QtCore, QtGui, QtWidgets
 
 from typing import Optional
 
@@ -77,18 +64,30 @@ class WidgetReadmeBrowser(QtWidgets.QTextBrowser):
                 self.setHtml(html)
             except ImportError:
                 self.setText(md)
-                FreeCAD.Console.Warning(
+                fci.Console.Warning(
                     "Qt < 5.15 and no `import markdown` -- falling back to plain text display\n"
                 )
         self.setGeometry(geometry)
 
     def _clean_markdown(self, md: str):
-        # Remove some HTML tags ( for now just img and br, which are the most common offenders that break rendering )
-        br_re = re.compile(r"<br\s*/?>")
-        img_re = re.compile(r"<img\s.*?src=(?:'|\")([^'\">]+)(?:'|\").*?\/?>")
+        # Remove some HTML tags (for now just img and br, which are the most common offenders that break rendering)
+        br_re = re.compile(r"<br\s*/?>", re.IGNORECASE)
+        comment_re = re.compile(r"<!--.*?-->", re.DOTALL)
+        img_re = re.compile(
+            r'<img\s+[^>]*src=["\'](?P<src>[^"\']+)["\'][^>]*'
+            r'(alt=["\'](?P<alt>[^"\']*)["\'])?[^>]*/?>',
+            re.IGNORECASE,
+        )
+
+        # Replace html images to markdown
+        def _markdown_img(m):
+            src = m.group("src")
+            alt = m.group("alt") or ""
+            return f"![{alt}]({src})"
 
         cleaned = br_re.sub(r"\n", md)
-        cleaned = img_re.sub(r"[html tag removed]", cleaned)
+        cleaned = comment_re.sub("", cleaned)
+        cleaned = img_re.sub(_markdown_img, cleaned)
 
         return cleaned
 

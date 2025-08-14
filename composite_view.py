@@ -33,17 +33,8 @@ from Widgets.addonmanager_widget_view_selector import AddonManagerDisplayStyle
 from addonmanager_package_details_controller import PackageDetailsController
 from package_list import PackageList
 
-# Get whatever version of PySide we can
-try:
-    import PySide  # Use the FreeCAD wrapper
-except ImportError:
-    try:
-        import PySide6 as PySide  # Outside FreeCAD, try Qt6 first
-    except ImportError:
-        # Fall back to Qt5 (if this fails, Python will kill this module's import)
-        import PySide2 as PySide
 
-from PySide import QtCore, QtWidgets
+from PySideWrapper import QtCore, QtWidgets
 
 
 class CompositeView(QtWidgets.QWidget):
@@ -143,19 +134,17 @@ class CompositeView(QtWidgets.QWidget):
     def addon_selected(self, addon):
         """Depending on the display_style, show addon details (possibly hiding the package_list
         widget in the process."""
-        self.package_details_controller.show_repo(addon)
+        self.package_details_controller.show_addon(addon)
         if self.display_style != AddonManagerDisplayStyle.COMPOSITE:
             self.scroll_position = (
                 self.package_list.ui.listPackages.verticalScrollBar().sliderPosition()
             )
-            print(f"Saved slider position at {self.scroll_position}")
             self.package_list.hide()
             self.package_details.show()
             self.package_details.button_bar.set_show_back_button(True)
 
     def _back_button_clicked(self):
         if self.display_style != AddonManagerDisplayStyle.COMPOSITE:
-            print(f"Set slider position to {self.scroll_position}")
             self.package_list.show()
             self.package_details.hide()
             # The following must be done *after* a cycle through the event loop

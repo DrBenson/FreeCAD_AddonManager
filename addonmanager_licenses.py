@@ -40,6 +40,10 @@ class SPDXLicenseManager:
         self._load_license_data()
 
     def _load_license_data(self):
+        if not __file__:
+            raise RuntimeError(
+                "The SPDXLicenseManager must be run in an environment where __file__ is known"
+            )
         spdx_path = f"{os.path.dirname(__file__)}/Resources/licenses/spdx.json"
         if os.path.exists(spdx_path):
             with open(spdx_path, "r", encoding="utf-8") as f:
@@ -64,7 +68,7 @@ class SPDXLicenseManager:
         if spdx_id not in self.license_data:
             fci.Console.PrintWarning(
                 f"WARNING: License ID {spdx_id} is not in the SPDX license "
-                f"list. The Addon author must correct their metadata.\n"
+                f"list. The author of the addon must correct their metadata.\n"
             )
             return False
         return (
@@ -80,7 +84,7 @@ class SPDXLicenseManager:
         if spdx_id not in self.license_data:
             fci.Console.PrintWarning(
                 f"WARNING: License ID {spdx_id} is not in the SPDX license "
-                f"list. The Addon author must correct their metadata.\n"
+                f"list. The author of the addon must correct their metadata.\n"
             )
             return False
         return (

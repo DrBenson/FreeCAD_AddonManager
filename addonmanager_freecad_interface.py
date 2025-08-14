@@ -32,12 +32,54 @@ from addonmanager_freecad_interface import Console, DataPaths, Preferences
 import json
 import logging
 import os
+import platform
+import shutil
 import tempfile
 
 # pylint: disable=too-few-public-methods
 
 try:
     import FreeCAD
+
+    try:
+        from freecad.utils import get_python_exe
+
+        try:
+            _ = get_python_exe()
+        except AttributeError as e:
+            raise RuntimeError("Could not get the FreeCAD python executable") from e
+    except ImportError:
+        # This was only added in FreeCAD 1.0 -- to support FreeCAD 0.21 a backup strategy must be
+        # used. This code is borrowed from FreeCAD 1.1dev.
+        def get_python_exe():
+            prefs = FreeCAD.ParamGet("User parameter:BaseApp/Preferences/PythonConsole")
+            python_exe = prefs.GetString("ExternalPythonExecutable", "Not set")
+            fc_dir = FreeCAD.getHomePath()
+            if not python_exe or python_exe == "Not set" or not os.path.exists(python_exe):
+                python_exe = os.path.join(fc_dir, "bin", "python3")
+                if "Windows" in platform.system():
+                    python_exe += ".exe"
+
+            if not python_exe or not os.path.exists(python_exe):
+                python_exe = os.path.join(fc_dir, "bin", "python")
+                if "Windows" in platform.system():
+                    python_exe += ".exe"
+
+            if not python_exe or not os.path.exists(python_exe):
+                python_exe = shutil.which("python3")
+
+            if not python_exe or not os.path.exists(python_exe):
+                python_exe = shutil.which("python")
+
+            if not python_exe or not os.path.exists(python_exe):
+                return ""
+
+            python_exe = python_exe.replace("/", os.path.sep)
+            prefs.SetString("ExternalPythonExecutable", python_exe)
+            return python_exe
+
+    if not hasattr(FreeCAD, "Console"):
+        raise ImportError("Unrecognized FreeCAD version")
 
     Console = FreeCAD.Console
     ParamGet = FreeCAD.ParamGet
@@ -47,12 +89,15 @@ try:
     getUserCachePath = FreeCAD.getUserCachePath
     translate = FreeCAD.Qt.translate
     loadUi = None
+    GuiUp = FreeCAD.GuiUp
 
-    if FreeCAD.GuiUp:
+    if GuiUp:
         import FreeCADGui
 
         if hasattr(FreeCADGui, "PySideUic"):
             loadUi = FreeCADGui.PySideUic.loadUi
+
+        addPreferencePage = FreeCADGui.addPreferencePage
     else:
         FreeCADGui = None
 
@@ -62,12 +107,48 @@ except ImportError:
     getUserAppDataDir = None
     getUserCachePath = None
     getUserMacroDir = None
+    loadUi = None
 
-    def translate(_context: str, string: str, _desc: str = "") -> str:
-        return string
+    try:
+        from PySide6 import QtCore, QtWidgets
+
+        GuiUp = (
+            True
+            if hasattr(QtWidgets, "QApplication") and QtWidgets.QApplication.instance()
+            else False
+        )
+        from PySide6.QtUiTools import QUiLoader
+    except ImportError:
+        try:
+            from PySide2 import QtCore, QtWidgets
+
+            GuiUp = True if QtWidgets.QApplication.instance() else False
+            from PySide2.QtUiTools import QUiLoader
+        except ImportError:
+            GuiUp = False
+
+    if GuiUp:
+
+        def loadUi(path: str):
+            loader = QUiLoader()
+            file = QtCore.QFile(path)
+            file.open(QtCore.QFile.ReadOnly)
+            window = loader.load(file)
+            file.close()
+            return window
+
+        def addPreferencePage(_options_class, _name: str):
+            """Don't do anything with a preference page right now"""
+            pass
+
+    def translate(context: str, sourceText: str, disambiguation: str = "", n: int = -1) -> str:
+        return QtCore.QCoreApplication.translate(context, sourceText, disambiguation, n)
 
     def Version():
         return 1, 1, 0, "dev"
+
+    def get_python_exe():
+        return shutil.which("python3")
 
     class ConsoleReplacement:
         """If FreeCAD's Console is not available, create a replacement by redirecting FreeCAD
@@ -178,21 +259,24 @@ class DataPaths:
             if self.macro_dir is None:
                 self.macro_dir = tempfile.mkdtemp()
             if self.home_dir is None:
-                self.home_dir = os.path.join(os.path.dirname(__file__), "..", "..")
+                self.home_dir = os.path.join(os.path.dirname(__file__))
 
     def __del__(self):
         self.reference_count -= 1
         if not FreeCAD and self.reference_count <= 0:
-            paths = [self.data_dir, self.mod_dir, self.cache_dir, self.macro_dir, self.mod_dir]
-            for path in paths:
-                try:
-                    os.rmdir(path)
-                except FileNotFoundError:
-                    pass
-            self.data_dir = None
-            self.mod_dir = None
-            self.cache_dir = None
-            self.macro_dir = None
+            self._delete_paths()
+
+    def _delete_paths(self):
+        if FreeCAD:
+            return
+        paths = [self.data_dir, self.mod_dir, self.cache_dir, self.macro_dir, self.mod_dir]
+        for path in paths:
+            if os.path.isdir(path):
+                os.rmdir(path)
+        self.data_dir = None
+        self.mod_dir = None
+        self.cache_dir = None
+        self.macro_dir = None
 
 
 class Preferences:

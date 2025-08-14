@@ -23,16 +23,11 @@
 
 """Defines a QWidget-derived class for displaying the cache load status."""
 
-try:
-    import FreeCAD
+import os
 
-    translate = FreeCAD.Qt.translate
-except ImportError:
-    FreeCAD = None
+import addonmanager_freecad_interface as fci
 
-    def translate(_: str, text: str):
-        return text
-
+translate = fci.translate
 
 # Get whatever version of PySide we can
 try:
@@ -42,8 +37,6 @@ except ImportError:
         from PySide6 import QtCore, QtGui, QtWidgets  # Outside FreeCAD, try Qt6 first
     except ImportError:
         from PySide2 import QtCore, QtGui, QtWidgets  # Fall back to Qt5
-
-from dataclasses import dataclass
 
 _TOTAL_INCREMENTS = 1000
 
@@ -153,8 +146,9 @@ class WidgetProgressBar(QtWidgets.QWidget):
         self.stop_button = QtWidgets.QToolButton(self)
         self.progress_bar.setMaximum(_TOTAL_INCREMENTS)
         self.stop_button.clicked.connect(self.stop_clicked)
+        icon_path = os.path.join(os.path.dirname(__file__), "..", "Resources", "icons")
         self.stop_button.setIcon(
-            QtGui.QIcon.fromTheme("stop", QtGui.QIcon(":/icons/debug-stop.svg"))
+            QtGui.QIcon.fromTheme("stop", QtGui.QIcon(os.path.join(icon_path, "debug-stop.svg")))
         )
         self.vertical_layout.addLayout(self.horizontal_layout)
         self.vertical_layout.addWidget(self.status_label)

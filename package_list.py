@@ -22,12 +22,10 @@
 # ***************************************************************************
 
 """Defines the PackageList QWidget for displaying a list of Addons."""
-import datetime
 import threading
 
-import FreeCAD
-
-from PySide import QtCore, QtGui, QtWidgets
+import addonmanager_freecad_interface as fci
+from PySideWrapper import QtCore, QtGui, QtWidgets
 
 from Addon import Addon
 
@@ -42,7 +40,7 @@ from Widgets.addonmanager_widget_filter_selector import StatusFilter, Filter
 from Widgets.addonmanager_widget_progress_bar import Progress, WidgetProgressBar
 from addonmanager_licenses import get_license_manager
 
-translate = FreeCAD.Qt.translate
+translate = fci.translate
 
 
 # pylint: disable=too-few-public-methods
@@ -75,10 +73,9 @@ class PackageList(QtWidgets.QWidget):
         self.ui.progress_bar.stop_clicked.connect(self.stop_loading)
 
         # Set up the view the same as the last time:
-        pref = FreeCAD.ParamGet("User parameter:BaseApp/Preferences/Addons")
-        package_type = pref.GetInt("PackageTypeSelection", 0)
-        status = pref.GetInt("StatusSelection", 0)
-        search_string = pref.GetString("SearchString", "")
+        package_type = fci.Preferences().get("PackageTypeSelection")
+        status = fci.Preferences().get("StatusSelection")
+        search_string = fci.Preferences().get("SearchString")
         self.ui.view_bar.filter_selector.set_contents_filter(package_type)
         self.ui.view_bar.filter_selector.set_status_filter(status)
         if search_string:
@@ -96,19 +93,13 @@ class PackageList(QtWidgets.QWidget):
         self.item_filter.setSortRole(SortOptions.Alphabetical)
         self.item_filter.sort(0, QtCore.Qt.AscendingOrder)
 
-        pref = FreeCAD.ParamGet("User parameter:BaseApp/Preferences/Addons")
-        style = pref.GetInt("ViewStyle", AddonManagerDisplayStyle.EXPANDED)
+        style = fci.Preferences().get("ViewStyle")
         self.set_view_style(style)
         self.ui.view_bar.view_selector.set_current_view(style)
 
-        self.item_filter.setHidePy2(pref.GetBool("HidePy2", False))
-        self.item_filter.setHideObsolete(pref.GetBool("HideObsolete", False))
-        self.item_filter.setHideNonOSIApproved(pref.GetBool("HideNonOSIApproved", False))
-        self.item_filter.setHideNonFSFLibre(pref.GetBool("HideNonFSFFreeLibre", False))
-        self.item_filter.setHideNewerFreeCADRequired(
-            pref.GetBool("HideNewerFreeCADRequired", False)
-        )
-        self.item_filter.setHideUnlicensed(pref.GetBool("HideUnlicensed", False))
+        self.item_filter.setHideNonOSIApproved(fci.Preferences().get("HideNonOSIApproved"))
+        self.item_filter.setHideNonFSFLibre(fci.Preferences().get("HideNonFSFFreeLibre"))
+        self.item_filter.setHideUnlicensed(fci.Preferences().get("HideUnlicensed"))
 
     def select_addon(self, addon_name: str):
         for index, addon in enumerate(self.item_model.repos):
@@ -117,12 +108,12 @@ class PackageList(QtWidgets.QWidget):
                 if self.item_filter.filterAcceptsRow(index):
                     self.ui.listPackages.setCurrentIndex(row_index)
                 else:
-                    FreeCAD.Console.PrintLog(
+                    fci.Console.PrintLog(
                         f"Addon {addon_name} is not visible given current "
                         "filter: not selecting it."
                     )
                 return
-        FreeCAD.Console.PrintLog(f"Could not find addon '{addon_name}' to select it")
+        fci.Console.PrintLog(f"Could not find addon '{addon_name}' to select it")
 
     def on_listPackages_clicked(self, index: QtCore.QModelIndex):
         """Determine what addon was selected and emit the itemSelected signal with it as
@@ -136,9 +127,8 @@ class PackageList(QtWidgets.QWidget):
 
         self.item_filter.setStatusFilter(new_filter.status_filter)
         self.item_filter.setPackageFilter(new_filter.content_filter)
-        pref = FreeCAD.ParamGet("User parameter:BaseApp/Preferences/Addons")
-        pref.SetInt("StatusSelection", new_filter.status_filter)
-        pref.SetInt("PackageTypeSelection", new_filter.content_filter)
+        fci.Preferences().set("StatusSelection", new_filter.status_filter)
+        fci.Preferences().set("PackageTypeSelection", new_filter.content_filter)
         self.item_filter.invalidateFilter()
 
     def set_view_style(self, style: AddonManagerDisplayStyle) -> None:
@@ -157,8 +147,7 @@ class PackageList(QtWidgets.QWidget):
         if self.item_model:
             self.item_model.layoutChanged.emit()
 
-        pref = FreeCAD.ParamGet("User parameter:BaseApp/Preferences/Addons")
-        pref.SetInt("ViewStyle", style)
+        fci.Preferences().set("ViewStyle", style)
 
     def set_loading(self, is_loading: bool) -> None:
         """Set the loading status of this package list: when a package list is loading, it shows
@@ -236,6 +225,9 @@ class PackageListItemModel(QtCore.QAbstractListModel):
         if role == SortOptions.Score:
             return self.repos[row].score
 
+        # Anything else:
+        return None
+
     def headerData(self, _unused1, _unused2, _role=QtCore.Qt.DisplayRole):
         """No header in this implementation: always returns None."""
         return None
@@ -249,6 +241,17 @@ class PackageListItemModel(QtCore.QAbstractListModel):
             self.beginInsertRows(QtCore.QModelIndex(), self.rowCount(), self.rowCount())
             self.repos.append(repo)
             self.endInsertRows()
+
+    def remove_item(self, repo: Addon) -> None:
+        if repo not in self.repos:
+            # Nothing to remove, don't care
+            return
+        with self.write_lock:
+            self.beginRemoveRows(
+                QtCore.QModelIndex(), self.repos.index(repo), self.repos.index(repo)
+            )
+            self.repos.remove(repo)
+            self.endRemoveRows()
 
     def clear(self) -> None:
         """Clear the model, removing all rows. Thread safe."""
@@ -496,13 +499,12 @@ class PackageListItemDelegate(QtWidgets.QStyledItemDelegate):
             else:
                 installed_version_string = "<br/>" + translate("AddonsInstaller", "Unknown version")
 
-        installed_date_string = ""
         if repo.updated_timestamp:
-            installed_date_string = "<br/>" + translate("AddonsInstaller", "Installed on") + ": "
-            installed_date_string += QtCore.QLocale().toString(
+            installed_date_string = QtCore.QLocale().toString(
                 QtCore.QDateTime.fromSecsSinceEpoch(int(round(repo.updated_timestamp, 0))),
                 QtCore.QLocale.ShortFormat,
             )
+            installed_version_string += " (" + installed_date_string + ")"
 
         available_version_string = ""
         if repo.metadata:
@@ -511,18 +513,27 @@ class PackageListItemDelegate(QtWidgets.QStyledItemDelegate):
             )
             available_version_string += str(repo.metadata.version)
 
+        remote_updated_date_string = ""
+        if repo.remote_last_updated:
+            py_dt = repo.remote_last_updated
+            q_date = QtCore.QDate(py_dt.year, py_dt.month, py_dt.day)
+            q_time = QtCore.QTime(py_dt.hour, py_dt.minute, py_dt.second, py_dt.microsecond // 1000)
+            q_dt = QtCore.QDateTime(q_date, q_time)
+            remote_updated_date_string = QtCore.QLocale().toString(
+                q_dt,
+                QtCore.QLocale.ShortFormat,
+            )
+            available_version_string += " (" + remote_updated_date_string + ")"
+
         if repo.status() == Addon.Status.UNCHECKED:
             result = translate("AddonsInstaller", "Installed")
             result += installed_version_string
-            result += installed_date_string
         elif repo.status() == Addon.Status.NO_UPDATE_AVAILABLE:
             result = translate("AddonsInstaller", "Up-to-date")
             result += installed_version_string
-            result += installed_date_string
         elif repo.status() == Addon.Status.UPDATE_AVAILABLE:
             result = translate("AddonsInstaller", "Update available")
             result += installed_version_string
-            result += installed_date_string
             result += available_version_string
         elif repo.status() == Addon.Status.PENDING_RESTART:
             result = translate("AddonsInstaller", "Pending restart")
@@ -560,8 +571,6 @@ class PackageListFilter(QtCore.QSortFilterProxyModel):
         self.package_type = 0  # Default to showing everything
         self.status = 0  # Default to showing any
         self.setSortCaseSensitivity(QtCore.Qt.CaseInsensitive)
-        self.hide_obsolete = False
-        self.hide_py2 = False
         self.hide_non_OSI_approved = False
         self.hide_non_FSF_libre = False
         self.hide_unlicensed = False
@@ -581,16 +590,6 @@ class PackageListFilter(QtCore.QSortFilterProxyModel):
         self.status = status
         self.invalidateFilter()
 
-    def setHidePy2(self, hide_py2: bool) -> None:
-        """Sets whether to hide Python 2-only Addons"""
-        self.hide_py2 = hide_py2
-        self.invalidateFilter()
-
-    def setHideObsolete(self, hide_obsolete: bool) -> None:
-        """Sets whether to hide Addons marked obsolete"""
-        self.hide_obsolete = hide_obsolete
-        self.invalidateFilter()
-
     def setHideNonOSIApproved(self, hide: bool) -> None:
         """Sets whether to hide Addons with non-OSI-approved licenses"""
         self.hide_non_OSI_approved = hide
@@ -605,20 +604,6 @@ class PackageListFilter(QtCore.QSortFilterProxyModel):
         """Sets whether to hide addons without a specified license"""
         self.hide_unlicensed = hide
         self.invalidateFilter()
-
-    def setHideNewerFreeCADRequired(self, hide_nfr: bool) -> None:
-        """Sets whether to hide packages that have indicated they need a newer version
-        of FreeCAD than the one currently running."""
-        self.hide_newer_freecad_required = hide_nfr
-        self.invalidateFilter()
-
-    # def lessThan(self, left_in, right_in) -> bool:
-    #    """Enable sorting of display name (not case-sensitive)."""
-    #
-    #    left = self.sourceModel().data(left_in, self.sortRole)
-    #    right = self.sourceModel().data(right_in, self.sortRole)
-    #
-    #    return left.display_name.lower() < right.display_name.lower()
 
     def filterAcceptsRow(self, row, _parent=QtCore.QModelIndex()):
         """Do the actual filtering (called automatically by Qt when drawing the list)"""
@@ -654,17 +639,9 @@ class PackageListFilter(QtCore.QSortFilterProxyModel):
         license_manager = get_license_manager()
         if data.status() == Addon.Status.NOT_INSTALLED:
 
-            # If it's not installed, check to see if it's Py2 only
-            if self.hide_py2 and data.python2:
-                return False
-
-            # If it's not installed, check to see if it's marked obsolete
-            if self.hide_obsolete and data.obsolete:
-                return False
-
             if self.hide_unlicensed:
                 if not data.license or data.license in ["UNLICENSED", "UNLICENCED"]:
-                    FreeCAD.Console.PrintLog(f"Hiding {data.name} because it has no license set\n")
+                    fci.Console.PrintLog(f"Hiding {data.name} because it has no license set\n")
                     return False
 
             # If it is not an OSI-approved license, check to see if we are hiding those
@@ -691,33 +668,17 @@ class PackageListFilter(QtCore.QSortFilterProxyModel):
                     if not fsf_libre and license_manager.is_fsf_libre(license_id):
                         fsf_libre = True
                 if self.hide_non_OSI_approved and not osi_approved:
-                    # FreeCAD.Console.PrintLog(
+                    # fci.Console.PrintLog(
                     #    f"Hiding addon {data.name} because its license, {licenses_to_check}, "
                     #    f"is "
                     #    f"not OSI approved\n"
                     # )
                     return False
                 if self.hide_non_FSF_libre and not fsf_libre:
-                    # FreeCAD.Console.PrintLog(
+                    # fci.Console.PrintLog(
                     #    f"Hiding addon {data.name} because its license, {licenses_to_check},  is "
                     #    f"not FSF Libre\n"
                     # )
-                    return False
-
-        # If it's not installed, check to see if it's for a newer version of FreeCAD
-        if (
-            data.status() == Addon.Status.NOT_INSTALLED
-            and self.hide_newer_freecad_required
-            and data.metadata
-        ):
-            # Only hide if ALL content items require a newer version, otherwise
-            # it's possible that this package actually provides versions of itself
-            # for newer and older versions
-
-            first_supported_version = get_first_supported_freecad_version(data.metadata)
-            if first_supported_version is not None:
-                current_fc_version = Version(from_list=FreeCAD.Version())
-                if first_supported_version > current_fc_version:
                     return False
 
         name = data.display_name

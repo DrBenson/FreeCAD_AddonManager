@@ -23,14 +23,13 @@
 
 """System for checking the network connection status asynchronously."""
 
-import FreeCAD
+import addonmanager_freecad_interface as fci
+from PySideWrapper import QtCore, QtWidgets
 
-from PySide import QtCore, QtWidgets
-
-import NetworkManager
 from addonmanager_workers_utility import ConnectionChecker
+from Widgets.addonmanager_utility_dialogs import MessageDialog
 
-translate = FreeCAD.Qt.translate
+translate = fci.translate
 
 
 class ConnectionCheckerGUI(QtCore.QObject):
@@ -52,15 +51,13 @@ class ConnectionCheckerGUI(QtCore.QObject):
 
     def start(self):
         """Start the connection check"""
-        self.connection_checker.start()
         self.connection_checker.success.connect(self._check_succeeded)
         self.connection_checker.failure.connect(self._network_connection_failed)
         self.signals_connected = True
+        self.connection_checker.start()
 
         # If it takes longer than a half second to check the connection, show a message:
-        self.connection_message_timer = QtCore.QTimer.singleShot(
-            500, self._show_connection_check_message
-        )
+        QtCore.QTimer.singleShot(500, self._show_connection_check_message)
 
     def _show_connection_check_message(self):
         """Display a message informing the user that the check is in process"""
@@ -68,9 +65,10 @@ class ConnectionCheckerGUI(QtCore.QObject):
             self.connection_check_message = QtWidgets.QMessageBox(
                 QtWidgets.QMessageBox.Information,
                 translate("AddonsInstaller", "Checking connection"),
-                translate("AddonsInstaller", "Checking for connection to GitHub..."),
+                translate("AddonsInstaller", "Checking for connection to addons.freecad.org..."),
                 QtWidgets.QMessageBox.Cancel,
             )
+            self.connection_check_message.setObjectName("AddonManager_ConnectionCheckMessageDialog")
             self.connection_check_message.buttonClicked.connect(self.cancel_network_check)
             self.connection_check_message.show()
 
@@ -84,27 +82,18 @@ class ConnectionCheckerGUI(QtCore.QObject):
             self.check_complete.emit()
 
     def _network_connection_failed(self, message: str) -> None:
-        """Callback for failed connection check. Displays an error message, then emits the
-        check_complete signal (but not the connection available signal)."""
+        """Callback for a failed connection check. Displays an error message, then emits the
+        check_complete signal (but not the connection_available signal)."""
         # This must run on the main GUI thread
         if hasattr(self, "connection_check_message") and self.connection_check_message:
             self.connection_check_message.close()
-        if NetworkManager.HAVE_QTNETWORK:
-            QtWidgets.QMessageBox.critical(
-                None, translate("AddonsInstaller", "Connection failed"), message
-            )
-        else:
-            # pylint: disable=line-too-long
-            QtWidgets.QMessageBox.critical(
-                None,
-                translate("AddonsInstaller", "Missing dependency"),
-                translate(
-                    "AddonsInstaller",
-                    "Could not import QtNetwork -- see Report View for details. Addon Manager "
-                    "unavailable.",
-                ),
-            )
-
+        MessageDialog.show_modal(
+            MessageDialog.DialogType.ERROR,
+            "AddonManager_ConnectionFailedDialog",
+            translate("AddonsInstaller", "Connection failed"),
+            message,
+            QtWidgets.QMessageBox.OK,
+        )
         self._disconnect_signals()
         self.check_complete.emit()
 

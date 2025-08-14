@@ -14,7 +14,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Add-on Manager: Warning!</string>
+   <string>Addon Manager Warning</string>
   </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
@@ -51,15 +51,12 @@
             <property name="scaledContents">
               <bool>false</bool>
             </property>
-            <property name="pixmap">
-              <pixmap resource="../AddonManager.qrc">:/icons/AddonMgrWithWarning.svg</pixmap>
-            </property>
           </widget>
         </item>
         <item>
           <widget class="QLabel" name="labelWarning">
             <property name="text">
-              <string>The Add-on Manager provides access to an extensive library of useful third-party FreeCAD extensions. No guarantees can be made regarding their safety or functionality.</string>
+              <string>The Addon Manager provides access to an extensive library of useful third-party FreeCAD extensions. No guarantees can be made regarding their safety or functionality.</string>
             </property>
             <property name="wordWrap">
               <bool>true</bool>

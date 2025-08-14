@@ -26,35 +26,17 @@ from enum import Enum, auto
 import os
 from typing import Optional
 
-try:
-    import FreeCAD
+from addonmanager_freecad_interface import translate
 
-    translate = FreeCAD.Qt.translate
-except ImportError:
-    FreeCAD = None
-
-    def translate(_: str, text: str):
-        return text
-
-
-# Get whatever version of PySide we can
-try:
-    import PySide  # Use the FreeCAD wrapper
-except ImportError:
-    try:
-        import PySide6  # Outside FreeCAD, try Qt6 first
-
-        PySide = PySide6
-    except ImportError:
-        import PySide2  # Fall back to Qt5 (if this fails, Python will kill this module's import)
-
-        PySide = PySide2
-
-from PySide import QtCore, QtWidgets
+from PySideWrapper import QtCore, QtWidgets
 
 from .addonmanager_widget_addon_buttons import WidgetAddonButtons
 from .addonmanager_widget_readme_browser import WidgetReadmeBrowser
-from .addonmanager_colors import warning_color_string, attention_color_string, bright_color_string
+from .addonmanager_colors import (
+    warning_color_string,
+    attention_color_string,
+    bright_color_string,
+)
 
 
 class MessageType(Enum):
@@ -79,8 +61,8 @@ class WarningFlags:
     obsolete: bool = False
     python2: bool = False
     required_freecad_version: Optional[str] = None
-    non_osi_approved = False
-    non_fsf_libre = False
+    non_osi_approved: bool = False
+    non_fsf_libre: bool = False
 
 
 class PackageDetailsView(QtWidgets.QWidget):
@@ -149,7 +131,7 @@ class PackageDetailsView(QtWidgets.QWidget):
     def set_installed(
         self,
         installed: bool,
-        on_date: Optional[str] = None,
+        on_date: float = None,
         version: Optional[str] = None,
         branch: Optional[str] = None,
     ):
@@ -187,11 +169,13 @@ class PackageDetailsView(QtWidgets.QWidget):
 
         if disabled:
             message = translate(
-                "AddonsInstaller", "This Addon will be disabled next time you restart FreeCAD."
+                "AddonsInstaller",
+                "This addon will be disabled next time you restart FreeCAD.",
             )
         else:
             message = translate(
-                "AddonsInstaller", "This Addon will be enabled next time you restart FreeCAD."
+                "AddonsInstaller",
+                "This addon will be enabled next time you restart FreeCAD.",
             )
         self.message_label.setText(f"<h3>{message}</h3>")
         self.message_label.setStyleSheet("color:" + attention_color_string())
@@ -201,7 +185,7 @@ class PackageDetailsView(QtWidgets.QWidget):
         needed."""
         message_string = "<h3>"
         message_string += translate(
-            "AddonsInstaller", "Changed to branch '{}' -- please restart to use Addon."
+            "AddonsInstaller", "Changed to branch '{}' -- please restart to use the addon."
         ).format(branch)
         message_string += "</h3>"
         self.message_label.setText(message_string)
@@ -211,35 +195,14 @@ class PackageDetailsView(QtWidgets.QWidget):
         """If the user has just updated the addon but not yet restarted, show an indication that
         we are awaiting a restart."""
         message = translate(
-            "AddonsInstaller", "This Addon has been updated. Restart FreeCAD to see changes."
+            "AddonsInstaller",
+            "This addon has been updated. Restart FreeCAD to see changes.",
         )
         self.message_label.setText(f"<h3>{message}</h3>")
         self.message_label.setStyleSheet("color:" + attention_color_string())
 
     def _sync_ui_state(self):
-        self._sync_button_state()
         self._create_status_label_text()
-
-    def _sync_button_state(self):
-        self.button_bar.install.setVisible(not self.installed)
-        self.button_bar.uninstall.setVisible(self.installed)
-        if not self.installed:
-            self.button_bar.disable.hide()
-            self.button_bar.enable.hide()
-            self.button_bar.update.hide()
-            self.button_bar.check_for_update.hide()
-        else:
-            self.button_bar.update.setVisible(self.update_info.update_available)
-            if self.update_info.detached_head:
-                self.button_bar.check_for_update.hide()
-            else:
-                self.button_bar.check_for_update.setVisible(not self.update_info.update_available)
-            if self.can_disable:
-                self.button_bar.enable.setVisible(self.disabled)
-                self.button_bar.disable.setVisible(not self.disabled)
-            else:
-                self.button_bar.enable.hide()
-                self.button_bar.disable.hide()
 
     def _create_status_label_text(self):
         if self.installed:
@@ -309,7 +272,8 @@ class PackageDetailsView(QtWidgets.QWidget):
                 if self.installed_branch != self.update_info.branch:
                     return (
                         translate(
-                            "AddonsInstaller", "Currently on branch {}, name changed to {}"
+                            "AddonsInstaller",
+                            "Currently on branch {}, name changed to {}",
                         ).format(self.installed_branch, self.update_info.branch)
                         + "."
                     )
@@ -335,11 +299,7 @@ class PackageDetailsView(QtWidgets.QWidget):
     def _there_are_warnings_to_show(self) -> bool:
         if self.disabled:
             return True
-        if (
-            self.warning_flags.obsolete
-            or self.warning_flags.python2
-            or self.warning_flags.required_freecad_version
-        ):
+        if self.warning_flags.required_freecad_version:
             return True
         return False  # TODO: Someday support optional warnings on license types
 
@@ -350,10 +310,6 @@ class PackageDetailsView(QtWidgets.QWidget):
                 "WARNING: This addon is currently installed, but disabled. Use the 'enable' "
                 "button to re-enable.",
             )
-        if self.warning_flags.obsolete:
-            return translate("AddonsInstaller", "WARNING: This addon is obsolete")
-        if self.warning_flags.python2:
-            return translate("AddonsInstaller", "WARNING: This addon is Python 2 only")
         if self.warning_flags.required_freecad_version:
             return translate("AddonsInstaller", "WARNING: This addon requires FreeCAD {}").format(
                 self.warning_flags.required_freecad_version

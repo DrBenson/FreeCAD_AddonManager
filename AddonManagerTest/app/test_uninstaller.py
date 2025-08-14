@@ -28,6 +28,7 @@ import os
 from stat import S_IREAD, S_IRGRP, S_IROTH, S_IWUSR
 import tempfile
 import unittest
+from unittest.mock import patch
 
 from addonmanager_uninstaller import AddonUninstaller, MacroUninstaller
 
@@ -76,7 +77,8 @@ class TestAddonUninstaller(unittest.TestCase):
         with open(fake_file_installed, "w", encoding="utf-8") as f:
             f.write("# Fake macro data for unit testing")
 
-    def test_uninstall_normal(self):
+    @patch("addonmanager_uninstaller.InstallationManifest")
+    def test_uninstall_normal(self, mock_installation_manifest):
         """Test the integrated uninstall function under normal circumstances"""
 
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -92,9 +94,9 @@ class TestAddonUninstaller(unittest.TestCase):
         """Test the integrated uninstall function for an addon without a name"""
 
         with tempfile.TemporaryDirectory() as temp_dir:
-            toplevel_path = self.setup_dummy_installation(temp_dir)
+            _ = self.setup_dummy_installation(temp_dir)
             self.mock_addon.name = None
-            result = self.test_object.run()
+            _ = self.test_object.run()
             self.assertTrue(os.path.exists(temp_dir))
             self.assertIn("failure", self.signals_caught)
             self.assertNotIn("success", self.signals_caught)
@@ -104,9 +106,9 @@ class TestAddonUninstaller(unittest.TestCase):
         """Test the integrated uninstall function for an addon with a dangerous name"""
 
         with tempfile.TemporaryDirectory() as temp_dir:
-            toplevel_path = self.setup_dummy_installation(temp_dir)
+            _ = self.setup_dummy_installation(temp_dir)
             self.mock_addon.name = "./"
-            result = self.test_object.run()
+            _ = self.test_object.run()
             self.assertTrue(os.path.exists(temp_dir))
             self.assertIn("failure", self.signals_caught)
             self.assertNotIn("success", self.signals_caught)
@@ -116,15 +118,16 @@ class TestAddonUninstaller(unittest.TestCase):
         """Test the integrated uninstall function for an addon with a name that isn't installed"""
 
         with tempfile.TemporaryDirectory() as temp_dir:
-            toplevel_path = self.setup_dummy_installation(temp_dir)
+            _ = self.setup_dummy_installation(temp_dir)
             self.mock_addon.name += "Nonexistent"
-            result = self.test_object.run()
+            _ = self.test_object.run()
             self.assertTrue(os.path.exists(temp_dir))
             self.assertIn("failure", self.signals_caught)
             self.assertNotIn("success", self.signals_caught)
             self.assertIn("finished", self.signals_caught)
 
-    def test_uninstall_addon_with_macros(self):
+    @patch("addonmanager_uninstaller.InstallationManifest")
+    def test_uninstall_addon_with_macros(self, mock_manifest):
         """Tests that the uninstaller removes the macro files"""
         with tempfile.TemporaryDirectory() as temp_dir:
             toplevel_path = self.setup_dummy_installation(temp_dir)
@@ -134,14 +137,15 @@ class TestAddonUninstaller(unittest.TestCase):
                 "FakeMacro.FCMacro",
                 os.path.join(toplevel_path, "AM_INSTALLATION_DIGEST.txt"),
             )
-            result = self.test_object.run()
+            _ = self.test_object.run()
             self.assertNotIn("failure", self.signals_caught)
             self.assertIn("success", self.signals_caught)
             self.assertIn("finished", self.signals_caught)
             self.assertFalse(os.path.exists(os.path.join(macro_directory, "FakeMacro.FCMacro")))
             self.assertTrue(os.path.exists(macro_directory))
 
-    def test_uninstall_calls_script(self):
+    @patch("addonmanager_uninstaller.InstallationManifest")
+    def test_uninstall_calls_script(self, mock_install_manifest):
         """Tests that the main uninstaller run function calls the uninstall.py script"""
 
         class Interceptor:
@@ -155,9 +159,9 @@ class TestAddonUninstaller(unittest.TestCase):
 
         interceptor = Interceptor()
         with tempfile.TemporaryDirectory() as temp_dir:
-            toplevel_path = self.setup_dummy_installation(temp_dir)
+            _ = self.setup_dummy_installation(temp_dir)
             self.test_object.run_uninstall_script = interceptor.func
-            result = self.test_object.run()
+            _ = self.test_object.run()
             self.assertTrue(interceptor.called, "Failed to call uninstall script")
 
     def test_remove_extra_files_no_digest(self):

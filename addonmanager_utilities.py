@@ -33,29 +33,16 @@ import platform
 import shutil
 import stat
 import subprocess
+import sys
 import time
 import re
 import ctypes
 
 from urllib.parse import urlparse
 
-try:
-    from PySide import QtCore, QtGui, QtWidgets
-except ImportError:
-    try:
-        from PySide6 import QtCore, QtGui, QtWidgets
-    except ImportError:
-        from PySide2 import QtCore, QtGui, QtWidgets
+from PySideWrapper import QtCore, QtGui, QtWidgets
 
 import addonmanager_freecad_interface as fci
-
-try:
-    from freecad.utils import get_python_exe
-except ImportError:
-
-    def get_python_exe():
-        """Use shutil.which to find python executable"""
-        return shutil.which("python")
 
 
 if fci.FreeCADGui:
@@ -157,7 +144,7 @@ def rmdir(path: str) -> bool:
             # NOTE: the onerror argument was deprecated in Python 3.12, replaced by onexc -- replace
             # when earlier versions are no longer supported.
             shutil.rmtree(path, onerror=remove_readonly)
-    except (WindowsError, PermissionError, OSError):
+    except (PermissionError, OSError):
         return False
     return True
 
@@ -165,6 +152,8 @@ def rmdir(path: str) -> bool:
 def remove_readonly(func, path, _) -> None:
     """Remove a read-only file."""
 
+    if not os.path.exists(path):
+        return  # Nothing to do
     os.chmod(path, stat.S_IWRITE)
     func(path)
 
@@ -207,7 +196,7 @@ def restart_freecad():
         return
 
     args = QtWidgets.QApplication.arguments()[1:]
-    if fci.FreeCADGui.getMainWindow().close():
+    if fci.FreeCADGui and fci.FreeCADGui.getMainWindow().close():
         QtCore.QProcess.startDetached(QtWidgets.QApplication.applicationFilePath(), args)
 
 
@@ -254,6 +243,8 @@ def construct_git_url(repo, filename):
         return f"{repo_url}/-/raw/{repo.branch}/{filename}"
     if parsed_url.netloc in ["codeberg.org"]:
         return f"{repo_url}/raw/branch/{repo.branch}/{filename}"
+    if parsed_url.netloc == "":
+        return f"{parsed_url.path}/{filename}"
     fci.Console.PrintLog(
         "Debug: addonmanager_utilities.construct_git_url: Unknown git host:"
         + parsed_url.netloc
@@ -269,12 +260,6 @@ def get_readme_url(repo):
     return construct_git_url(repo, "README.md")
 
 
-def get_metadata_url(url):
-    """Returns the location of a package.xml metadata file"""
-
-    return construct_git_url(url, "package.xml")
-
-
 def get_desc_regex(repo):
     """Returns a regex string that extracts a WB description to be displayed in the description
     panel of the Addon manager, if the README could not be found"""
@@ -287,9 +272,7 @@ def get_desc_regex(repo):
     if parsed_url.netloc in ["codeberg.org"]:
         return r'<meta property="og:description" content="(.*?)"'
     fci.Console.PrintLog(
-        "Debug: addonmanager_utilities.get_desc_regex: Unknown git host:",
-        repo.url,
-        "\n",
+        f"Debug: addonmanager_utilities.get_desc_regex: Unknown git host: {repo.url}\n"
     )
     return r'<meta.*?content="(.*?)".*?og:description.*?>'
 
@@ -452,10 +435,8 @@ def blocking_get(url: str, method=None) -> bytes:
         NetworkManager.InitializeNetworkManager()
         p = NetworkManager.AM_NETWORK_MANAGER.blocking_get(url, 10000)  # 10 second timeout
         if p:
-            try:
+            if hasattr(p, "data"):
                 p = p.data()
-            except AttributeError:
-                pass
     elif requests and method is None or method == "requests":
         response = requests.get(url)
         if response.status_code == 200:
@@ -548,7 +529,7 @@ def get_main_am_window():
     for widget in windows:
         if widget.objectName() == "AddonManager_Main_Window":
             return widget
-    # If there is no main AM window, we may be running unit tests: see if the Test Runner window
+    # If there is no main AM window, we may be running the internal unit tests: see if the Test Runner window
     # exists:
     for widget in windows:
         if widget.objectName() == "TestGui__UnitTest":
@@ -557,8 +538,12 @@ def get_main_am_window():
     for widget in windows:
         if hasattr(widget, "centralWidget"):
             return widget.centralWidget()
-    # Why is this code even getting called?
-    return None
+    # We are probably running in an external unit test framework, with no top-level window at all.
+    if len(windows) == 0:
+        return None
+    raise RuntimeError(
+        "Windows exist, but none of them can be identified as the primary top-level window."
+    )
 
 
 def remove_options_and_arg(call_args: List[str], deny_args: List[str]) -> List[str]:
@@ -568,12 +553,26 @@ def remove_options_and_arg(call_args: List[str], deny_args: List[str]) -> List[s
     as --target and --path. We then have to remove e.g. target --path and
     its argument, if present."""
     for deny_arg in deny_args:
-        try:
+        if deny_arg in call_args:
             index = call_args.index(deny_arg)
             del call_args[index : index + 2]  # The option and its argument
-        except ValueError:
-            pass
     return call_args
+
+
+def in_venv():
+    return hasattr(sys, "real_prefix") or (
+        hasattr(sys, "base_prefix") and sys.base_prefix != sys.prefix
+    )
+
+
+def using_system_pip_installation_location() -> bool:
+    """If we are in a virtual environment, or other sort of container, there's no need to use a
+    custom pip installation location."""
+    snap_package = os.getenv("SNAP_REVISION")
+    appimage = os.getenv("APPIMAGE")
+    if snap_package or appimage or in_venv():
+        return True
+    return False
 
 
 def create_pip_call(args: List[str]) -> List[str]:
@@ -582,18 +581,19 @@ def create_pip_call(args: List[str]) -> List[str]:
     of arguments suitable for passing directly to subprocess.Popen and related functions."""
     snap_package = os.getenv("SNAP_REVISION")
     appimage = os.getenv("APPIMAGE")
-    if snap_package:
+
+    if using_system_pip_installation_location():
         args = remove_options_and_arg(args, ["--target", "--path"])
+
+    if snap_package:
         call_args = ["pip", "--disable-pip-version-check"]
-        call_args.extend(args)
     elif appimage:
         python_exe = fci.DataPaths().home_dir + "bin/python"
         call_args = [python_exe, "-m", "pip", "--disable-pip-version-check"]
-        call_args.extend(args)
     else:
-        python_exe = get_python_exe()
+        python_exe = fci.get_python_exe()
         if not python_exe:
             raise RuntimeError("Could not locate Python executable on this system")
         call_args = [python_exe, "-m", "pip", "--disable-pip-version-check"]
-        call_args.extend(args)
+    call_args.extend(args)
     return call_args

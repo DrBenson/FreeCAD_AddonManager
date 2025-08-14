@@ -24,23 +24,18 @@
 """Provides the PackageDetails widget."""
 
 import os
-from typing import Optional
 
-from PySide import QtCore, QtWidgets
+from PySideWrapper import QtCore, QtWidgets
 
 import addonmanager_freecad_interface as fci
 
-import addonmanager_utilities as utils
 from addonmanager_metadata import (
-    Version,
-    get_first_supported_freecad_version,
     get_branch_from_metadata,
     get_repo_url_from_metadata,
 )
-from addonmanager_workers_startup import GetMacroDetailsWorker, CheckSingleUpdateWorker
+from addonmanager_workers_startup import CheckSingleUpdateWorker
 from addonmanager_git import GitManager, NoGitFound
 from Addon import Addon
-from change_branch import ChangeBranchDialog
 from addonmanager_readme_controller import ReadmeController
 from Widgets.addonmanager_widget_package_details_view import UpdateInformation, WarningFlags
 
@@ -77,21 +72,27 @@ class PackageDetailsController(QtCore.QObject):
         self.ui.button_bar.install.clicked.connect(lambda: self.install.emit(self.addon))
         self.ui.button_bar.uninstall.clicked.connect(lambda: self.uninstall.emit(self.addon))
         self.ui.button_bar.update.clicked.connect(lambda: self.update.emit(self.addon))
-        self.ui.button_bar.change_branch.clicked.connect(self.change_branch_clicked)
         self.ui.button_bar.enable.clicked.connect(self.enable_clicked)
         self.ui.button_bar.disable.clicked.connect(self.disable_clicked)
+        self.ui.button_bar.install_branch.connect(self.install_branch)
 
-    def show_repo(self, repo: Addon) -> None:
-        """The main entry point for this class, shows the package details and related buttons
+    def show_addon(self, addon: Addon) -> None:
+        """The main entry point for this class shows the package details and related buttons
         for the provided repo."""
-        self.addon = repo
-        self.readme_controller.set_addon(repo)
+        self.addon = addon
+        self.readme_controller.set_addon(addon)
         self.original_disabled_state = self.addon.is_disabled()
-        if repo is not None:
+        if addon is not None:
             self.ui.button_bar.show()
+            if addon.repo_type == Addon.Kind.MACRO:
+                self.set_up_macro_display()
+            else:
+                self.set_up_non_macro_display()
+            self.set_up_updater()
         else:
             self.ui.button_bar.hide()
 
+    def set_up_updater(self):
         if self.worker is not None:
             if not self.worker.isFinished():
                 self.worker.requestInterruption()
@@ -99,42 +100,35 @@ class PackageDetailsController(QtCore.QObject):
 
         installed = self.addon.status() != Addon.Status.NOT_INSTALLED
         self.ui.set_installed(installed)
-        if repo.metadata is not None:
-            self.ui.set_url(get_repo_url_from_metadata(repo.metadata))
+        if self.addon.metadata is not None:
+            self.ui.set_url(get_repo_url_from_metadata(self.addon.metadata))
         else:
-            self.ui.set_url(None)  # to reset it and  hide it
+            self.ui.set_url(None)  # to reset it and hide it
         update_info = UpdateInformation()
         if installed:
             update_info.unchecked = self.addon.status() == Addon.Status.UNCHECKED
             update_info.update_available = self.addon.status() == Addon.Status.UPDATE_AVAILABLE
             update_info.check_in_progress = False  # TODO: Implement the "check in progress" status
-            if repo.metadata:
-                update_info.branch = get_branch_from_metadata(repo.metadata)
-                update_info.version = repo.metadata.version
-            elif repo.macro:
-                update_info.version = repo.macro.version
+            if self.addon.metadata:
+                update_info.branch = get_branch_from_metadata(self.addon.metadata)
+                update_info.version = str(self.addon.metadata.version)
+            elif self.addon.macro:
+                update_info.version = str(self.addon.macro.version)
             self.ui.set_update_available(update_info)
             self.ui.set_location(
                 self.addon.macro_directory
-                if repo.repo_type == Addon.Kind.MACRO
+                if self.addon.repo_type == Addon.Kind.MACRO
                 else os.path.join(self.addon.mod_directory, self.addon.name)
             )
             self.ui.set_disabled(self.addon.is_disabled())
-        self.ui.allow_running(repo.repo_type == Addon.Kind.MACRO)
-        self.ui.allow_disabling(repo.repo_type != Addon.Kind.MACRO)
 
-        if repo.repo_type == Addon.Kind.MACRO:
-            self.update_macro_info(repo)
-
-        if repo.status() == Addon.Status.UNCHECKED:
-            self.ui.button_bar.check_for_update.show()
-            self.ui.button_bar.check_for_update.setText(
-                translate("AddonsInstaller", "Check for update")
-            )
-            self.ui.button_bar.check_for_update.setEnabled(True)
+        if self.addon.status() == Addon.Status.UNCHECKED:
             if not self.update_check_thread:
                 self.update_check_thread = QtCore.QThread()
-            self.check_for_update_worker = CheckSingleUpdateWorker(repo)
+                self.update_check_thread.setObjectName(
+                    "PackageDetailsController update check thread"
+                )
+            self.check_for_update_worker = CheckSingleUpdateWorker(self.addon)
             self.check_for_update_worker.moveToThread(self.update_check_thread)
             self.update_check_thread.finished.connect(self.check_for_update_worker.deleteLater)
             self.ui.button_bar.check_for_update.clicked.connect(
@@ -146,78 +140,33 @@ class PackageDetailsController(QtCore.QObject):
             self.ui.button_bar.check_for_update.hide()
 
         flags = WarningFlags()
-        flags.required_freecad_version = self.requires_newer_freecad()
-        flags.obsolete = repo.obsolete
-        flags.python2 = repo.python2
         self.ui.set_warning_flags(flags)
-        self.set_change_branch_button_state()
 
-    def requires_newer_freecad(self) -> Optional[Version]:
-        """If the current package is not installed, returns the first supported version of
-        FreeCAD, if one is set, or None if no information is available (or if the package is
-        already installed)."""
-
-        # If it's not installed, check to see if it's for a newer version of FreeCAD
-        if self.addon.status() == Addon.Status.NOT_INSTALLED and self.addon.metadata:
-            # Only hide if ALL content items require a newer version, otherwise
-            # it's possible that this package actually provides versions of itself
-            # for newer and older versions
-
-            first_supported_version = get_first_supported_freecad_version(self.addon.metadata)
-            if first_supported_version is not None:
-                fc_version = Version(from_list=fci.Version())
-                if first_supported_version > fc_version:
-                    return first_supported_version
-        return None
-
-    def set_change_branch_button_state(self):
-        """The change branch button is only available for installed Addons that have a .git directory
-        and in runs where the git is available."""
-
-        self.ui.button_bar.change_branch.hide()
-
-        pref = fci.ParamGet("User parameter:BaseApp/Preferences/Addons")
-        show_switcher = pref.GetBool("ShowBranchSwitcher", False)
-        if not show_switcher:
-            return
-
-        # Is this repo installed? If not, return.
+    def set_up_non_macro_display(self):
+        branches = []
         if self.addon.status() == Addon.Status.NOT_INSTALLED:
-            return
+            branches.append(self.addon.branch_display_name)
+        if self.addon.sub_addons:
+            branches.extend(self.addon.sub_addons.keys())
+        self.ui.button_bar.set_installation_status(
+            installed=self.addon.status() != Addon.Status.NOT_INSTALLED,
+            available_branches=branches,
+            disabled=self.addon.is_disabled(),
+        )
+        self.ui.button_bar.set_can_run(False)
+        self.ui.button_bar.set_can_check_for_updates(True if self.addon.cache_directory else False)
+        if self.addon.name == "AddonManager":
+            self.ui.button_bar.setup_for_addon_manager()  # Must happen AFTER other config steps
 
-        # Is it a Macro? If so, return:
-        if self.addon.repo_type == Addon.Kind.MACRO:
-            return
-
-        # Can we actually switch branches? If not, return.
-        if not self.git_manager:
-            return
-
-        # Is there a .git subdirectory? If not, return.
-        basedir = fci.getUserAppDataDir()
-        path_to_git = os.path.join(basedir, "Mod", self.addon.name, ".git")
-        if not os.path.isdir(path_to_git):
-            return
-
-        # If all four above checks passed, then it's possible for us to switch
-        # branches, if there are any besides the one we are on: show the button
-        self.ui.button_bar.change_branch.show()
-
-    def update_macro_info(self, repo: Addon) -> None:
-        if not repo.macro.url:
-            # We need to populate the macro information... may as well do it while the user reads
-            # the wiki page
-            self.worker = GetMacroDetailsWorker(repo)
-            self.worker.readme_updated.connect(self.macro_readme_updated)
-            self.worker.start()
-
-    def change_branch_clicked(self) -> None:
-        """Loads the branch-switching dialog"""
-        basedir = fci.getUserAppDataDir()
-        path_to_repo = os.path.join(basedir, "Mod", self.addon.name)
-        change_branch_dialog = ChangeBranchDialog(path_to_repo, self.ui)
-        change_branch_dialog.branch_changed.connect(self.branch_changed)
-        change_branch_dialog.exec()
+    def set_up_macro_display(self):
+        self.ui.button_bar.set_installation_status(
+            installed=self.addon.status() != Addon.Status.NOT_INSTALLED,
+            available_branches=[],
+            disabled=self.addon.is_disabled(),
+            can_be_disabled=False,
+        )
+        self.ui.button_bar.set_can_run(True)
+        self.ui.button_bar.set_can_check_for_updates(False)
 
     def enable_clicked(self) -> None:
         """Called by the Enable button, enables this Addon and updates GUI to reflect
@@ -244,6 +193,21 @@ class PackageDetailsController(QtCore.QObject):
         else:
             self.addon.set_status(self.original_status)
         self.update_status.emit(self.addon)
+
+    def install_branch(self, branch: str):
+        if self.addon.branch_display_name == branch:
+            fci.Console.PrintMessage(
+                f"Installing active branch {branch} for {self.addon.display_name}\n"
+            )
+            self.install.emit(self.addon)
+            return
+        if branch not in self.addon.sub_addons:
+            fci.Console.PrintError(
+                f"Internal error: branch {branch} not found in sub_addons list for addon {self.addon.display_name}.\n"
+            )
+            return
+        fci.Console.PrintMessage(f"Installing sub-branch {branch} for {self.addon.display_name}\n")
+        self.install.emit(self.addon.sub_addons[branch])
 
     def branch_changed(self, old_branch: str, name: str) -> None:
         """Displays a dialog confirming the branch changed, and tries to access the
@@ -278,7 +242,4 @@ class PackageDetailsController(QtCore.QObject):
 
     def display_repo_status(self, addon):
         self.update_status.emit(self.addon)
-        self.show_repo(self.addon)
-
-    def macro_readme_updated(self):
-        self.show_repo(self.addon)
+        self.show_addon(self.addon)
