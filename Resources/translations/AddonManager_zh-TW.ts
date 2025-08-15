@@ -6,19 +6,19 @@
     <extra-po-header-last_translator>DrBenson &lt;Benson.Dr@GMail.com&gt;</extra-po-header-last_translator>
     <extra-po-header-po_revision_date></extra-po-header-po_revision_date>
     <extra-po-header-pot_creation_date></extra-po-header-pot_creation_date>
-    <extra-po-header-project_id_version>FreeCAD AddonManager Language Translations v0.22_dev</extra-po-header-project_id_version>
-    <extra-po-header-x_generator>Poedit 3.2.2</extra-po-header-x_generator>
+    <extra-po-header-project_id_version>FreeCAD AddonManager Language Translations v1.1.0</extra-po-header-project_id_version>
+    <extra-po-header-x_generator>Poedit 3.6</extra-po-header-x_generator>
     <extra-po-header_comment>#
 # Translators:
-# DrBenson &lt;Benson.Dr@GMail.com&gt;, 2023
+# DrBenson &lt;Benson.Dr@GMail.com&gt;, 2025
 #
     </extra-po-header_comment>
     <extra-po-headers>Project-Id-Version,POT-Creation-Date,PO-Revision-Date,Last-Translator,Language-Team,Language,MIME-Version,Content-Type,Content-Transfer-Encoding,Plural-Forms,X-Language,X-Source-Language,X-Qt-Contexts,X-Generator</extra-po-headers>
 <context>
     <name>AddCustomRepositoryDialog</name>
     <message>
-        <location filename="../../AddonManagerOptions_AddCustomRepository.ui" line="14"/>
-        <source>Custom repository</source>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/AddonManagerOptions_AddCustomRepository.ui" line="14"/>
+        <source>Custom Repository</source>
         <translation>自訂存儲庫</translation>
     </message>
     <message>
@@ -30,6 +30,11 @@
         <location filename="../../AddonManagerOptions_AddCustomRepository.ui" line="30"/>
         <source>Branch</source>
         <translation>分支</translation>
+    </message>
+    <message>
+        <location filename="../../AddonManagerOptions_AddCustomRepository.ui" line="14"/>
+        <source>Custom repository</source>
+        <translation>自訂存儲庫</translation>
     </message>
 </context>
 <context>
@@ -56,43 +61,17 @@
 <context>
     <name>AddonsInstaller</name>
     <message>
-        <location filename="../../AddonManager.py" line="125"/>
-        <source>Addon Manager</source>
-        <translation>附加元件管理員</translation>
-    </message>
-    <message>
-        <location filename="../../AddonManager.py" line="363"/>
-        <source>Previous cache process was interrupted, restarting...
-</source>
-        <translation>之前的快取程序中斷，正在重新啟動...
-</translation>
-    </message>
-    <message>
-        <location filename="../../AddonManager.py" line="382"/>
-        <source>Custom repo list changed, forcing recache...
-</source>
-        <translation>自訂儲存庫清單已更改，強制重新緩存...
-</translation>
-    </message>
-    <message>
         <source>Checking connection</source>
         <translation>檢查連線</translation>
     </message>
     <message>
-        <source>Checking for connection to GitHub...</source>
-        <translation>檢查與 GitHub 的連線...</translation>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/addonmanager_connection_checker.py" line="68"/>
+        <source>Checking for connection to addons.freecad.org...</source>
+        <translation>檢查與 addons.freecad.org 的連線...</translation>
     </message>
     <message>
         <source>Connection failed</source>
         <translation>連線失敗</translation>
-    </message>
-    <message>
-        <source>Missing dependency</source>
-        <translation>缺少相依性</translation>
-    </message>
-    <message>
-        <source>Could not import QtNetwork -- see Report View for details. Addon Manager unavailable.</source>
-        <translation>無法匯入 QtNetwork - 有關詳細信息，請參閱報告檢視. 附加元件管理員不可用.</translation>
     </message>
     <message>
         <source>Installation of Python package {} failed</source>
@@ -114,93 +93,25 @@
         <translation>安裝附加元件 {} 失敗</translation>
     </message>
     <message>
-        <location filename="../../addonmanager_devmode_add_content.py" line="137"/>
-        <source>Unrecognized content kind &apos;{}&apos;</source>
-        <translation>無法辨識的內容類型 &apos;{}&apos;</translation>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/addonmanager_dependency_installer.py" line="200"/>
+        <source>Installation of addon {} failed</source>
+        <translation>安裝附加元件 {} 失敗</translation>
     </message>
     <message>
-        <location filename="../../addonmanager_devmode_add_content.py" line="202"/>
-        <source>Unable to locate icon at {}</source>
-        <translation>找不到圖示 {}</translation>
+        <source>Click for details about package {}</source>
+        <translation>點擊查看套件 {} 詳細資料</translation>
     </message>
     <message>
-        <location filename="../../addonmanager_devmode_add_content.py" line="279"/>
-        <source>Select an icon file for this content item</source>
-        <translation>為此內容項目選擇一個圖示檔案</translation>
+        <source>Click for details about workbench {}</source>
+        <translation>點擊查看工作台 {} 詳細資料</translation>
     </message>
     <message>
-        <location filename="../../addonmanager_devmode_add_content.py" line="293"/>
-        <location filename="../../addonmanager_devmode_add_content.py" line="332"/>
-        <location filename="../../addonmanager_devmode.py" line="732"/>
-        <source>{} is not a subdirectory of {}</source>
-        <translation>{} 不是 {} 的子目錄</translation>
+        <source>Click for details about macro {}</source>
+        <translation>點擊查看巨集 {} 詳細資料</translation>
     </message>
     <message>
-        <location filename="../../addonmanager_devmode_add_content.py" line="311"/>
-        <source>Select the subdirectory for this content item</source>
-        <translation>選擇該內容項目的子目錄</translation>
-    </message>
-    <message>
-        <location filename="../../addonmanager_devmode_add_content.py" line="452"/>
-        <source>Automatic</source>
-        <translation>自動</translation>
-    </message>
-    <message>
-        <location filename="../../addonmanager_devmode_add_content.py" line="453"/>
-        <source>Workbench</source>
-        <translation>工作台</translation>
-    </message>
-    <message>
-        <location filename="../../addonmanager_devmode_add_content.py" line="454"/>
-        <source>Addon</source>
-        <translation>附加元件</translation>
-    </message>
-    <message>
-        <location filename="../../addonmanager_devmode_add_content.py" line="455"/>
-        <source>Python</source>
-        <translation>Python</translation>
-    </message>
-    <message>
-        <location filename="../../addonmanager_devmode_add_content.py" line="465"/>
-        <source>Yes</source>
-        <translation>確定</translation>
-    </message>
-    <message>
-        <location filename="../../addonmanager_devmode_add_content.py" line="521"/>
-        <source>Internal Workbench</source>
-        <translation>内部工作台</translation>
-    </message>
-    <message>
-        <location filename="../../addonmanager_devmode_add_content.py" line="524"/>
-        <source>External Addon</source>
-        <translation>外部附加元件</translation>
-    </message>
-    <message>
-        <location filename="../../addonmanager_devmode_add_content.py" line="527"/>
-        <source>Python Package</source>
-        <translation>Python 套件</translation>
-    </message>
-    <message>
-        <location filename="../../addonmanager_devmode_add_content.py" line="597"/>
-        <location filename="../../addonmanager_devmode_add_content.py" line="610"/>
-        <source>Other...</source>
-        <translation>其它...</translation>
-    </message>
-    <message>
-        <location filename="../../addonmanager_devmode_license_selector.py" line="114"/>
-        <source>Other...</source>
-        <comment>For providing a license other than one listed</comment>
-        <translation>其它...</translation>
-    </message>
-    <message>
-        <location filename="../../addonmanager_devmode_license_selector.py" line="208"/>
-        <source>Select the corresponding license file in your Addon</source>
-        <translation>在您的Addon中選擇相應的授權文件</translation>
-    </message>
-    <message>
-        <location filename="../../addonmanager_devmode_license_selector.py" line="241"/>
-        <source>Location for new license file</source>
-        <translation>新許可證文件的位置</translation>
+        <source>Tags</source>
+        <translation>標籤</translation>
     </message>
     <message>
         <location filename="../../addonmanager_devmode_people_table.py" line="88"/>
@@ -211,6 +122,10 @@
         <translation>維護者</translation>
     </message>
     <message>
+        <source>Maintainers:</source>
+        <translation>維護者：</translation>
+    </message>
+    <message>
         <location filename="../../addonmanager_devmode_people_table.py" line="89"/>
         <location filename="../../addonmanager_devmode.py" line="117"/>
         <location filename="../../package_list.py" line="432"/>
@@ -219,106 +134,67 @@
         <translation>作者</translation>
     </message>
     <message>
-        <location filename="../../addonmanager_devmode.py" line="197"/>
-        <source>XML failure while reading metadata from file {}</source>
-        <translation>從檔案 {} 讀取中繼資料時 XML 失敗</translation>
+        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/package_list.py" line="372"/>
+        <source>{} ★ on GitHub</source>
+        <translation>{} ★ 在 GitHub 上</translation>
     </message>
     <message>
-        <location filename="../../addonmanager_devmode.py" line="204"/>
-        <source>Invalid metadata in file {}</source>
-        <translation>文件 {} 中的中繼資料無效</translation>
+        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/package_list.py" line="374"/>
+        <source>No ★, or not on GitHub</source>
+        <translation>無 ★，或不在 GitHub 上</translation>
     </message>
     <message>
-        <location filename="../../addonmanager_devmode.py" line="246"/>
-        <source>WARNING: Path specified in package.xml metadata does not match currently checked-out branch.</source>
-        <translation>警告: package.xml 中繼資料中指定的路徑與目前簽出的分支不匹配.</translation>
+        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/package_list.py" line="379"/>
+        <source>Created </source>
+        <translation>已建立 </translation>
     </message>
     <message>
-        <location filename="../../addonmanager_devmode.py" line="268"/>
-        <source>Name</source>
-        <translation>名稱</translation>
+        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/package_list.py" line="387"/>
+        <source>Updated </source>
+        <translation>已更新 </translation>
     </message>
     <message>
-        <location filename="../../addonmanager_devmode.py" line="271"/>
-        <source>Class</source>
-        <translation>類別</translation>
+        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/package_list.py" line="390"/>
+        <source>Rank: </source>
+        <translation>評價: </translation>
     </message>
     <message>
-        <location filename="../../addonmanager_devmode.py" line="276"/>
-        <source>Description</source>
-        <translation>描述</translation>
+        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/package_list.py" line="394"/>
+        <source>Score: </source>
+        <translation>積分: </translation>
     </message>
     <message>
-        <location filename="../../addonmanager_devmode.py" line="282"/>
-        <source>Subdirectory</source>
-        <translation>子目錄</translation>
+        <location filename="../../package_list.py" line="822"/>
+        <source>Installed</source>
+        <translation>己安裝</translation>
     </message>
     <message>
-        <location filename="../../addonmanager_devmode.py" line="288"/>
-        <source>Files</source>
-        <translation>檔案</translation>
+        <source>Up-to-date</source>
+        <translation>已同步</translation>
     </message>
     <message>
-        <location filename="../../addonmanager_devmode.py" line="464"/>
-        <source>Select the folder containing your Addon</source>
-        <translation>選擇包含您的外掛程式的資料夾</translation>
+        <source>Update available</source>
+        <translation>有可用更新</translation>
     </message>
     <message>
-        <location filename="../../addonmanager_devmode.py" line="593"/>
-        <source>No Vermin, cancelling operation.</source>
-        <comment>NOTE: Vermin is a Python package and proper noun - do not translate</comment>
-        <translation>無 Vermin，正在取消操作.</translation>
+        <source>Pending restart</source>
+        <translation>等待重啟</translation>
     </message>
     <message>
-        <location filename="../../addonmanager_devmode.py" line="600"/>
-        <source>Scanning Addon for Python version compatibility</source>
-        <translation>掃描附加元件以取得 Python 版本相容性</translation>
+        <source>DISABLED</source>
+        <translation>停用</translation>
     </message>
     <message>
-        <location filename="../../addonmanager_devmode.py" line="631"/>
-        <source>Minimum Python Version Detected</source>
-        <translation>偵測到 Python 最低版本</translation>
+        <source>Installed version</source>
+        <translation>已安裝版本</translation>
     </message>
     <message>
-        <location filename="../../addonmanager_devmode.py" line="635"/>
-        <source>Vermin auto-detected a required version of Python 3.{}</source>
-        <translation>Vermin 自動偵測所需的 Python 3 版本. {}</translation>
+        <source>Unknown version</source>
+        <translation>未知版本</translation>
     </message>
     <message>
-        <location filename="../../addonmanager_devmode.py" line="647"/>
-        <source>Install Vermin?</source>
-        <translation>安裝 Vermin?</translation>
-    </message>
-    <message>
-        <location filename="../../addonmanager_devmode.py" line="651"/>
-        <source>Auto-detecting the required version of Python for this Addon requires Vermin (https://pypi.org/project/vermin/). OK to install?</source>
-        <translation>自動偵測此附加元件所需的 Python 版本需要 Vermin (https://pypi.org/project/vermin/). 確定安裝?</translation>
-    </message>
-    <message>
-        <location filename="../../addonmanager_devmode.py" line="658"/>
-        <source>Attempting to install Vermin from PyPi</source>
-        <translation>嘗試從 PyPi 安裝 Vermin</translation>
-    </message>
-    <message>
-        <source>Installation failed</source>
-        <translation>安裝失敗</translation>
-    </message>
-    <message>
-        <location filename="../../addonmanager_devmode.py" line="690"/>
-        <source>Failed to install Vermin -- check Report View for details.</source>
-        <comment>&apos;Vermin&apos; is the name of a Python package, do not translate</comment>
-        <translation>安裝 Vermin 失敗 - 檢查報告檢視以了解詳細信息.</translation>
-    </message>
-    <message>
-        <location filename="../../addonmanager_devmode.py" line="705"/>
-        <source>Failed to import vermin after installation -- cannot scan Addon.</source>
-        <comment>&apos;vermin&apos; is the name of a Python package, do not translate</comment>
-        <translation>安裝後無法導入Vermin -- 無法掃描附加元件.</translation>
-    </message>
-    <message>
-        <location filename="../../addonmanager_devmode.py" line="718"/>
-        <source>Select an icon file for this package</source>
-        <translation>為此套件選擇一個圖示檔案</translation>
+        <source>Available version</source>
+        <translation>可用版本</translation>
     </message>
     <message>
         <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/addonmanager_git.py" line="153"/>
@@ -346,97 +222,9 @@
         <translation>Git 分支重新命名失敗並顯示以下訊息:</translation>
     </message>
     <message>
-        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/addonmanager_installer_gui.py" line="153"/>
-        <source>This addon requires Python packages that are not installed, and cannot be installed automatically. To use this addon you must install the following Python packages manually:</source>
-        <translation>該附加元件需要未安裝的Python套件，並且無法自動安裝. 要使用此工作台，您必須手動安裝以下 Python 套件:</translation>
-    </message>
-    <message>
-        <source>Too many to list</source>
-        <translation>太多無法完整列出</translation>
-    </message>
-    <message>
-        <source>Missing Requirement</source>
-        <translation>缺少需求元件</translation>
-    </message>
-    <message>
-        <source>Addon &apos;{}&apos; requires &apos;{}&apos;, which is not available in your copy of FreeCAD.</source>
-        <translation>附加元件程式&apos;{}&apos;需要&apos;{}&apos;，但您的 FreeCAD 版本中並未提供該功能.</translation>
-    </message>
-    <message>
-        <source>Addon &apos;{}&apos; requires the following workbenches, which are not available in your copy of FreeCAD:</source>
-        <translation>附加元件程式&apos;{}&apos;需要以下工作台，但您的 FreeCAD 版本中並未提供這個工作台:</translation>
-    </message>
-    <message>
-        <source>Press OK to install anyway.</source>
-        <translation>按 確定 仍然進行安裝.</translation>
-    </message>
-    <message>
-        <location filename="../../addonmanager_installer_gui.py" line="246"/>
-        <location filename="../../AddonManagerTest/gui/test_installer_gui.py" line="232"/>
-        <source>Incompatible Python version</source>
-        <translation>Python 版本不相容</translation>
-    </message>
-    <message>
-        <location filename="../../addonmanager_installer_gui.py" line="250"/>
-        <source>This Addon (or one if its dependencies) requires Python {}.{}, and your system is running {}.{}. Installation cancelled.</source>
-        <translation>此附加元件程式(或相依性)需要 Python {}.{}，而您的系統正在執行 {}.{}. 安裝已取消.</translation>
-    </message>
-    <message>
-        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/addonmanager_installer_gui.py" line="246"/>
-        <source>This Addon (or one of its dependencies) requires Python {}.{}, and your system is running {}.{}. Installation cancelled.</source>
-        <translation>此附加元件程式(或相依性)需要 Python {}.{}，而您的系統正在執行 {}.{}. 安裝已取消.</translation>
-    </message>
-    <message>
-        <location filename="../../addonmanager_installer_gui.py" line="271"/>
-        <source>Optional dependency on {} ignored because it is not in the allow-list</source>
-        <translation>對 {} 的可選附加依賴被忽略，因為它不在允許清單中</translation>
-    </message>
-    <message>
-        <source>Installing dependencies</source>
-        <translation>安裝依賴關係套件</translation>
-    </message>
-    <message>
-        <source>Cannot execute Python</source>
-        <translation>無法執行Python</translation>
-    </message>
-    <message>
-        <source>Failed to automatically locate your Python executable, or the path is set incorrectly. Please check the Addon Manager preferences setting for the path to Python.</source>
-        <translation>無法自動找到您的 Python 可執行文件，或路徑設定不正確. 請檢查 附加元件 偏好設定中的 Python 路徑.</translation>
-    </message>
-    <message>
-        <source>Dependencies could not be installed. Continue with installation of {} anyway?</source>
-        <translation>無法安裝依賴項目. 仍然繼續安裝 {}?</translation>
-    </message>
-    <message>
-        <source>Cannot execute pip</source>
-        <translation>無法執行pip</translation>
-    </message>
-    <message>
-        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/addonmanager_installer_gui.py" line="370"/>
-        <source>Failed to execute pip, which may be missing from your Python installation. Please ensure your system has pip installed and try again. The failed command was:</source>
-        <translation>無法執行 pip，您的 Python 安裝中可能缺少該檔案. 請確保您的系統已安裝 pip，然後重試. 失敗的指令是:</translation>
-    </message>
-    <message>
-        <source>Continue with installation of {} anyway?</source>
-        <translation>仍然繼續安裝 {}?</translation>
-    </message>
-    <message>
-        <source>Package installation failed</source>
-        <translation>套件安裝失敗</translation>
-    </message>
-    <message>
-        <source>See Report View for detailed failure log.</source>
-        <translation>有關詳細的故障日誌，請參閱報告檢視.</translation>
-    </message>
-    <message>
-        <location filename="../../addonmanager_installer_gui.py" line="442"/>
-        <source>Installing Addon</source>
-        <translation>附加元件安裝中</translation>
-    </message>
-    <message>
-        <location filename="../../addonmanager_installer_gui.py" line="443"/>
-        <source>Installing FreeCAD Addon &apos;{}&apos;</source>
-        <translation>FreeCAD 附加元件 &apos;{}&apos; 安裝中</translation>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/addonmanager_installer_gui.py" line="130"/>
+        <source>Installing &apos;{}&apos;</source>
+        <translation>安裝中 &apos;{}&apos;</translation>
     </message>
     <message>
         <location filename="../../addonmanager_installer_gui.py" line="457"/>
@@ -592,6 +380,11 @@
         <translation>解除安裝</translation>
     </message>
     <message>
+        <location filename="../../package_details.py" line="917"/>
+        <source>Update</source>
+        <translation>更新</translation>
+    </message>
+    <message>
         <location filename="../../package_details.py" line="920"/>
         <source>Check for Update</source>
         <translation>檢查更新</translation>
@@ -629,6 +422,139 @@
         <source>Run</source>
         <comment>Indicates a macro that can be &apos;run&apos;</comment>
         <translation>執行</translation>
+    </message>
+    <message>
+        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/addonmanager_installer_gui.py" line="153"/>
+        <source>This addon requires Python packages that are not installed, and cannot be installed automatically. To use this addon you must install the following Python packages manually:</source>
+        <translation>該附加元件需要未安裝的Python套件，並且無法自動安裝. 要使用此工作台，您必須手動安裝以下 Python 套件:</translation>
+    </message>
+    <message>
+        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/addonmanager_installer_gui.py" line="246"/>
+        <source>This Addon (or one of its dependencies) requires Python {}.{}, and your system is running {}.{}. Installation cancelled.</source>
+        <translation>此附加元件程式(或相依性)需要 Python {}.{}，而您的系統正在執行 {}.{}. 安裝已取消.</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/addonmanager_installer_gui.py" line="517"/>
+        <source>These addons require Python packages that are not installed, and cannot be installed automatically. To use them you must install the following Python packages manually:</source>
+        <translation>這些附加元件需要未安裝的 Python 相依性套件，而且無法自動安裝. 要使用它們，您必須手動安裝下列 Python 套件:</translation>
+    </message>
+    <message>
+        <source>Too many to list</source>
+        <translation>太多無法完整列出</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/addonmanager_installer_gui.py" line="529"/>
+        <source>Requirement Cannot be Installed</source>
+        <translation>無法安裝相依性需求</translation>
+    </message>
+    <message>
+        <source>Addon &apos;{}&apos; requires &apos;{}&apos;, which is not available in your copy of FreeCAD.</source>
+        <translation>附加元件程式&apos;{}&apos;需要&apos;{}&apos;，但您的 FreeCAD 版本中並未提供該功能.</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/addonmanager_installer_gui.py" line="556"/>
+        <source>These addons require &apos;{}&apos;, which is not available in your copy of FreeCAD.</source>
+        <translation>這些附加元件需要 &apos;{}&apos;. 而您的 FreeCAD 備份中並沒有這個功能.</translation>
+    </message>
+    <message>
+        <source>Addon &apos;{}&apos; requires the following workbenches, which are not available in your copy of FreeCAD:</source>
+        <translation>附加元件程式&apos;{}&apos;需要以下工作台，但您的 FreeCAD 版本中並未提供這個工作台:</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/addonmanager_installer_gui.py" line="576"/>
+        <source>These addons require the following workbenches, which are not available in your copy of FreeCAD:</source>
+        <translation>這些附加元件需要下列工作台，而這些工作台在您的 FreeCAD 備份中並不存在:</translation>
+    </message>
+    <message>
+        <source>Press OK to install anyway.</source>
+        <translation>按 確定 仍然進行安裝.</translation>
+    </message>
+    <message>
+        <source>Missing Requirement</source>
+        <translation>缺少需求元件</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_installer_gui.py" line="246"/>
+        <location filename="../../AddonManagerTest/gui/test_installer_gui.py" line="232"/>
+        <source>Incompatible Python version</source>
+        <translation>Python 版本不相容</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_installer_gui.py" line="250"/>
+        <source>This Addon (or one if its dependencies) requires Python {}.{}, and your system is running {}.{}. Installation cancelled.</source>
+        <translation>此附加元件程式(或相依性)需要 Python {}.{}，而您的系統正在執行 {}.{}. 安裝已取消.</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_installer_gui.py" line="442"/>
+        <source>Installing Addon</source>
+        <translation>附加元件安裝中</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_installer_gui.py" line="443"/>
+        <source>Installing FreeCAD Addon &apos;{}&apos;</source>
+        <translation>FreeCAD 附加元件 &apos;{}&apos; 安裝中</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/addonmanager_installer_gui.py" line="638"/>
+        <source>This addon (or one of its dependencies) requires Python {}, and your system is running {}. Installation cancelled.</source>
+        <translation>此附加元件程式(或相依性)需要 Python {}，而您的系統正在執行.{}. 安裝已取消.</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_installer_gui.py" line="271"/>
+        <source>Optional dependency on {} ignored because it is not in the allow-list</source>
+        <translation>對 {} 的可選附加依賴被忽略，因為它不在允許清單中</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/addonmanager_installer_gui.py" line="700"/>
+        <source>Installing dependencies</source>
+        <comment>Window title</comment>
+        <translation>安裝相依性套件</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/addonmanager_installer_gui.py" line="701"/>
+        <source>Installing dependencies…</source>
+        <comment>Window text</comment>
+        <translation>安裝相依性套件…</translation>
+    </message>
+    <message>
+        <source>Cannot execute Python</source>
+        <translation>無法執行Python</translation>
+    </message>
+    <message>
+        <source>Failed to automatically locate your Python executable, or the path is set incorrectly. Please check the Addon Manager preferences setting for the path to Python.</source>
+        <translation>無法自動找到您的 Python 可執行文件，或路徑設定不正確. 請檢查 附加元件 偏好設定中的 Python 路徑.</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/addonmanager_installer_gui.py" line="730"/>
+        <source>Dependencies could not be installed. Continue with installation anyway?</source>
+        <translation>無法安裝相依性套件. 仍然繼續安裝?</translation>
+    </message>
+    <message>
+        <source>Cannot execute pip</source>
+        <translation>無法執行pip</translation>
+    </message>
+    <message>
+        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/addonmanager_installer_gui.py" line="370"/>
+        <source>Failed to execute pip, which may be missing from your Python installation. Please ensure your system has pip installed and try again. The failed command was:</source>
+        <translation>無法執行 pip，您的 Python 安裝中可能缺少該檔案. 請確保您的系統已安裝 pip，然後重試. 失敗的指令是:</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/addonmanager_installer_gui.py" line="755"/>
+        <source>Continue with addon installation anyway?</source>
+        <translation>仍然繼續安裝附加元件?</translation>
+    </message>
+    <message>
+        <source>Package installation failed</source>
+        <translation>套件安裝失敗</translation>
+    </message>
+    <message>
+        <source>See Report View for detailed failure log.</source>
+        <translation>有關詳細的故障日誌，請參閱報告檢視.</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/addonmanager_installer_gui.py" line="781"/>
+        <source>Continue with installation anyway?</source>
+        <translation>仍然繼續安裝?</translation>
     </message>
     <message>
         <location filename="../../addonmanager_installer.py" line="350"/>
@@ -687,11 +613,6 @@
         <translation>分支名稱</translation>
     </message>
     <message>
-        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/addonmanager_package_details_controller.py" line="125"/>
-        <source>Check for update</source>
-        <translation>檢查更新</translation>
-    </message>
-    <message>
         <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/addonmanager_package_details_controller.py" line="257"/>
         <source>Branch change succeeded.
 Moved
@@ -705,23 +626,18 @@ Please restart to use the new version.</source>
 請重新啟動以使用新版本.</translation>
     </message>
     <message>
-        <location filename="../../AddonManager.py" line="236"/>
-        <source>Starting up...</source>
-        <translation>啟動中...</translation>
+        <location filename="../../../../../../../Benson/sources/FreeCAD-1.1.0/src/Mod/AddonManager/AddonManager.py" line="255"/>
+        <source>Addon Manager v</source>
+        <translation>附加元件管理員 版本</translation>
     </message>
     <message>
-        <location filename="../../AddonManager.py" line="279"/>
-        <source>Loading addon information</source>
-        <translation>載入附加元件資訊</translation>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/AddonManager.py" line="342"/>
+        <source>Worker process {} is taking a long time to stop…</source>
+        <translation>作業程序 {} 需要很長時間才能停止...</translation>
     </message>
     <message>
-        <location filename="../../AddonManager.py" line="305"/>
-        <source>Worker process {} is taking a long time to stop...</source>
-        <translation>工作程序 {} 需要很長時間才能停止...</translation>
-    </message>
-    <message>
-        <location filename="../../AddonManager.py" line="435"/>
-        <source>Addon manager</source>
+        <location filename="../../AddonManager.py" line="125"/>
+        <source>Addon Manager</source>
         <translation>附加元件管理員</translation>
     </message>
     <message>
@@ -741,32 +657,9 @@ Please restart to use the new version.</source>
         <extra-po-references>../..</extra-po-references>
     </message>
     <message>
-        <location filename="../../AddonManager.py" line="516"/>
-        <location filename="../../AddonManager.py" line="987"/>
-        <source>Refresh local cache</source>
-        <translation>重整本地緩沖暫存</translation>
-    </message>
-    <message>
-        <location filename="../../AddonManager.py" line="706"/>
-        <source>Could not find addon &apos;{}&apos; to select
-</source>
-        <translation>找不到要選擇的附加元件&apos;{}&apos;
-</translation>
-    </message>
-    <message>
-        <location filename="../../AddonManager.py" line="766"/>
-        <source>Apply {} update(s)</source>
-        <translation>套用 {} 個更新</translation>
-    </message>
-    <message>
-        <location filename="../../AddonManager.py" line="775"/>
-        <source>No updates available</source>
-        <translation>無可用更新</translation>
-    </message>
-    <message>
-        <location filename="../../AddonManager.py" line="1027"/>
-        <source>Execution of macro failed. See console for failure details.</source>
-        <translation>巨集執行失敗. 請參閱控制台以了解故障詳細信息.</translation>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/AddonManager.py" line="433"/>
+        <source>Continuing startup</source>
+        <translation>持續啟動</translation>
     </message>
     <message>
         <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/AddonManager.py" line="524"/>
@@ -784,15 +677,20 @@ Please restart to use the new version.</source>
         <translation>建立巨集清單</translation>
     </message>
     <message>
-        <location filename="../../AddonManager.py" line="662"/>
-        <source>Updating cache...</source>
-        <translation>緩沖暫存更新中...</translation>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/AddonManager.py" line="488"/>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/AddonManager.py" line="523"/>
+        <source>Checking for updates…</source>
+        <translation>檢查更新...</translation>
     </message>
     <message>
-        <location filename="../../AddonManager.py" line="736"/>
-        <location filename="../../AddonManager.py" line="771"/>
-        <source>Checking for updates...</source>
-        <translation>檢查更新...</translation>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/AddonManager.py" line="554"/>
+        <source>Fetching addon stats</source>
+        <translation>擷取附加元件統計資料</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/AddonManager.py" line="571"/>
+        <source>Fetching addon score</source>
+        <translation>擷取附加元件積分</translation>
     </message>
     <message>
         <location filename="../../AddonManager.py" line="912"/>
@@ -807,39 +705,26 @@ Please restart to use the new version.</source>
         <translation>臨時巨集安裝失敗.</translation>
     </message>
     <message>
-        <location filename="../../manage_python_dependencies.py" line="166"/>
-        <source>New Python Version Detected</source>
-        <translation>偵測到新的 Python 版本</translation>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/AddonManager.py" line="786"/>
+        <source>The following auto-generated backups were found in your Mod directory:</source>
+        <translation>在您的 Mod 目錄中找到以下自動產生的備份:</translation>
     </message>
     <message>
-        <location filename="../../manage_python_dependencies.py" line="170"/>
-        <source>This appears to be the first time this version of Python has been used with the Addon Manager. Would you like to install the same auto-installed dependencies for it?</source>
-        <translation>這似乎是該版本的 Python 第一次與附加元件管理員一起使用. 您想為其安裝相同的自動安裝相依元件嗎?</translation>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/AddonManager.py" line="791"/>
+        <source>Do you want to delete them now?</source>
+        <translation>您是否要現在刪除它們?</translation>
     </message>
     <message>
-        <location filename="../../manage_python_dependencies.py" line="202"/>
-        <source>Processing, please wait...</source>
-        <translation>進行中, 請稍候...</translation>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/AddonManager.py" line="803"/>
+        <source>Always</source>
+        <comment>&apos;Always&apos; delete old backups</comment>
+        <translation>總是</translation>
     </message>
     <message>
-        <location filename="../../package_details.py" line="917"/>
-        <source>Update</source>
-        <translation>更新</translation>
-    </message>
-    <message>
-        <location filename="../../manage_python_dependencies.py" line="355"/>
-        <source>Updating...</source>
-        <translation>更新中...</translation>
-    </message>
-    <message>
-        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/addonmanager_readme_controller.py" line="83"/>
-        <source>Loading info for {} from the FreeCAD Macro Recipes wiki...</source>
-        <translation>從 FreeCAD Macro Recipes wiki 載入 {} 的訊息...</translation>
-    </message>
-    <message>
-        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/addonmanager_readme_controller.py" line="82"/>
-        <source>Loading page for {} from {}...</source>
-        <translation>正在從 {} 載入 {} 頁面...</translation>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/AddonManager.py" line="806"/>
+        <source>Never</source>
+        <comment>&apos;Never&apos; delete old backups</comment>
+        <translation>永不</translation>
     </message>
     <message>
         <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/addonmanager_readme_viewer.py" line="60"/>
@@ -850,6 +735,11 @@ Please restart to use the new version.</source>
         <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/addonmanager_readme_viewer.py" line="84"/>
         <source>Failed to download data from {} -- received response code {}.</source>
         <translation>無法從 {} 下載資料 -- 收到回應碼 {}.</translation>
+    </message>
+    <message>
+        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/addonmanager_readme_controller.py" line="82"/>
+        <source>Loading page for {} from {}...</source>
+        <translation>正在從 {} 載入 {} 頁面...</translation>
     </message>
     <message>
         <location filename="../../addonmanager_uninstaller_gui.py" line="84"/>
@@ -903,7 +793,8 @@ Please restart to use the new version.</source>
         <translation>嘗試刪除巨集檔案 {} 時出錯: </translation>
     </message>
     <message>
-        <source>Execution of Addon&apos;s uninstall.py script failed. Proceeding with uninstall...</source>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/addonmanager_uninstaller.py" line="160"/>
+        <source>Execution of addon&apos;s uninstall.py script failed. Proceeding with uninstall...</source>
         <translation>附加元件 的 uninstall.py 腳本執行失敗. 繼續移除安裝...</translation>
     </message>
     <message>
@@ -927,14 +818,6 @@ Please restart to use the new version.</source>
         <translation>安裝中</translation>
     </message>
     <message>
-        <source>Succeeded</source>
-        <translation>成功</translation>
-    </message>
-    <message>
-        <source>Failed</source>
-        <translation>失敗</translation>
-    </message>
-    <message>
         <location filename="../../addonmanager_update_all_gui.py" line="200"/>
         <source>Update was cancelled</source>
         <translation>更新已取消</translation>
@@ -945,23 +828,42 @@ Please restart to use the new version.</source>
         <translation>某些附加元件可能已經被更新了</translation>
     </message>
     <message>
-        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/addonmanager_workers_installation.py" line="184"/>
-        <source>Downloaded {} for {}</source>
-        <translation>已下載 {} 的 {}</translation>
+        <source>Succeeded</source>
+        <translation>成功</translation>
     </message>
     <message>
-        <location filename="../../addonmanager_workers_installation.py" line="220"/>
-        <source>Failed to decode {} file for Addon &apos;{}&apos;</source>
-        <translation>無法解碼文件 {} 於附加元件 &apos;{}&apos;</translation>
+        <source>Failed</source>
+        <translation>失敗</translation>
     </message>
     <message>
-        <location filename="../../addonmanager_workers_installation.py" line="229"/>
-        <source>Any dependency information in this file will be ignored</source>
-        <translation>該文件中的任何依賴資訊都將被忽略</translation>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/addonmanager_update_all_gui.py" line="409"/>
+        <source>Name</source>
+        <comment>Column header</comment>
+        <translation>名稱</translation>
     </message>
     <message>
-        <source>Failed to connect to GitHub. Check your connection and proxy settings.</source>
-        <translation>無法連線到 GitHub. 檢查您的連線和代理設定.</translation>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/addonmanager_update_all_gui.py" line="410"/>
+        <source>Installed Version</source>
+        <comment>Column header</comment>
+        <translation>已安裝版本</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/addonmanager_update_all_gui.py" line="411"/>
+        <source>Available Version</source>
+        <comment>Column header</comment>
+        <translation>可用版本</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/addonmanager_update_all_gui.py" line="412"/>
+        <source>Update?</source>
+        <comment>Column header</comment>
+        <translation>更新?</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/addonmanager_update_all_gui.py" line="413"/>
+        <source>Done</source>
+        <comment>Column header</comment>
+        <translation>完成</translation>
     </message>
     <message>
         <location filename="../../addonmanager_workers_startup.py" line="182"/>
@@ -979,36 +881,11 @@ Please restart to use the new version.</source>
         <translation>git 狀態失敗 {}</translation>
     </message>
     <message>
-        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/addonmanager_workers_startup.py" line="284"/>
-        <source>Git is disabled, skipping Git macros</source>
-        <translation>Git 被停用，略過 Git 巨集</translation>
-    </message>
-    <message>
-        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/addonmanager_workers_startup.py" line="332"/>
-        <source>Attempting to change non-Git Macro setup to use Git
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/addonmanager_workers_startup.py" line="232"/>
+        <source>WARNING: Custom addon &apos;{}&apos; is overriding the one in the official addon catalog
 </source>
-        <translation>嘗試變更非 Git 巨集設定以使用 Git
+        <translation>警告: 自訂附加元件 &apos;{}&apos; 會取代官方附加元件目錄中的附加元件
 </translation>
-    </message>
-    <message>
-        <source>An error occurred updating macros from GitHub, trying clean checkout...</source>
-        <translation>從 GitHub 更新巨集時發生錯誤，嘗試乾淨簽出...</translation>
-    </message>
-    <message>
-        <source>Attempting to do a clean checkout...</source>
-        <translation>嘗試進行乾淨的簽出...</translation>
-    </message>
-    <message>
-        <source>Clean checkout succeeded</source>
-        <translation>清除檢查成功</translation>
-    </message>
-    <message>
-        <source>Failed to update macros from GitHub -- try clearing the Addon Manager&apos;s cache.</source>
-        <translation>無法從 GitHub 更新巨集 - 嘗試清除附加元件管理員的快取.</translation>
-    </message>
-    <message>
-        <source>Error connecting to the Wiki, FreeCAD cannot retrieve the Wiki macro list at this time</source>
-        <translation>連接到 Wiki 時發生錯誤，FreeCAD 此時無法擷取 Wiki 巨集列表</translation>
     </message>
     <message>
         <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/addonmanager_workers_startup.py" line="548"/>
@@ -1026,31 +903,6 @@ Please restart to use the new version.</source>
         <translation>Git 狀態失敗 {}</translation>
     </message>
     <message>
-        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/addonmanager_workers_startup.py" line="912"/>
-        <source>Retrieving info from Git</source>
-        <translation>從 git 中檢索訊息</translation>
-    </message>
-    <message>
-        <source>Failed to read metadata from {name}</source>
-        <translation>無法從 {name} 讀取中繼資料</translation>
-    </message>
-    <message>
-        <source>Failed to fetch code for macro &apos;{name}&apos;</source>
-        <translation>無法取得巨集「{name}」的程式碼</translation>
-    </message>
-    <message>
-        <source>Addon Manager: a worker process failed to complete while fetching {name}</source>
-        <translation>附加元件管理員: 取得 {name} 時工作程序無法完成</translation>
-    </message>
-    <message>
-        <source>Out of {num_macros} macros, {num_failed} timed out while processing</source>
-        <translation>在 {num_macros} 個巨集中，{num_failed} 個在處理時逾時</translation>
-    </message>
-    <message>
-        <source>Addon Manager: a worker process failed to halt ({name})</source>
-        <translation>附加元件管理員: 工作程序未能停止 ({name})</translation>
-    </message>
-    <message>
         <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/addonmanager_workers_startup.py" line="845"/>
         <source>Caching {} macro</source>
         <translation>緩沖 {} 巨集代碼</translation>
@@ -1061,14 +913,9 @@ Please restart to use the new version.</source>
         <translation>巨集快取</translation>
     </message>
     <message>
-        <source>Timeout while fetching metadata for macro {}</source>
-        <translation>取得巨集 {} 的中繼資料時逾時</translation>
-    </message>
-    <message>
-        <source>Failed to kill process for macro {}!
-</source>
-        <translation>無法終止巨集程序 {}!
-</translation>
+        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/addonmanager_workers_startup.py" line="912"/>
+        <source>Retrieving info from Git</source>
+        <translation>從 git 中檢索訊息</translation>
     </message>
     <message>
         <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/addonmanager_workers_startup.py" line="938"/>
@@ -1085,8 +932,26 @@ Please restart to use the new version.</source>
 </translation>
     </message>
     <message>
-        <source>Unable to read data from GitHub: check your internet connection and proxy settings and try again.</source>
-        <translation>無法從 GitHub 讀取資料: 檢查您的網路連線和代理設定，然後重試.</translation>
+        <source>Failed to read metadata from {name}</source>
+        <translation>無法從 {name} 讀取中繼資料</translation>
+    </message>
+    <message>
+        <source>Failed to fetch code for macro &apos;{name}&apos;</source>
+        <translation>無法取得巨集「{name}」的程式碼</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/addonmanager_workers_startup.py" line="566"/>
+        <source>Failed to get addon statistics from {} -- only sorting alphabetically will be accurate
+</source>
+        <translation>無法從 {} 取得附加元件統計資料 -- 只有按字母順序排序才是準確的
+</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/addonmanager_workers_startup.py" line="605"/>
+        <source>Failed to get addon score from &apos;{}&apos; -- sorting by score will fail
+</source>
+        <translation>無法從「{}」取得 附加元件 評價分數 -- 按評價排序將失敗
+</translation>
     </message>
     <message>
         <location filename="../../Addon.py" line="392"/>
@@ -1162,16 +1027,6 @@ Please restart to use the new version.</source>
         <translation>最近更新</translation>
     </message>
     <message>
-        <location filename="../../NetworkManager.py" line="96"/>
-        <source>Could not import QtNetwork -- it does not appear to be installed on your system. Your provider may have a package for this dependency (often called &quot;python3-pyside2.qtnetwork&quot;)</source>
-        <translation>無法匯入 QtNetwork -- 它似乎沒有安裝在您的系統上. 您的提供者可能有一個用於此依賴的套件 (通常稱為&quot;python3-pyside2.qtnetwork&quot;)</translation>
-    </message>
-    <message>
-        <location filename="../../NetworkManager.py" line="221"/>
-        <source>Failed to convert the specified proxy port &apos;{}&apos; to a port number</source>
-        <translation>無法將指定的代理埠&quot;{}&quot;轉換為連接埠編號</translation>
-    </message>
-    <message>
         <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/NetworkManager.py" line="233"/>
         <source>Failed to parse proxy URL &apos;{}&apos;</source>
         <translation>無法解析代理 URL網址 &apos;{}&apos;</translation>
@@ -1197,96 +1052,452 @@ Please restart to use the new version.</source>
         <translation>加密連線出錯</translation>
     </message>
     <message>
-        <source>Click for details about package {}</source>
-        <translation>點擊查看套件 {} 詳細資料</translation>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/addonmanager_python_deps.py" line="297"/>
+        <source>Package</source>
+        <translation>套件</translation>
     </message>
     <message>
-        <source>Click for details about workbench {}</source>
-        <translation>點擊查看工作台 {} 詳細資料</translation>
-    </message>
-    <message>
-        <source>Click for details about macro {}</source>
-        <translation>點擊查看巨集 {} 詳細資料</translation>
-    </message>
-    <message>
-        <source>Tags</source>
-        <translation>標籤</translation>
-    </message>
-    <message>
-        <source>Maintainers:</source>
-        <translation>維護者：</translation>
-    </message>
-    <message>
-        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/package_list.py" line="372"/>
-        <source>{} ★ on GitHub</source>
-        <translation>{} ★ 在 GitHub 上</translation>
-    </message>
-    <message>
-        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/package_list.py" line="374"/>
-        <source>No ★, or not on GitHub</source>
-        <translation>無 ★，或不在 GitHub 上</translation>
-    </message>
-    <message>
-        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/package_list.py" line="379"/>
-        <source>Created </source>
-        <translation>已建立 </translation>
-    </message>
-    <message>
-        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/package_list.py" line="387"/>
-        <source>Updated </source>
-        <translation>已更新 </translation>
-    </message>
-    <message>
-        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/package_list.py" line="390"/>
-        <source>Rank: </source>
-        <translation>評價: </translation>
-    </message>
-    <message>
-        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/package_list.py" line="394"/>
-        <source>Score: </source>
-        <translation>積分: </translation>
-    </message>
-    <message>
-        <location filename="../../package_list.py" line="822"/>
-        <source>Installed</source>
-        <translation>己安裝</translation>
-    </message>
-    <message>
-        <source>Up-to-date</source>
-        <translation>已同步</translation>
-    </message>
-    <message>
-        <source>Update available</source>
-        <translation>有可用更新</translation>
-    </message>
-    <message>
-        <source>Pending restart</source>
-        <translation>等待重啟</translation>
-    </message>
-    <message>
-        <source>DISABLED</source>
-        <translation>停用</translation>
-    </message>
-    <message>
-        <source>Installed version</source>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/addonmanager_python_deps.py" line="299"/>
+        <source>Installed Version</source>
         <translation>已安裝版本</translation>
     </message>
     <message>
-        <source>Unknown version</source>
-        <translation>未知版本</translation>
-    </message>
-    <message>
-        <source>Installed on</source>
-        <translation>己安裝於</translation>
-    </message>
-    <message>
-        <source>Available version</source>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/addonmanager_python_deps.py" line="301"/>
+        <source>Available Version</source>
         <translation>可用版本</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/addonmanager_python_deps.py" line="303"/>
+        <source>Dependencies</source>
+        <translation>相依性</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/addonmanager_workers_utility.py" line="82"/>
+        <source>Unable to read data from addons.freecad.org. The server may be down, or you may not be connected to the internet.</source>
+        <translation>無法從 addons.freecad.org 讀取資料. 伺服器可能當機，或您未連線至網際網路.</translation>
+    </message>
+    <message>
+        <location filename="../../AddonManager.py" line="236"/>
+        <source>Starting up...</source>
+        <translation>啟動中...</translation>
+    </message>
+    <message>
+        <location filename="../../AddonManager.py" line="279"/>
+        <source>Loading addon information</source>
+        <translation>載入附加元件資訊</translation>
+    </message>
+    <message>
+        <location filename="../../AddonManager.py" line="305"/>
+        <source>Worker process {} is taking a long time to stop...</source>
+        <translation>工作程序 {} 需要很長時間才能停止...</translation>
+    </message>
+    <message>
+        <location filename="../../AddonManager.py" line="363"/>
+        <source>Previous cache process was interrupted, restarting...
+</source>
+        <translation>之前的快取程序中斷，正在重新啟動...
+</translation>
+    </message>
+    <message>
+        <location filename="../../AddonManager.py" line="382"/>
+        <source>Custom repo list changed, forcing recache...
+</source>
+        <translation>自訂儲存庫清單已更改，強制重新緩存...
+</translation>
+    </message>
+    <message>
+        <location filename="../../AddonManager.py" line="435"/>
+        <source>Addon manager</source>
+        <translation>附加元件管理員</translation>
+    </message>
+    <message>
+        <location filename="../../AddonManager.py" line="516"/>
+        <location filename="../../AddonManager.py" line="987"/>
+        <source>Refresh local cache</source>
+        <translation>重整本地緩沖暫存</translation>
+    </message>
+    <message>
+        <location filename="../../AddonManager.py" line="662"/>
+        <source>Updating cache...</source>
+        <translation>緩沖暫存更新中...</translation>
+    </message>
+    <message>
+        <location filename="../../AddonManager.py" line="706"/>
+        <source>Could not find addon &apos;{}&apos; to select
+</source>
+        <translation>找不到要選擇的附加元件&apos;{}&apos;
+</translation>
+    </message>
+    <message>
+        <location filename="../../AddonManager.py" line="736"/>
+        <location filename="../../AddonManager.py" line="771"/>
+        <source>Checking for updates...</source>
+        <translation>檢查更新...</translation>
+    </message>
+    <message>
+        <location filename="../../AddonManager.py" line="766"/>
+        <source>Apply {} update(s)</source>
+        <translation>套用 {} 個更新</translation>
+    </message>
+    <message>
+        <location filename="../../AddonManager.py" line="775"/>
+        <source>No updates available</source>
+        <translation>無可用更新</translation>
+    </message>
+    <message>
+        <location filename="../../AddonManager.py" line="1027"/>
+        <source>Execution of macro failed. See console for failure details.</source>
+        <translation>巨集執行失敗. 請參閱控制台以了解故障詳細信息.</translation>
+    </message>
+    <message>
+        <source>Checking for connection to GitHub...</source>
+        <translation>檢查與 GitHub 的連線...</translation>
+    </message>
+    <message>
+        <source>Missing dependency</source>
+        <translation>缺少相依性</translation>
+    </message>
+    <message>
+        <source>Could not import QtNetwork -- see Report View for details. Addon Manager unavailable.</source>
+        <translation>無法匯入 QtNetwork - 有關詳細信息，請參閱報告檢視. 附加元件管理員不可用.</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode_add_content.py" line="137"/>
+        <source>Unrecognized content kind &apos;{}&apos;</source>
+        <translation>無法辨識的內容類型 &apos;{}&apos;</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode_add_content.py" line="202"/>
+        <source>Unable to locate icon at {}</source>
+        <translation>找不到圖示 {}</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode_add_content.py" line="279"/>
+        <source>Select an icon file for this content item</source>
+        <translation>為此內容項目選擇一個圖示檔案</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode_add_content.py" line="293"/>
+        <location filename="../../addonmanager_devmode_add_content.py" line="332"/>
+        <location filename="../../addonmanager_devmode.py" line="732"/>
+        <source>{} is not a subdirectory of {}</source>
+        <translation>{} 不是 {} 的子目錄</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode_add_content.py" line="311"/>
+        <source>Select the subdirectory for this content item</source>
+        <translation>選擇該內容項目的子目錄</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode_add_content.py" line="452"/>
+        <source>Automatic</source>
+        <translation>自動</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode_add_content.py" line="453"/>
+        <source>Workbench</source>
+        <translation>工作台</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode_add_content.py" line="454"/>
+        <source>Addon</source>
+        <translation>附加元件</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode_add_content.py" line="455"/>
+        <source>Python</source>
+        <translation>Python</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode_add_content.py" line="465"/>
+        <source>Yes</source>
+        <translation>確定</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode_add_content.py" line="521"/>
+        <source>Internal Workbench</source>
+        <translation>内部工作台</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode_add_content.py" line="524"/>
+        <source>External Addon</source>
+        <translation>外部附加元件</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode_add_content.py" line="527"/>
+        <source>Python Package</source>
+        <translation>Python 套件</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode_add_content.py" line="597"/>
+        <location filename="../../addonmanager_devmode_add_content.py" line="610"/>
+        <source>Other...</source>
+        <translation>其它...</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode_license_selector.py" line="114"/>
+        <source>Other...</source>
+        <comment>For providing a license other than one listed</comment>
+        <translation>其它...</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode_license_selector.py" line="208"/>
+        <source>Select the corresponding license file in your Addon</source>
+        <translation>在您的Addon中選擇相應的授權文件</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode_license_selector.py" line="241"/>
+        <source>Location for new license file</source>
+        <translation>新許可證文件的位置</translation>
+    </message>
+    <message>
+        <location filename="../../../../../../../Benson/sources/FreeCAD-1.1.0/src/Mod/AddonManager/addonmanager_devmode.py" line="183"/>
+        <source>Failure while reading metadata from file {}</source>
+        <translation>從檔案 {} 讀取metadata元資料時失敗</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode.py" line="197"/>
+        <source>XML failure while reading metadata from file {}</source>
+        <translation>從檔案 {} 讀取中繼資料時 XML 失敗</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode.py" line="204"/>
+        <source>Invalid metadata in file {}</source>
+        <translation>文件 {} 中的中繼資料無效</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode.py" line="246"/>
+        <source>WARNING: Path specified in package.xml metadata does not match currently checked-out branch.</source>
+        <translation>警告: package.xml 中繼資料中指定的路徑與目前簽出的分支不匹配.</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode.py" line="268"/>
+        <source>Name</source>
+        <translation>名稱</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode.py" line="271"/>
+        <source>Class</source>
+        <translation>類別</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode.py" line="276"/>
+        <source>Description</source>
+        <translation>描述</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode.py" line="282"/>
+        <source>Subdirectory</source>
+        <translation>子目錄</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode.py" line="288"/>
+        <source>Files</source>
+        <translation>檔案</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode.py" line="464"/>
+        <source>Select the folder containing your Addon</source>
+        <translation>選擇包含您的外掛程式的資料夾</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode.py" line="593"/>
+        <source>No Vermin, cancelling operation.</source>
+        <comment>NOTE: Vermin is a Python package and proper noun - do not translate</comment>
+        <translation>無 Vermin，正在取消操作.</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode.py" line="600"/>
+        <source>Scanning Addon for Python version compatibility</source>
+        <translation>掃描附加元件以取得 Python 版本相容性</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode.py" line="631"/>
+        <source>Minimum Python Version Detected</source>
+        <translation>偵測到 Python 最低版本</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode.py" line="635"/>
+        <source>Vermin auto-detected a required version of Python 3.{}</source>
+        <translation>Vermin 自動偵測所需的 Python 3 版本. {}</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode.py" line="647"/>
+        <source>Install Vermin?</source>
+        <translation>安裝 Vermin?</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode.py" line="651"/>
+        <source>Auto-detecting the required version of Python for this Addon requires Vermin (https://pypi.org/project/vermin/). OK to install?</source>
+        <translation>自動偵測此附加元件所需的 Python 版本需要 Vermin (https://pypi.org/project/vermin/). 確定安裝?</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode.py" line="658"/>
+        <source>Attempting to install Vermin from PyPi</source>
+        <translation>嘗試從 PyPi 安裝 Vermin</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode.py" line="690"/>
+        <source>Failed to install Vermin -- check Report View for details.</source>
+        <comment>&apos;Vermin&apos; is the name of a Python package, do not translate</comment>
+        <translation>安裝 Vermin 失敗 - 檢查報告檢視以了解詳細信息.</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode.py" line="705"/>
+        <source>Failed to import vermin after installation -- cannot scan Addon.</source>
+        <comment>&apos;vermin&apos; is the name of a Python package, do not translate</comment>
+        <translation>安裝後無法導入Vermin -- 無法掃描附加元件.</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_devmode.py" line="718"/>
+        <source>Select an icon file for this package</source>
+        <translation>為此套件選擇一個圖示檔案</translation>
+    </message>
+    <message>
+        <source>Installation failed</source>
+        <translation>安裝失敗</translation>
     </message>
     <message>
         <location filename="../../addonmanager_git.py" line="98"/>
         <source>Basic git update failed with the following message:</source>
         <translation>基本 git 更新失敗並顯示以下訊息:</translation>
+    </message>
+    <message>
+        <source>Installing dependencies</source>
+        <translation>安裝相依性套件</translation>
+    </message>
+    <message>
+        <source>Dependencies could not be installed. Continue with installation of {} anyway?</source>
+        <translation>無法安裝相依性套件. 仍然繼續安裝 {}?</translation>
+    </message>
+    <message>
+        <source>Continue with installation of {} anyway?</source>
+        <translation>仍然繼續安裝 {}?</translation>
+    </message>
+    <message>
+        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/addonmanager_package_details_controller.py" line="125"/>
+        <source>Check for update</source>
+        <translation>檢查更新</translation>
+    </message>
+    <message>
+        <location filename="../../manage_python_dependencies.py" line="166"/>
+        <source>New Python Version Detected</source>
+        <translation>偵測到新的 Python 版本</translation>
+    </message>
+    <message>
+        <location filename="../../manage_python_dependencies.py" line="170"/>
+        <source>This appears to be the first time this version of Python has been used with the Addon Manager. Would you like to install the same auto-installed dependencies for it?</source>
+        <translation>這似乎是該版本的 Python 第一次與附加元件管理員一起使用. 您想為其安裝相同的自動安裝相依元件嗎?</translation>
+    </message>
+    <message>
+        <location filename="../../manage_python_dependencies.py" line="202"/>
+        <source>Processing, please wait...</source>
+        <translation>進行中, 請稍候...</translation>
+    </message>
+    <message>
+        <location filename="../../manage_python_dependencies.py" line="355"/>
+        <source>Updating...</source>
+        <translation>更新中...</translation>
+    </message>
+    <message>
+        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/addonmanager_readme_controller.py" line="83"/>
+        <source>Loading info for {} from the FreeCAD Macro Recipes wiki...</source>
+        <translation>從 FreeCAD Macro Recipes wiki 載入 {} 的訊息...</translation>
+    </message>
+    <message>
+        <source>Execution of Addon&apos;s uninstall.py script failed. Proceeding with uninstall...</source>
+        <translation>附加元件 的 uninstall.py 腳本執行失敗. 繼續移除安裝...</translation>
+    </message>
+    <message>
+        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/addonmanager_workers_installation.py" line="184"/>
+        <source>Downloaded {} for {}</source>
+        <translation>已下載 {} 的 {}</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_workers_installation.py" line="220"/>
+        <source>Failed to decode {} file for Addon &apos;{}&apos;</source>
+        <translation>無法解碼文件 {} 於附加元件 &apos;{}&apos;</translation>
+    </message>
+    <message>
+        <location filename="../../addonmanager_workers_installation.py" line="229"/>
+        <source>Any dependency information in this file will be ignored</source>
+        <translation>該文件中的任何依賴資訊都將被忽略</translation>
+    </message>
+    <message>
+        <source>Failed to connect to GitHub. Check your connection and proxy settings.</source>
+        <translation>無法連線到 GitHub. 檢查您的連線和代理設定.</translation>
+    </message>
+    <message>
+        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/addonmanager_workers_startup.py" line="284"/>
+        <source>Git is disabled, skipping Git macros</source>
+        <translation>Git 被停用，略過 Git 巨集</translation>
+    </message>
+    <message>
+        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/addonmanager_workers_startup.py" line="332"/>
+        <source>Attempting to change non-Git Macro setup to use Git
+</source>
+        <translation>嘗試變更非 Git 巨集設定以使用 Git
+</translation>
+    </message>
+    <message>
+        <source>An error occurred updating macros from GitHub, trying clean checkout...</source>
+        <translation>從 GitHub 更新巨集時發生錯誤，嘗試乾淨簽出...</translation>
+    </message>
+    <message>
+        <source>Attempting to do a clean checkout...</source>
+        <translation>嘗試進行乾淨的簽出...</translation>
+    </message>
+    <message>
+        <source>Clean checkout succeeded</source>
+        <translation>清除檢查成功</translation>
+    </message>
+    <message>
+        <source>Failed to update macros from GitHub -- try clearing the Addon Manager&apos;s cache.</source>
+        <translation>無法從 GitHub 更新巨集 - 嘗試清除附加元件管理員的快取.</translation>
+    </message>
+    <message>
+        <source>Error connecting to the Wiki, FreeCAD cannot retrieve the Wiki macro list at this time</source>
+        <translation>連接到 Wiki 時發生錯誤，FreeCAD 此時無法擷取 Wiki 巨集列表</translation>
+    </message>
+    <message>
+        <source>Addon Manager: a worker process failed to complete while fetching {name}</source>
+        <translation>附加元件管理員: 取得 {name} 時工作程序無法完成</translation>
+    </message>
+    <message>
+        <source>Out of {num_macros} macros, {num_failed} timed out while processing</source>
+        <translation>在 {num_macros} 個巨集中，{num_failed} 個在處理時逾時</translation>
+    </message>
+    <message>
+        <source>Addon Manager: a worker process failed to halt ({name})</source>
+        <translation>附加元件管理員: 工作程序未能停止 ({name})</translation>
+    </message>
+    <message>
+        <source>Timeout while fetching metadata for macro {}</source>
+        <translation>取得巨集 {} 的中繼資料時逾時</translation>
+    </message>
+    <message>
+        <source>Failed to kill process for macro {}!
+</source>
+        <translation>無法終止巨集程序 {}!
+</translation>
+    </message>
+    <message>
+        <source>Unable to read data from GitHub: check your internet connection and proxy settings and try again.</source>
+        <translation>無法從 GitHub 讀取資料: 檢查您的網路連線和代理設定，然後重試.</translation>
+    </message>
+    <message>
+        <location filename="../../NetworkManager.py" line="96"/>
+        <source>Could not import QtNetwork -- it does not appear to be installed on your system. Your provider may have a package for this dependency (often called &quot;python3-pyside2.qtnetwork&quot;)</source>
+        <translation>無法匯入 QtNetwork -- 它似乎沒有安裝在您的系統上. 您的提供者可能有一個用於此依賴的套件 (通常稱為&quot;python3-pyside2.qtnetwork&quot;)</translation>
+    </message>
+    <message>
+        <location filename="../../NetworkManager.py" line="221"/>
+        <source>Failed to convert the specified proxy port &apos;{}&apos; to a port number</source>
+        <translation>無法將指定的代理埠&quot;{}&quot;轉換為連接埠編號</translation>
+    </message>
+    <message>
+        <source>Installed on</source>
+        <translation>己安裝於</translation>
     </message>
     <message>
         <source>Downloaded package.xml for {}</source>
@@ -1684,17 +1895,22 @@ Please restart to use the new version.</source>
         <translation>&lt;b&gt;套件名稱&lt;/b&gt;</translation>
     </message>
     <message>
+        <location filename="../../compact_view.py" line="88"/>
+        <source>Update Available</source>
+        <translation>有可用更新</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/compact_view.ui" line="66"/>
+        <source>&lt;b&gt;Package name&lt;/b&gt;</source>
+        <translation>&lt;b&gt;套件名稱&lt;/b&gt;</translation>
+    </message>
+    <message>
         <source>Version</source>
         <translation>版本</translation>
     </message>
     <message>
         <source>Description</source>
         <translation>說明</translation>
-    </message>
-    <message>
-        <location filename="../../compact_view.py" line="88"/>
-        <source>Update Available</source>
-        <translation>有可用更新</translation>
     </message>
     <message>
         <source>UpdateAvailable</source>
@@ -1745,11 +1961,6 @@ Do you want the Addon Manager to install them automatically? Choose &quot;Ignore
 您希望附加元件管理員自動安裝它們嗎? 選擇“忽略”安裝附加元件而不安裝依賴項目.</translation>
     </message>
     <message>
-        <location filename="../../dependency_resolution_dialog.ui" line="43"/>
-        <source>FreeCAD Addons</source>
-        <translation>FreeCAD 附加元件</translation>
-    </message>
-    <message>
         <location filename="../../dependency_resolution_dialog.ui" line="55"/>
         <source>Required Python modules</source>
         <translation>需要 Python 模組</translation>
@@ -1757,6 +1968,30 @@ Do you want the Addon Manager to install them automatically? Choose &quot;Ignore
     <message>
         <location filename="../../dependency_resolution_dialog.ui" line="67"/>
         <source>Optional Python modules</source>
+        <translation>可選 Python 模組</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/dependency_resolution_dialog.ui" line="29"/>
+        <source>This installation/update has the following required and optional dependencies.
+
+Do you want the Addon Manager to install them automatically? Choose &quot;Ignore&quot; to install/update without installing the dependencies.</source>
+        <translation>此安裝/更新有下列必要和可選的相依性.
+
+您希望 附加元件管理員 自動安裝這些依賴項目嗎? 選擇「忽略」以安裝/更新而不安裝依賴項目.</translation>
+    </message>
+    <message>
+        <location filename="../../dependency_resolution_dialog.ui" line="43"/>
+        <source>FreeCAD Addons</source>
+        <translation>FreeCAD 附加元件</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/dependency_resolution_dialog.ui" line="55"/>
+        <source>Required Python Modules</source>
+        <translation>需要 Python 模組</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/dependency_resolution_dialog.ui" line="67"/>
+        <source>Optional Python Modules</source>
         <translation>可選 Python 模組</translation>
     </message>
 </context>
@@ -1967,6 +2202,58 @@ Do you want the Addon Manager to install them automatically? Choose &quot;Ignore
         <translation>關閉</translation>
     </message>
     <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/first_run.ui" line="17"/>
+        <source>Addon Manager Warning</source>
+        <translation>附加元件管理員 警告</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/first_run.ui" line="59"/>
+        <source>The Addon Manager provides access to an extensive library of useful third-party FreeCAD extensions. No guarantees can be made regarding their safety or functionality.</source>
+        <translation>附加元件管理員提供對有用的第三方 FreeCAD 擴充功能的廣泛函式庫的存取. 無法保證其安全性或功能性.</translation>
+    </message>
+    <message>
+        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/first_run.ui" line="96"/>
+        <source>Continue</source>
+        <translation>繼續</translation>
+    </message>
+    <message>
+        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/first_run.ui" line="103"/>
+        <source>Cancel</source>
+        <translation>取消</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/progress.ui" line="14"/>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/update_all_progress.ui" line="14"/>
+        <source>Updating Addons</source>
+        <translation>附加元件更新中</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/progress.ui" line="23"/>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/update_all_progress.ui" line="23"/>
+        <source>Updating Addons…</source>
+        <translation>附加元件更新中…</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/update_all.ui" line="14"/>
+        <source>Update Addons</source>
+        <translation>更新附加元件</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/update_all.ui" line="26"/>
+        <source>Addons with available updates</source>
+        <translation>附加元件有可用更新</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/update_all.ui" line="49"/>
+        <source>Update selected addons</source>
+        <translation>更新已選取附加元件</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/update_all.ui" line="56"/>
+        <source>(Note that addon authors sometimes do not update the version number on each update, so the available and installed versions may appear the same.)</source>
+        <translation>(請注意，附加元件作者有時不會在每次更新時更新版本號，因此可用版本和已安裝版本可能看起來是一樣的.)</translation>
+    </message>
+    <message>
         <location filename="../../developer_mode_tags.ui" line="14"/>
         <source>Edit Tags</source>
         <translation>編輯標籤</translation>
@@ -1991,16 +2278,6 @@ Do you want the Addon Manager to install them automatically? Choose &quot;Ignore
         <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/first_run.ui" line="62"/>
         <source>The Add-on Manager provides access to an extensive library of useful third-party FreeCAD extensions. No guarantees can be made regarding their safety or functionality.</source>
         <translation>附加元件管理員提供對有用的第三方 FreeCAD 擴充功能的廣泛函式庫的存取. 無法保證其安全性或功能性.</translation>
-    </message>
-    <message>
-        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/first_run.ui" line="96"/>
-        <source>Continue</source>
-        <translation>繼續</translation>
-    </message>
-    <message>
-        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/first_run.ui" line="103"/>
-        <source>Cancel</source>
-        <translation>取消</translation>
     </message>
     <message>
         <location filename="../../first_run.ui" line="17"/>
@@ -2098,17 +2375,22 @@ Do you want the Addon Manager to install them automatically? Choose &quot;Ignore
         <translation>&lt;h1&gt;套件名稱&lt;/h1&gt;</translation>
     </message>
     <message>
+        <location filename="../../expanded_view.py" line="129"/>
+        <source>Update Available</source>
+        <translation>有可用更新</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/expanded_view.ui" line="101"/>
+        <source>&lt;h1&gt;Package name&lt;/h1&gt;</source>
+        <translation>&lt;h1&gt;套件名稱&lt;/h1&gt;</translation>
+    </message>
+    <message>
         <source>Version</source>
         <translation>版本</translation>
     </message>
     <message>
         <source>(tags)</source>
         <translation>(標籤)</translation>
-    </message>
-    <message>
-        <location filename="../../expanded_view.py" line="129"/>
-        <source>Update Available</source>
-        <translation>有可用更新</translation>
     </message>
     <message>
         <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/expanded_view.ui" line="128"/>
@@ -2224,6 +2506,57 @@ Do you want the Addon Manager to install them automatically? Choose &quot;Ignore
 <context>
     <name>Gui::Dialog::DlgSettingsAddonManager</name>
     <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/AddonManagerOptions.ui" line="14"/>
+        <source>Addon Manager Options</source>
+        <translation>附加元件管理員選項</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/AddonManagerOptions.ui" line="32"/>
+        <source>Hide addons without a license</source>
+        <translation>隱藏沒有許可證的附加元件</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/AddonManagerOptions.ui" line="48"/>
+        <source>Hide addons with non-FSF free/libre license</source>
+        <translation>隱藏具有非 FSF Free/Libre 許可證的附加元件</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/AddonManagerOptions.ui" line="64"/>
+        <source>Hide addons with non-OSI-approved license</source>
+        <translation>隱藏具有未經 OSI 批准的許可證的附加元件</translation>
+    </message>
+    <message>
+        <source>Custom repositories</source>
+        <translation>自訂存儲庫</translation>
+    </message>
+    <message>
+        <source>Proxy</source>
+        <translation>代理伺服器</translation>
+    </message>
+    <message>
+        <source>No proxy</source>
+        <translation>沒有代理伺服器</translation>
+    </message>
+    <message>
+        <source>User system proxy</source>
+        <translation>使用者系統代理伺服器</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/AddonManagerOptions.ui" line="175"/>
+        <source>User-defined proxy</source>
+        <translation>使用者定義代理伺服器</translation>
+    </message>
+    <message>
+        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/AddonManagerOptions.ui" line="324"/>
+        <source>Score source URL</source>
+        <translation>積分來源網址</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/AddonManagerOptions.ui" line="219"/>
+        <source>The URL for the addon score data (see Addon Manager wiki page for formatting and hosting details)</source>
+        <translation>附加元件積分資料的網址(有關格式和託管詳細信息，請參閱文件)</translation>
+    </message>
+    <message>
         <source>Addon manager options</source>
         <translation>附加元件管理員選項</translation>
     </message>
@@ -2238,26 +2571,6 @@ installed addons will be checked for available updates</source>
         <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/AddonManagerOptions.ui" line="27"/>
         <source>Automatically check for updates at start (requires Git)</source>
         <translation>啟動時自動檢查更新 (需要 Git)</translation>
-    </message>
-    <message>
-        <source>Download Macro metadata (approximately 10MB)</source>
-        <translation>下載巨集中介資料(大約 10MB)</translation>
-    </message>
-    <message>
-        <source>Cache update frequency</source>
-        <translation>暫停緩沖暫存更新頻率</translation>
-    </message>
-    <message>
-        <source>Manual (no automatic updates)</source>
-        <translation>手動(不自動檢查更新)</translation>
-    </message>
-    <message>
-        <source>Daily</source>
-        <translation>每天</translation>
-    </message>
-    <message>
-        <source>Weekly</source>
-        <translation>每週</translation>
     </message>
     <message>
         <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/AddonManagerOptions.ui" line="96"/>
@@ -2280,43 +2593,6 @@ installed addons will be checked for available updates</source>
         <translation>附加元件積分資料的網址(有關格式和託管詳細信息，請參閱文件).</translation>
     </message>
     <message>
-        <source>Hide Addons marked Python 2 Only</source>
-        <translation>隱藏標記為僅適用於 Python 2 的附加元件</translation>
-    </message>
-    <message>
-        <source>Hide Addons marked Obsolete</source>
-        <translation>隱藏標記為過時的附加元件</translation>
-    </message>
-    <message>
-        <source>Hide Addons that require a newer version of FreeCAD</source>
-        <translation>隱藏需要較新版本 FreeCAD 的附加元件</translation>
-    </message>
-    <message>
-        <source>Custom repositories</source>
-        <translation>自訂存儲庫</translation>
-    </message>
-    <message>
-        <source>Proxy</source>
-        <translation>代理伺服器</translation>
-    </message>
-    <message>
-        <source>No proxy</source>
-        <translation>沒有代理伺服器</translation>
-    </message>
-    <message>
-        <source>User system proxy</source>
-        <translation>使用者系統代理伺服器</translation>
-    </message>
-    <message>
-        <source>User-defined proxy:</source>
-        <translation>使用者定義代理伺服器:</translation>
-    </message>
-    <message>
-        <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/AddonManagerOptions.ui" line="324"/>
-        <source>Score source URL</source>
-        <translation>積分來源網址</translation>
-    </message>
-    <message>
         <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/AddonManagerOptions.ui" line="343"/>
         <source>The URL for the Addon Score data (see Addon Manager wiki page for formatting and hosting details).</source>
         <translation>附加元件積分資料的網址(有關格式和託管詳細信息，請參閱文件).</translation>
@@ -2332,10 +2608,6 @@ installed addons will be checked for available updates</source>
         <translation>Git 可執行檔的路徑. 如果需要且未指定則自動偵測.</translation>
     </message>
     <message>
-        <source>Advanced Options</source>
-        <translation>進階選項</translation>
-    </message>
-    <message>
         <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/AddonManagerOptions.ui" line="396"/>
         <source>Show option to change branches (requires Git)</source>
         <translation>顯示更改分支的選項 (需要 Git)</translation>
@@ -2346,13 +2618,48 @@ installed addons will be checked for available updates</source>
         <translation>停用 Git (僅回退到 ZIP 下載)</translation>
     </message>
     <message>
-        <source>Activate Addon Manager options intended for developers of new Addons.</source>
-        <translation>啟動供新附加元件程式開發人員使用的附加元件管理員選項.</translation>
+        <source>Download Macro metadata (approximately 10MB)</source>
+        <translation>下載巨集中介資料(大約 10MB)</translation>
     </message>
     <message>
-        <location filename="../../AddonManagerOptions.ui" line="383"/>
-        <source>Addon developer mode</source>
-        <translation>附加元件開發者模式</translation>
+        <source>Cache update frequency</source>
+        <translation>暫停緩沖暫存更新頻率</translation>
+    </message>
+    <message>
+        <source>Manual (no automatic updates)</source>
+        <translation>手動(不自動檢查更新)</translation>
+    </message>
+    <message>
+        <source>Daily</source>
+        <translation>每天</translation>
+    </message>
+    <message>
+        <source>Weekly</source>
+        <translation>每週</translation>
+    </message>
+    <message>
+        <source>Hide Addons marked Python 2 Only</source>
+        <translation>隱藏標記為僅適用於 Python 2 的附加元件</translation>
+    </message>
+    <message>
+        <source>Hide Addons marked Obsolete</source>
+        <translation>隱藏標記為過時的附加元件</translation>
+    </message>
+    <message>
+        <source>Hide Addons that require a newer version of FreeCAD</source>
+        <translation>隱藏需要較新版本 FreeCAD 的附加元件</translation>
+    </message>
+    <message>
+        <source>User-defined proxy:</source>
+        <translation>使用者定義代理伺服器:</translation>
+    </message>
+    <message>
+        <source>Advanced Options</source>
+        <translation>進階選項</translation>
+    </message>
+    <message>
+        <source>Activate Addon Manager options intended for developers of new Addons.</source>
+        <translation>啟動供新附加元件程式開發人員使用的附加元件管理員選項.</translation>
     </message>
     <message>
         <location filename="../../AddonManagerOptions.ui" line="276"/>
@@ -2368,6 +2675,11 @@ installed addons will be checked for available updates</source>
         <location filename="../../AddonManagerOptions.ui" line="308"/>
         <source>Path to git executable (optional):</source>
         <translation>用於 git 執行程式的路徑(可選):</translation>
+    </message>
+    <message>
+        <location filename="../../AddonManagerOptions.ui" line="383"/>
+        <source>Addon developer mode</source>
+        <translation>附加元件開發者模式</translation>
     </message>
     <message>
         <source>Automatically check for updates at start (requires git)</source>
@@ -2409,8 +2721,9 @@ installed addons will be checked for available updates
 <context>
     <name>PackageDetails</name>
     <message>
-        <source>Uninstalls a selected macro or workbench</source>
-        <translation>移除安裝選定的巨集或工作台</translation>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/package_details.ui" line="49"/>
+        <source>Installs a macro or workbench</source>
+        <translation>安裝巨集或工作台</translation>
     </message>
     <message>
         <source>Install</source>
@@ -2427,6 +2740,15 @@ installed addons will be checked for available updates
     <message>
         <source>Run Macro</source>
         <translation>執行巨集</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/package_details.ui" line="80"/>
+        <source>Change Branch</source>
+        <translation>變更分支</translation>
+    </message>
+    <message>
+        <source>Uninstalls a selected macro or workbench</source>
+        <translation>移除安裝選定的巨集或工作台</translation>
     </message>
     <message>
         <location filename="../../package_details.ui" line="80"/>
@@ -2447,6 +2769,26 @@ installed addons will be checked for available updates
     <message>
         <source>Manage Python Dependencies</source>
         <translation>管理 Python 相依性</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/PythonDependencyUpdateDialog.ui" line="20"/>
+        <source>The following Python packages have been installed locally by the Addon Manager to satisfy addon dependencies. Installation location</source>
+        <translation>以下 Python 套件已由附加元件管理員 在本機安裝，以滿足 附加元件 依賴關係. 安裝位置</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/PythonDependencyUpdateDialog.ui" line="53"/>
+        <source>Update in progress…</source>
+        <translation>更新進行中…</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/PythonDependencyUpdateDialog.ui" line="63"/>
+        <source>An asterisk (*) in the &quot;Used by&quot; column indicates an optional dependency. Note that &apos;Used by&apos; only records direct imports in the addon. Other Python packages that those packages depend upon may have been installed as well.</source>
+        <translation>「使用者」欄位中的星號 (*) 表示可選依賴項目. 請注意，Used by 僅記錄 Addon 中的直接匯入. 這些軟體套件所依賴的其他 Python 軟體套件也可能已被安裝.</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/PythonDependencyUpdateDialog.ui" line="75"/>
+        <source>Update All</source>
+        <translation>更新全部</translation>
     </message>
     <message>
         <source>The following Python packages have been installed locally by the Addon Manager to satisfy Addon dependencies. Installation location:</source>
@@ -2498,6 +2840,16 @@ installed addons will be checked for available updates
 </context>
 <context>
     <name>Std_AddonMgr</name>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/AddonManager.py" line="234"/>
+        <source>&amp;Addon Manager</source>
+        <translation>附加元件管理員(&amp;A)</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/AddonManager.py" line="238"/>
+        <source>Manages external workbenches, macros, and preference packs</source>
+        <translation>管理外部工作台、巨集和預設套件</translation>
+    </message>
     <message>
         <source>&amp;Addon manager</source>
         <translation>附加元件管理員(&amp;A)</translation>
@@ -2650,8 +3002,9 @@ installed addons will be checked for available updates
 <context>
     <name>add_toolbar_button_dialog</name>
     <message>
-        <source>Add button?</source>
-        <translation>新增按鈕?</translation>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/add_toolbar_button_dialog.ui" line="14"/>
+        <source>Add Button</source>
+        <translation>新增按鈕</translation>
     </message>
     <message>
         <source>Add a toolbar button for this macro?</source>
@@ -2669,12 +3022,21 @@ installed addons will be checked for available updates
         <source>Never</source>
         <translation>永不</translation>
     </message>
+    <message>
+        <source>Add button?</source>
+        <translation>新增按鈕?</translation>
+    </message>
 </context>
 <context>
     <name>change_branch</name>
     <message>
         <source>Change Branch</source>
         <translation>變更分支</translation>
+    </message>
+    <message>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/change_branch.ui" line="23"/>
+        <source>Change to branch</source>
+        <translation>變更到分支</translation>
     </message>
     <message>
         <location filename="../../../../../../../Benson/sources/FreeCAD-0.22.0-git/src/Mod/AddonManager/change_branch.ui" line="23"/>
@@ -2729,7 +3091,8 @@ installed addons will be checked for available updates
 <context>
     <name>proxy_authentication</name>
     <message>
-        <source>Proxy login required</source>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/proxy_authentication.ui" line="14"/>
+        <source>Proxy Login Required</source>
         <translation>代理伺服器需要登錄</translation>
     </message>
     <message>
@@ -2737,16 +3100,18 @@ installed addons will be checked for available updates
         <translation>代理伺服器需要驗證</translation>
     </message>
     <message>
-        <source>Proxy:</source>
-        <translation>代理伺服器:</translation>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/proxy_authentication.ui" line="29"/>
+        <source>Proxy</source>
+        <translation>代理伺服器</translation>
     </message>
     <message>
         <source>Placeholder for proxy address</source>
         <translation>代理伺服器地址的預留位置</translation>
     </message>
     <message>
-        <source>Realm:</source>
-        <translation>領域:</translation>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/proxy_authentication.ui" line="49"/>
+        <source>Realm</source>
+        <translation>領域</translation>
     </message>
     <message>
         <source>Placeholder for proxy realm</source>
@@ -2759,6 +3124,18 @@ installed addons will be checked for available updates
     <message>
         <source>Password</source>
         <translation>密碼</translation>
+    </message>
+    <message>
+        <source>Proxy login required</source>
+        <translation>代理伺服器需要登錄</translation>
+    </message>
+    <message>
+        <source>Proxy:</source>
+        <translation>代理伺服器:</translation>
+    </message>
+    <message>
+        <source>Realm:</source>
+        <translation>領域:</translation>
     </message>
 </context>
 <context>
@@ -2801,19 +3178,25 @@ installed addons will be checked for available updates
         <translation>選擇工具列</translation>
     </message>
     <message>
-        <source>Select a toolbar to add this macro to:</source>
-        <translation>選擇要增加此巨集的工具列:</translation>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/select_toolbar_dialog.ui" line="26"/>
+        <source>Select a toolbar to add this macro to</source>
+        <translation>選擇要增加此巨集的工具列</translation>
     </message>
     <message>
         <source>Ask every time</source>
         <translation>每次都詢問</translation>
     </message>
+    <message>
+        <source>Select a toolbar to add this macro to:</source>
+        <translation>選擇要增加此巨集的工具列:</translation>
+    </message>
 </context>
 <context>
     <name>toolbar_button</name>
     <message>
-        <source>Add button?</source>
-        <translation>新增按鈕?</translation>
+        <location filename="../../../../../FreeCAD-1.1.0/src/Mod/AddonManager/toolbar_button.ui" line="14"/>
+        <source>Add Button</source>
+        <translation>新增按鈕</translation>
     </message>
     <message>
         <source>Add a toolbar button for this macro?</source>
@@ -2830,6 +3213,10 @@ installed addons will be checked for available updates
     <message>
         <source>Never</source>
         <translation>永不</translation>
+    </message>
+    <message>
+        <source>Add button?</source>
+        <translation>新增按鈕?</translation>
     </message>
 </context>
 </TS>
