@@ -21,7 +21,7 @@
     <message>
       <location filename="../../addonmanager_uninstaller_gui.py" line="+126"/>
       <source>Finished removing {}</source>
-      <translation>Скончана выдаленне {}</translation>
+      <translation>Выдаленне {} скончана</translation>
     </message>
     <message>
       <location line="+14"/>
@@ -40,9 +40,9 @@
   <context>
     <name>AddonsInstaller</name>
     <message>
-      <location filename="../../Addon.py" line="+392"/>
+      <location filename="../../Addon.py" line="+395"/>
       <source>{}: Unrecognized internal workbench &apos;{}&apos;</source>
-      <translation>{}: Непрызнаны ўнутраны варштат &apos;{}&apos;</translation>
+      <translation>{}: непрызнаны ўнутраны варштат '{}';</translation>
     </message>
     <message>
       <location line="+33"/>
@@ -82,7 +82,7 @@
     <message>
       <location line="+19"/>
       <source>Installing required dependency {}</source>
-      <translation>Ўстаноўка неабходнай залежнасці {}</translation>
+      <translation>Усталяванне неабходнай залежнасці {}</translation>
     </message>
     <message>
       <location line="+10"/>
@@ -112,8 +112,8 @@
     <message>
       <location filename="../../addonmanager_installer_gui.py" line="+530"/>
       <source>This addon requires Python packages that are not installed, and cannot be installed automatically. To use this addon you must install the following Python packages manually:</source>
-      <translation>Для гэтага дадатку патрабуюцца пакеты Python, якія не ўсталяваныя і не могуць быць усталяваныя аўтаматычна.
-Каб ужыць гэты дадатак, вы павінны ўсталяваць наступныя пакеты Python уручную:</translation>
+      <translation>Для дадзенага дадатку патрабуюцца пакеты Python, якія не ўсталяваныя і не могуць быць усталяваныя аўтаматычна.
+Каб ужыць дадатак, неабходна ўсталяваць наступныя пакеты Python уручную:</translation>
     </message>
     <message>
       <location line="+12"/>
@@ -133,13 +133,13 @@
     <message>
       <location line="-441"/>
       <source>Installing &apos;{}&apos;</source>
-      <translation>Усталёўка '{}'</translation>
+      <translation>Усталяванне '{}'</translation>
     </message>
     <message>
       <location line="+407"/>
       <source>These addons require Python packages that are not installed, and cannot be installed automatically. To use them you must install the following Python packages manually:</source>
       <translation>Для дадаткаў патрабуюцца пакеты Python, якія не ўсталяваныя і не могуць быць усталяваныя аўтаматычна.
-Каб ужыць дадатак, вы павінны ўсталяваць наступныя пакеты Python уручную:</translation>
+Каб ужыць дадатак, неабходна ўсталяваць наступныя пакеты Python уручную:</translation>
     </message>
     <message>
       <location line="+12"/>
@@ -149,7 +149,7 @@
     <message>
       <location line="+27"/>
       <source>These addons require &apos;{}&apos;, which is not available in your copy of FreeCAD.</source>
-      <translation>Для дадаткаў патрабуецца '{}', які недаступны ў вашай копіі FreeCAD.</translation>
+      <translation>Для дадаткаў патрабуецца '{}', які недаступны ў ужываемай копіі FreeCAD.</translation>
     </message>
     <message>
       <location line="+9"/>
@@ -159,7 +159,7 @@
     <message>
       <location line="+11"/>
       <source>These addons require the following workbenches, which are not available in your copy of FreeCAD:</source>
-      <translation>Для дадаткаў патрабуюцца наступныя варштаты, якія недаступныя ў вашай копіі FreeCAD:</translation>
+      <translation>Для дадаткаў патрабуюцца наступныя варштаты, якія недаступныя ў ужываемай копіі FreeCAD:</translation>
     </message>
     <message>
       <location line="+7"/>
@@ -174,36 +174,36 @@
     <message>
       <location line="+5"/>
       <source>This addon (or one of its dependencies) requires Python {}, and your system is running {}. Installation cancelled.</source>
-      <translation>Дадатак (ці адна з яго залежнасці) патрабуе Python {}, і вашая сістэма запушчаная {}.
-Устаноўка адмененая.</translation>
+      <translation>Дадатак (ці адна з яго залежнасці) патрабуе Python {}, і сістэма запушчаная {}.
+Усталяванне адмененая.</translation>
     </message>
     <message>
       <location line="+53"/>
       <source>Installing Dependencies</source>
       <comment>Window title</comment>
-      <translation>Устаноўка залежнасцяў</translation>
+      <translation>Усталяванне залежнасцяў</translation>
     </message>
     <message>
       <location line="+1"/>
       <source>Installing dependencies…</source>
       <comment>Window text</comment>
-      <translation>Устаноўка залежнасцяў…</translation>
+      <translation>Усталяванне залежнасцяў…</translation>
     </message>
     <message>
       <location line="+29"/>
       <source>Dependencies could not be installed. Continue with installation anyway?</source>
       <translation>Не атрымалася ўсталяваць залежнасці.
-Ці працягнуць устаноўку ў любым выпадку?</translation>
+Ці працягнуць усталяванне ў любым выпадку?</translation>
     </message>
     <message>
       <location line="+25"/>
       <source>Continue with addon installation anyway?</source>
-      <translation>Ці працягнуць устаноўку дадатку ў любым выпадку?</translation>
+      <translation>Ці працягнуць усталяванне дадатку ў любым выпадку?</translation>
     </message>
     <message>
       <location line="+26"/>
       <source>Continue with installation anyway?</source>
-      <translation>Ці працягнуць устаноўку ў любым выпадку?</translation>
+      <translation>Ці працягнуць усталяванне ў любым выпадку?</translation>
     </message>
     <message>
       <location line="-117"/>
@@ -228,8 +228,8 @@
     <message>
       <location line="+6"/>
       <source>Failed to execute pip, which may be missing from your Python installation. Please ensure your system has pip installed and try again. The failed command was:</source>
-      <translation>Не атрымалася выканаць каманду pip, якая можа адсутнічаць у вашым усталяваным Python.
-Калі ласка, пераканайцеся, што ў вашай сістэме ўсталяваны pip, і паўтарыце спробу.
+      <translation>Не атрымалася выканаць каманду pip, якая можа адсутнічаць у ўсталяваным Python.
+Пераканайцеся, што ў сістэме ўсталяваны pip, і паўтарыце спробу.
 Няўдалая каманда была:</translation>
     </message>
     <message>
@@ -250,7 +250,7 @@
     <message>
       <location line="+1"/>
       <source>Cancelling installation of &apos;{}&apos;</source>
-      <translation>Скасаванне ўстаноўкі &apos;{}&apos;</translation>
+      <translation>Скасаванне ўсталявання '{}'</translation>
     </message>
     <message>
       <location line="+27"/>
@@ -303,7 +303,7 @@
       <location line="+34"/>
       <source>Failed to create installation manifest file:
 </source>
-      <translation>Не атрымалася стварыць файл маніфесту ўстаноўкі:
+      <translation>Не атрымалася стварыць файл маніфесту ўсталявання:
 </translation>
     </message>
     <message>
@@ -327,7 +327,7 @@
       <translation>Немагчыма адчыніць URL-адрас {} коду макраса</translation>
     </message>
     <message>
-      <location line="+137"/>
+      <location line="+136"/>
       <source>Unable to fetch macro-specified file {} from {}</source>
       <translation>Немагчыма выняць паказаны файл макраса {} з {}</translation>
     </message>
@@ -350,7 +350,7 @@ Please restart to use the new version.</source>
 Запусціце нанова, каб ужыць новую версію.</translation>
     </message>
     <message>
-      <location filename="../../addonmanager_python_deps.py" line="+300"/>
+      <location filename="../../addonmanager_python_deps.py" line="+304"/>
       <source>Package</source>
       <translation>Пакет</translation>
     </message>
@@ -387,12 +387,12 @@ Please restart to use the new version.</source>
     <message>
       <location line="+1"/>
       <source>Are you sure you want to uninstall {}?</source>
-      <translation>Вы ўпэўненыя, што жадаеце выдаліць {}?</translation>
+      <translation>Ці сапраўды выдаліць {}?</translation>
     </message>
     <message>
       <location line="+10"/>
       <source>Removing Addon</source>
-      <translation>Выдаленне Дадатку</translation>
+      <translation>Выдаленне дадатку</translation>
     </message>
     <message>
       <location line="+1"/>
@@ -486,9 +486,9 @@ Please restart to use the new version.</source>
       <translation>Зроблена</translation>
     </message>
     <message>
-      <location filename="../../addonmanager_workers_startup.py" line="+117"/>
+      <location filename="../../addonmanager_workers_startup.py" line="+116"/>
       <source>WARNING: Duplicate addon {} ignored</source>
-      <translation>УВАГА: Паўторны дадатак {} прапушчаны</translation>
+      <translation>Увага: паўторны дадатак {} прапушчаны</translation>
     </message>
     <message>
       <location line="+119"/>
@@ -523,21 +523,42 @@ Please restart to use the new version.</source>
       <translation>Не атрымалася выняць код для макраса &apos;{name}&apos;</translation>
     </message>
     <message>
-      <location line="+61"/>
+      <location line="+67"/>
       <source>Failed to get addon statistics from {} -- only sorting alphabetically will be accurate
 </source>
       <translation>Не атрымалася атрымаць статыстыку па дадатку з {} -- дакладнай будзе толькі парадкаванне па алфавіце
 </translation>
     </message>
     <message>
-      <location line="+41"/>
+      <location line="+42"/>
       <source>Failed to get addon score from &apos;{}&apos; -- sorting by score will fail
 </source>
       <translation>Не атрымалася атрымаць ацэнкі дадаткаў з '{}' -- упарадкаванне па ацэнках завяршылася памылкай
 </translation>
     </message>
     <message>
-      <location line="+42"/>
+      <location line="+11"/>
+      <source>Failed to decode addon score from &apos;{}&apos; -- sorting by score will fail
+</source>
+      <translation>Не атрымалася расшыфраваць ацэнкі дадаткаў з '{}' -- упарадкаванне па ацэнках завяршылася памылкай
+</translation>
+    </message>
+    <message>
+      <location line="+7"/>
+      <source>Failed to parse addon score from &apos;{}&apos; -- sorting by score will fail
+</source>
+      <translation>Не атрымалася прааналізаваць ацэнкі дадаткаў з '{}' -- упарадкаванне па ацэнках завяршылася памылкай
+</translation>
+    </message>
+    <message>
+      <location line="+7"/>
+      <source>Failed to read addon score from &apos;{}&apos; -- sorting by score will fail
+</source>
+      <translation>Не атрымалася прачытаць ацэнкі дадаткаў з '{}' -- упарадкаванне па ацэнках завяршылася памылкай
+</translation>
+    </message>
+    <message>
+      <location line="+39"/>
       <location line="+13"/>
       <source>Checking for missing dependencies</source>
       <translation>Праверка адсутных залежнасцяў</translation>
@@ -549,7 +570,7 @@ Please restart to use the new version.</source>
 Магчыма, сервер не працуе, альбо адсутнічае злучэнне з інтэрнэтам.</translation>
     </message>
     <message>
-      <location filename="../../AddonManager.py" line="+282"/>
+      <location filename="../../AddonManager.py" line="+281"/>
       <source>Worker process {} is taking a long time to stop…</source>
       <translation>Працоўнаму працэсу {} патрабуецца шмат часу, каб спыніцца…</translation>
     </message>
@@ -608,19 +629,19 @@ Please restart to use the new version.</source>
     <message>
       <location line="+17"/>
       <source>Fetching addon score</source>
-      <translation>Атрыманне статыстыкі па дадатку</translation>
+      <translation>Атрыманне ацэнкі па дадатку</translation>
     </message>
     <message>
       <location line="+74"/>
       <location line="+27"/>
       <location line="+126"/>
       <source>Cannot launch a new installer until the previous one has finished</source>
-      <translation>Не атрымалася запусціць новы ўстаноўшчык, каб скончыць працу папярэдняга</translation>
+      <translation>Не атрымалася запусціць новы сродак усталявання, каб скончыць працу папярэдняга</translation>
     </message>
     <message>
       <location line="-66"/>
       <source>Some installed addons are missing dependencies. Would you like to install them now?</source>
-      <translation>У некаторых устаноўленых дадатказ адсутнічаюць залежнасці.
+      <translation>У некаторых усталяваных дадатках адсутнічаюць залежнасці.
 Ці ўсталяваць іх цяпер?</translation>
     </message>
     <message>
@@ -631,7 +652,7 @@ Please restart to use the new version.</source>
     <message>
       <location line="+44"/>
       <source>The following auto-generated backups were found in your Mod directory:</source>
-      <translation>У вашым каталогу модаў былі знойдзеныя наступныя аўтаматычна створаныя рэзервовыя копіі:</translation>
+      <translation>У каталогу модаў былі знойдзеныя наступныя аўтаматычна створаныя рэзервовыя копіі:</translation>
     </message>
     <message>
       <location line="+5"/>
@@ -651,7 +672,67 @@ Please restart to use the new version.</source>
       <translation>Ніколі</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.py" line="+250"/>
+      <location filename="../../AddonManagerOptions.py" line="+95"/>
+      <source>Proxy test timed out: no connection made.</source>
+      <translation>Час чакання праверкі проксі-сервера скончыўся: злучэнне не ўстаноўлена.</translation>
+    </message>
+    <message>
+      <location line="+7"/>
+      <source>Proxy test returned an error: no connection made.
+</source>
+      <translation>Праверка проксі-сервера вярнула паведамленне пра памылку: злучэнне не ўстаноўлена.
+</translation>
+    </message>
+    <message>
+      <location line="+16"/>
+      <source>Proxy test succeeded, connection established.</source>
+      <translation>Праверка проксі-сервера прайшла паспяхова, злучэнне ўстаноўлена.</translation>
+    </message>
+    <message>
+      <location line="+5"/>
+      <source>Proxy requires authentication. The Addon Manager does not support this.</source>
+      <translation>Проксі-сервер патрабуе аўтэнтыфікацыі.
+Кіраўнік дадаткаў не падтрымлівае аўтэнтыфікацыю.</translation>
+    </message>
+    <message>
+      <location line="+0"/>
+      <source>Proxy connection failed with code {}: {}.</source>
+      <translation>Памылка злучэння да проксі-серверу з кодам {}: {}.</translation>
+    </message>
+    <message>
+      <location line="+102"/>
+      <source>Invalid hostname</source>
+      <translation>Хібнае імя хаста</translation>
+    </message>
+    <message>
+      <location line="+10"/>
+      <location line="+20"/>
+      <location line="+38"/>
+      <source>No proxy</source>
+      <translation>Без проксі</translation>
+    </message>
+    <message>
+      <location line="-57"/>
+      <source>n/a</source>
+      <translation>непрыдатны</translation>
+    </message>
+    <message>
+      <location line="+5"/>
+      <source>proxy.example.com</source>
+      <translation>proxy.example.com</translation>
+    </message>
+    <message>
+      <location line="+34"/>
+      <source>System has no proxy</source>
+      <translation>У сістэме адсутнічае проксі-сервер</translation>
+    </message>
+    <message>
+      <location line="+43"/>
+      <source>Testing proxy connection…</source>
+      <translation>Тэставанне злучэння да проксі-сервера…</translation>
+    </message>
+    <message>
+      <location line="+259"/>
       <source>Repository URL</source>
       <comment>Preferences header for custom repositories</comment>
       <translation>URL-адрас сховішча</translation>
@@ -663,22 +744,7 @@ Please restart to use the new version.</source>
       <translation>Назва галіны</translation>
     </message>
     <message>
-      <location filename="../../NetworkManager.py" line="+213"/>
-      <source>Failed to parse proxy URL &apos;{}&apos;</source>
-      <translation>Не атрымалася прааналізаваць URL-адрас проксі-сервера '{}'</translation>
-    </message>
-    <message>
-      <location line="+32"/>
-      <source>Parameter error: mutually exclusive proxy options set. Resetting to default.</source>
-      <translation>Памылка налады: усталяваны ўзаемавыключальныя налады проксі. Скінуць да першапачатковага значэння.</translation>
-    </message>
-    <message>
-      <location line="+15"/>
-      <source>Parameter error: user proxy indicated, but no proxy provided. Resetting to default.</source>
-      <translation>Памылка налады: паказаны карыстальніцкі проксі, але проксі не прадстаўлены. Скінуць да першапачатковага значэння.</translation>
-    </message>
-    <message>
-      <location line="+214"/>
+      <location filename="../../NetworkManager.py" line="+403"/>
       <source>Addon Manager: Unexpected {} response from server</source>
       <translation>Кіраванне дадаткамі: Нечаканы адказ {} ад сервера</translation>
     </message>
@@ -688,7 +754,7 @@ Please restart to use the new version.</source>
       <translation>Памылка з зашыфраваным злучэннем</translation>
     </message>
     <message>
-      <location filename="../../package_list.py" line="+194"/>
+      <location filename="../../package_list.py" line="+193"/>
       <source>Click for details about package {}</source>
       <translation>Націсніце, каб атрымаць падрабязную інфармацыю пра пакет {}</translation>
     </message>
@@ -708,17 +774,12 @@ Please restart to use the new version.</source>
       <translation>Меткі</translation>
     </message>
     <message>
-      <location line="+46"/>
-      <source>Maintainer</source>
-      <translation>Суправаджальнік</translation>
+      <location line="+51"/>
+      <source>Maintainer(s)</source>
+      <translation>Суправаджальнікі</translation>
     </message>
     <message>
-      <location line="+5"/>
-      <source>Maintainers:</source>
-      <translation>Суправаджальнікі:</translation>
-    </message>
-    <message>
-      <location line="+7"/>
+      <location line="+17"/>
       <source>Author</source>
       <translation>Аўтар</translation>
     </message>
@@ -735,12 +796,12 @@ Please restart to use the new version.</source>
     <message>
       <location line="+5"/>
       <source>Created </source>
-      <translation>Створана </translation>
+      <translation>Створаны </translation>
     </message>
     <message>
       <location line="+8"/>
       <source>Updated </source>
-      <translation>Абноўлена </translation>
+      <translation>Абноўлены </translation>
     </message>
     <message>
       <location line="+3"/>
@@ -798,7 +859,7 @@ Please restart to use the new version.</source>
       <translation>Даступная версія</translation>
     </message>
     <message>
-      <location filename="../../Widgets/addonmanager_widget_addon_buttons.py" line="+170"/>
+      <location filename="../../Widgets/addonmanager_widget_addon_buttons.py" line="+169"/>
       <source>Install</source>
       <translation>Усталяваць</translation>
     </message>
@@ -845,7 +906,7 @@ Please restart to use the new version.</source>
     <message>
       <location line="+1"/>
       <source>Run</source>
-      <translation>Праца</translation>
+      <translation>Выканаць</translation>
     </message>
     <message>
       <location line="+1"/>
@@ -896,7 +957,7 @@ Please restart to use the new version.</source>
     <message>
       <location line="+4"/>
       <source>Installation Status</source>
-      <translation>Стан устаноўкі</translation>
+      <translation>Стан усталявання</translation>
     </message>
     <message>
       <location line="+6"/>
@@ -1022,7 +1083,7 @@ Please restart to use the new version.</source>
     <message>
       <location line="+1"/>
       <source>WARNING: This addon requires FreeCAD {}</source>
-      <translation>УВАГА: гэты дадатак патрабуе FreeCAD {}</translation>
+      <translation>Увага: дадзены дадатак патрабуе FreeCAD {}</translation>
     </message>
     <message>
       <location filename="../../Widgets/addonmanager_widget_search.py" line="+68"/>
@@ -1093,22 +1154,22 @@ Please restart to use the new version.</source>
       <translation>Гузік</translation>
     </message>
     <message>
-      <location line="+3"/>
+      <location filename="../../compact_view.py" line="+3"/>
       <source>&lt;b&gt;Package Name&lt;/b&gt;</source>
       <translation>&lt;b&gt;Назва пакета&lt;/b&gt;</translation>
     </message>
     <message>
-      <location line="+1"/>
+      <location filename="../../compact_view.py" line="+1"/>
       <source>Version</source>
       <translation>Версія</translation>
     </message>
     <message>
-      <location line="+3"/>
+      <location filename="../../compact_view.py" line="+3"/>
       <source>Description</source>
       <translation>Апісанне</translation>
     </message>
     <message>
-      <location line="+3"/>
+      <location filename="../../compact_view.py" line="+3"/>
       <source>Update available</source>
       <translation>Даступна абнаўленне</translation>
     </message>
@@ -1131,10 +1192,10 @@ Please restart to use the new version.</source>
       <source>This installation/update has the following required and optional dependencies.
 
 Do you want the Addon Manager to install them automatically? Choose &quot;Ignore&quot; to install/update without installing the dependencies.</source>
-      <translation>Устаноўка / абнаўленне змяшчае наступныя абавязковыя і неабавязковыя залежнасці.
+      <translation>Усталяванне / абнаўленне змяшчае наступныя абавязковыя і неабавязковыя залежнасці.
 
 Ці дазволіць кіраванню дадаткамі ўсталяваць іх аўтаматычна?
-Выберыце 'Ігнараваць', каб усталяваць/абнавіць без устаноўкі залежнасцяў.</translation>
+Выберыце 'Ігнараваць', каб усталяваць/абнавіць без усталявання залежнасцяў.</translation>
     </message>
     <message>
       <source>FreeCAD Addons</source>
@@ -1267,23 +1328,7 @@ Do you want the Addon Manager to install them automatically? Choose &quot;Ignore
     </message>
     <message>
       <source>Custom repositories</source>
-      <translation>Карыстальніцкія сховішча</translation>
-    </message>
-    <message>
-      <source>Proxy</source>
-      <translation>Проксі</translation>
-    </message>
-    <message>
-      <source>No proxy</source>
-      <translation>Без проксі</translation>
-    </message>
-    <message>
-      <source>User system proxy</source>
-      <translation>Сістэмны проксі карыстальніка</translation>
-    </message>
-    <message>
-      <source>User-defined proxy</source>
-      <translation>Карыстальніцкі проксі</translation>
+      <translation>Карыстальніцкія сховішчы</translation>
     </message>
     <message>
       <source>Score source URL</source>
@@ -1292,6 +1337,54 @@ Do you want the Addon Manager to install them automatically? Choose &quot;Ignore
     <message>
       <source>The URL for the addon score data (see Addon Manager wiki page for formatting and hosting details)</source>
       <translation>URL-адрас для дадзеных ацэнкі дадаткаў (падрабязнасці пра фарматаванне і размяшчэнне глядзіце ў вікі-старонцы кіравання дадаткамі)</translation>
+    </message>
+    <message>
+      <source>Use a proxy server for access to addon data</source>
+      <translation>Ужыць проксі-сервер для доступу да дадзеных дадаткаў</translation>
+    </message>
+    <message>
+      <source>Proxy addon manager traffic</source>
+      <translation>Трафік кіраўніка проксі-сервера дадаткаў</translation>
+    </message>
+    <message>
+      <source>Use the system&apos;s proxy settings</source>
+      <translation>Ужыць сістэмныя налады проксі-сервера</translation>
+    </message>
+    <message>
+      <source>System</source>
+      <translation>Сістэма</translation>
+    </message>
+    <message>
+      <source>Use custom proxy settings</source>
+      <translation>Ужыць карыстальніцкія налады проксі-сервера</translation>
+    </message>
+    <message>
+      <source>Custom</source>
+      <translation>Карыстальніцкі</translation>
+    </message>
+    <message>
+      <source>Host</source>
+      <translation>Паходжанне</translation>
+    </message>
+    <message>
+      <source>:</source>
+      <translation>:</translation>
+    </message>
+    <message>
+      <source>Port</source>
+      <translation>Порт</translation>
+    </message>
+    <message>
+      <source>Test these proxy settings</source>
+      <translation>Праверыць налады проксі-сервера</translation>
+    </message>
+    <message>
+      <source>Test Connection</source>
+      <translation>Праверыць злучэнне</translation>
+    </message>
+    <message>
+      <source>Connection Test</source>
+      <translation>Праверка злучэння</translation>
     </message>
   </context>
   <context>
@@ -1330,7 +1423,7 @@ Do you want the Addon Manager to install them automatically? Choose &quot;Ignore
     <message>
       <source>The following Python packages have been installed locally by the Addon Manager to satisfy addon dependencies. Installation location</source>
       <translation>Наступныя пакеты Python былі ўсталяваныя лакальна кіраваннем дадаткамі для задавальнення залежнасцяў дадаткаў.
-Месцазнаходжанне ўстаноўкі</translation>
+Месцазнаходжанне ўсталявання</translation>
     </message>
     <message>
       <source>Update in progress…</source>
@@ -1373,7 +1466,7 @@ Do you want the Addon Manager to install them automatically? Choose &quot;Ignore
     <message>
       <location filename="../../addonmanager_toolbar_adapter.py" line="+45"/>
       <source>Auto-Created Macro Toolbar</source>
-      <translation>Панэль інструментаў макрасаў, якія ствараюцца аўтаматычна</translation>
+      <translation>Панэль інструментаў макрасаў, якая ствараецца аўтаматычна</translation>
     </message>
   </context>
   <context>

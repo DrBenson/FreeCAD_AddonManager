@@ -40,14 +40,14 @@
   <context>
     <name>AddonsInstaller</name>
     <message>
-      <location filename="../../Addon.py" line="+392"/>
+      <location filename="../../Addon.py" line="+395"/>
       <source>{}: Unrecognized internal workbench &apos;{}&apos;</source>
-      <translation>{} : atelier interne non reconnu "{}"</translation>
+      <translation>{} : atelier interne « {} » non reconnu</translation>
     </message>
     <message>
       <location line="+33"/>
       <source>Addon Developer Warning: Repository URL set in package.xml file for addon {} ({}) does not match the URL it was fetched from ({})</source>
-      <translation>Avertissement du développeur de l'extension : l'URL du répertoire défini dans le fichier package.xml pour l'extension {} ({}) ne correspond pas à l'URL depuis laquelle il a été récupéré ({}).</translation>
+      <translation>Avertissement du développeur de l'extension : l'URL du répertoire définie dans le fichier package.xml pour l'extension {} ({}) ne correspond pas à l'URL depuis laquelle il a été récupéré ({}).</translation>
     </message>
     <message>
       <location line="+8"/>
@@ -67,27 +67,27 @@
     <message>
       <location line="+26"/>
       <source>Connection failed</source>
-      <translation>La connexion a échoué</translation>
+      <translation>La connexion a échoué.</translation>
     </message>
     <message>
       <location filename="../../addonmanager_dependency_installer.py" line="+146"/>
       <source>Installation of Python package {} failed</source>
-      <translation>L'installation du paquet Python {} a échoué</translation>
+      <translation>L'installation du paquet Python {} a échoué.</translation>
     </message>
     <message>
       <location line="+25"/>
       <source>Installation of optional package failed</source>
-      <translation>L'installation du paquet facultatif a échoué</translation>
+      <translation>L'installation du paquet facultatif a échoué.</translation>
     </message>
     <message>
       <location line="+19"/>
       <source>Installing required dependency {}</source>
-      <translation>Installation de la dépendance requise {}</translation>
+      <translation>L'installation de la dépendance {} est requise.</translation>
     </message>
     <message>
       <location line="+10"/>
       <source>Installation of addon {} failed</source>
-      <translation>L'installation de l'extension {} a échoué</translation>
+      <translation>L'installation de l'extension {} a échoué.</translation>
     </message>
     <message>
       <location filename="../../addonmanager_git.py" line="+153"/>
@@ -127,7 +127,7 @@
     <message>
       <location line="-35"/>
       <source>Addon &apos;{}&apos; requires &apos;{}&apos;, which is not available in your copy of FreeCAD.</source>
-      <translation>L'extension "{}" nécessite "{}" qui n'est pas disponible dans votre version de FreeCAD.</translation>
+      <translation>L'extension « {} » nécessite « {} », qui n'est pas disponible dans votre version de FreeCAD.</translation>
     </message>
     <message>
       <location line="-441"/>
@@ -152,7 +152,7 @@
     <message>
       <location line="+9"/>
       <source>Addon &apos;{}&apos; requires the following workbenches, which are not available in your copy of FreeCAD:</source>
-      <translation>L'extension "{}" nécessite les ateliers suivants, qui ne sont pas présents dans votre version de FreeCAD :</translation>
+      <translation>L'extension « {} » nécessite les ateliers suivants, qui ne sont pas présents dans votre version de FreeCAD :</translation>
     </message>
     <message>
       <location line="+11"/>
@@ -172,8 +172,7 @@
     <message>
       <location line="+5"/>
       <source>This addon (or one of its dependencies) requires Python {}, and your system is running {}. Installation cancelled.</source>
-      <translation>Cette extension (ou l'une de ses dépendances) nécessite Python {}, et votre système utilise {}.
-L'installation est annulée.</translation>
+      <translation>Cette extension (ou l'une de ses dépendances) nécessite Python {}, et votre système utilise {}. L'installation est annulée.</translation>
     </message>
     <message>
       <location line="+53"/>
@@ -205,7 +204,7 @@ L'installation est annulée.</translation>
     <message>
       <location line="-117"/>
       <source>Optional dependency on {} ignored because it is not in the allow-list</source>
-      <translation>Dépendance facultative sur {} ignorée parce qu’elle n'est pas dans la liste autorisée</translation>
+      <translation>La dépendance facultative sur {} est ignorée parce qu’elle n'est pas dans la liste autorisée.</translation>
     </message>
     <message>
       <location line="+55"/>
@@ -225,17 +224,17 @@ L'installation est annulée.</translation>
     <message>
       <location line="+6"/>
       <source>Failed to execute pip, which may be missing from your Python installation. Please ensure your system has pip installed and try again. The failed command was:</source>
-      <translation>Impossible d'exécuter le pip. Il peut être absent de votre installation Python. Assurez-vous que pip est installé sur votre système et réessayez. La commande qui a échoué était :</translation>
+      <translation>Impossible d'exécuter pip. Il peut être absent de votre installation Python. Assurez-vous que pip est installé sur votre système et réessayez. La commande qui a échoué était :</translation>
     </message>
     <message>
       <location line="+22"/>
       <source>Package installation failed</source>
-      <translation>L'installation du paquet a échoué</translation>
+      <translation>L'installation du paquet a échoué.</translation>
     </message>
     <message>
       <location line="+4"/>
       <source>See Report View for detailed failure log.</source>
-      <translation>Voir la Vue rapport pour pour les logs détaillés des défaillances.</translation>
+      <translation>Voir la vue rapport pour les logs détaillés des défaillances.</translation>
     </message>
     <message>
       <location line="-637"/>
@@ -245,7 +244,7 @@ L'installation est annulée.</translation>
     <message>
       <location line="+1"/>
       <source>Cancelling installation of &apos;{}&apos;</source>
-      <translation>Annulation de l'installation de "{}"</translation>
+      <translation>Annulation en cours de l'installation de « {} »</translation>
     </message>
     <message>
       <location line="+27"/>
@@ -256,17 +255,17 @@ L'installation est annulée.</translation>
     <message>
       <location line="+1"/>
       <source>{} was installed successfully</source>
-      <translation>{} a été installé avec succès</translation>
+      <translation>{} a été installé avec succès.</translation>
     </message>
     <message>
       <location line="+13"/>
       <source>Installation Failed</source>
-      <translation>L'installation a échoué</translation>
+      <translation>L'installation a échoué.</translation>
     </message>
     <message>
       <location line="+2"/>
       <source>Failed to install {}</source>
-      <translation>Impossible d'installer {}</translation>
+      <translation>Échec de l'installation de {}</translation>
     </message>
     <message>
       <location line="+113"/>
@@ -287,18 +286,18 @@ L'installation est annulée.</translation>
     <message>
       <location filename="../../addonmanager_installer.py" line="+383"/>
       <source>Received {} response code from server</source>
-      <translation>Réception de {} code de réponse du serveur</translation>
+      <translation>Réception du code de réponse {} du serveur</translation>
     </message>
     <message>
       <location line="+184"/>
       <source>Failed to install macro {}</source>
-      <translation>Impossible d'installer la macro {}</translation>
+      <translation>Échec de l'installation de la macro {}</translation>
     </message>
     <message>
       <location line="+34"/>
       <source>Failed to create installation manifest file:
 </source>
-      <translation>Impossible de créer le fichier d'information sur l'installation :</translation>
+      <translation>Échec de la création du fichier d'information sur l'installation :</translation>
     </message>
     <message>
       <location filename="../../addonmanager_macro.py" line="+164"/>
@@ -308,7 +307,7 @@ L'installation est annulée.</translation>
     <message>
       <location line="+13"/>
       <source>Unable to fetch the code of this macro.</source>
-      <translation>Impossible de récupérer le code de cette macro.</translation>
+      <translation>Impossible de récupérer le code de cette macro</translation>
     </message>
     <message>
       <location line="+15"/>
@@ -321,7 +320,7 @@ L'installation est annulée.</translation>
       <translation>Impossible d'ouvrir l'URL du code de la macro {}</translation>
     </message>
     <message>
-      <location line="+137"/>
+      <location line="+136"/>
       <source>Unable to fetch macro-specified file {} from {}</source>
       <translation>Impossible de récupérer le fichier {} spécifié par la macro à partir de {}</translation>
     </message>
@@ -337,13 +336,14 @@ Moved
 from: {}
 to: {}
 Please restart to use the new version.</source>
-      <translation>Le changement de branche a réussi. Elle a été déplacée
+      <translation>Le changement de branche a réussi.
+Il a été déplacé
 de : {}
 vers : {}
 Redémarrer pour utiliser la nouvelle version.</translation>
     </message>
     <message>
-      <location filename="../../addonmanager_python_deps.py" line="+300"/>
+      <location filename="../../addonmanager_python_deps.py" line="+304"/>
       <source>Package</source>
       <translation>Paquet</translation>
     </message>
@@ -370,7 +370,7 @@ Redémarrer pour utiliser la nouvelle version.</translation>
     <message>
       <location line="-124"/>
       <source>Failed to download data from {} -- received response code {}.</source>
-      <translation>Impossible de télécharger les données de {}. Le code de réponse reçu est {}.</translation>
+      <translation>Échec du téléchargement des données de {}. Le code de réponse reçu est {}.</translation>
     </message>
     <message>
       <location filename="../../addonmanager_uninstaller_gui.py" line="-52"/>
@@ -405,7 +405,7 @@ Redémarrer pour utiliser la nouvelle version.</translation>
     <message>
       <location filename="../../addonmanager_uninstaller.py" line="+111"/>
       <source>An unknown error occurred</source>
-      <translation>Une erreur inconnue est survenue</translation>
+      <translation>Une erreur inconnue est survenue.</translation>
     </message>
     <message>
       <location line="+23"/>
@@ -420,12 +420,12 @@ Redémarrer pour utiliser la nouvelle version.</translation>
     <message>
       <location line="+19"/>
       <source>Removed extra installed file {}</source>
-      <translation>Suppression du fichier {} installé en plus</translation>
+      <translation>Le fichier supplémentaire {} installé a été supprimé.</translation>
     </message>
     <message>
       <location line="+14"/>
       <source>Error while trying to remove extra installed file {}</source>
-      <translation>Erreur lors de la suppression du fichier {} installé en plus</translation>
+      <translation>Erreur lors de la suppression du fichier supplémentaire {} installé</translation>
     </message>
     <message>
       <location line="+64"/>
@@ -469,18 +469,18 @@ Redémarrer pour utiliser la nouvelle version.</translation>
       <location line="+1"/>
       <source>Update?</source>
       <comment>Column header</comment>
-      <translation>Mettre à jour?</translation>
+      <translation>Faut-il mettre à jour ?</translation>
     </message>
     <message>
       <location line="+1"/>
       <source>Done</source>
       <comment>Column header</comment>
-      <translation>Fait</translation>
+      <translation>C'est fait.</translation>
     </message>
     <message>
-      <location filename="../../addonmanager_workers_startup.py" line="+117"/>
+      <location filename="../../addonmanager_workers_startup.py" line="+116"/>
       <source>WARNING: Duplicate addon {} ignored</source>
-      <translation>ATTENTION : l'extension dupliquée {} est ignorée.</translation>
+      <translation>ATTENTION : l'extension en double {} est ignorée.</translation>
     </message>
     <message>
       <location line="+119"/>
@@ -501,7 +501,7 @@ Redémarrer pour utiliser la nouvelle version.</translation>
     <message>
       <location line="+13"/>
       <source>Git status failed for {}</source>
-      <translation>Le statut de Git a échoué pour {}</translation>
+      <translation>Le statut de Git a échoué pour {}.</translation>
     </message>
     <message>
       <location line="+68"/>
@@ -511,22 +511,40 @@ Redémarrer pour utiliser la nouvelle version.</translation>
     <message>
       <location line="+24"/>
       <source>Failed to fetch code for macro &apos;{name}&apos;</source>
-      <translation>Impossible de récupérer le code de la macro "{name}"</translation>
+      <translation>Impossible de récupérer le code de la macro « {name} »</translation>
     </message>
     <message>
-      <location line="+61"/>
+      <location line="+67"/>
       <source>Failed to get addon statistics from {} -- only sorting alphabetically will be accurate
 </source>
       <translation>Échec de la récupération des statistiques de l'extension {}, seul le tri par ordre alphabétique sera exact.</translation>
     </message>
     <message>
-      <location line="+41"/>
+      <location line="+42"/>
       <source>Failed to get addon score from &apos;{}&apos; -- sorting by score will fail
 </source>
       <translation>Échec de la récupération du score de l'extension {}, le tri par score échouera.</translation>
     </message>
     <message>
-      <location line="+42"/>
+      <location line="+11"/>
+      <source>Failed to decode addon score from &apos;{}&apos; -- sorting by score will fail
+</source>
+      <translation>Impossible de décoder le score de l'extension à partir de « {} ». Le tri par score échouera.</translation>
+    </message>
+    <message>
+      <location line="+7"/>
+      <source>Failed to parse addon score from &apos;{}&apos; -- sorting by score will fail
+</source>
+      <translation>Impossible d'analyser le score de l'extension à partir de « {} ». Le tri par score échouera.</translation>
+    </message>
+    <message>
+      <location line="+7"/>
+      <source>Failed to read addon score from &apos;{}&apos; -- sorting by score will fail
+</source>
+      <translation>Impossible de lire le score de l'extension à partir de « {} ». Le tri par score échouera.</translation>
+    </message>
+    <message>
+      <location line="+39"/>
       <location line="+13"/>
       <source>Checking for missing dependencies</source>
       <translation>Recherche des dépendances manquantes</translation>
@@ -537,15 +555,15 @@ Redémarrer pour utiliser la nouvelle version.</translation>
       <translation>Impossible de lire les données à partir de addons.freecad.org. Il se peut que le serveur soit en panne ou que vous ne soyez pas connecté à internet.</translation>
     </message>
     <message>
-      <location filename="../../AddonManager.py" line="+282"/>
+      <location filename="../../AddonManager.py" line="+281"/>
       <source>Worker process {} is taking a long time to stop…</source>
-      <translation>Le processus de travail {} met du temps à s'arrêter...</translation>
+      <translation>Le processus {} met du temps à s'arrêter…</translation>
     </message>
     <message>
       <location line="-86"/>
       <location line="+126"/>
       <source>Addon Manager</source>
-      <translation>Gestionnaire d'extensions</translation>
+      <translation>Gestionnaire des extensions</translation>
     </message>
     <message>
       <location line="-125"/>
@@ -581,7 +599,7 @@ Redémarrer pour utiliser la nouvelle version.</translation>
       <location line="+44"/>
       <location line="+35"/>
       <source>Checking for updates…</source>
-      <translation>Vérification des mises à jour...</translation>
+      <translation>Vérification des mises à jour…</translation>
     </message>
     <message>
       <location line="+13"/>
@@ -603,12 +621,12 @@ Redémarrer pour utiliser la nouvelle version.</translation>
       <location line="+27"/>
       <location line="+126"/>
       <source>Cannot launch a new installer until the previous one has finished</source>
-      <translation>Impossible de lancer un nouveau programme d'installation tant que le précédent n'est pas terminé</translation>
+      <translation>Impossible de lancer un nouveau programme d'installation tant que le précédent n'est pas terminé.</translation>
     </message>
     <message>
       <location line="-66"/>
       <source>Some installed addons are missing dependencies. Would you like to install them now?</source>
-      <translation>Certaines extensions installées ont des dépendances manquantes. Voulez-vous les installer maintenant ?</translation>
+      <translation>Certaines extensions installées ont des dépendances manquantes. Faut-il les installer maintenant ?</translation>
     </message>
     <message>
       <location line="+51"/>
@@ -623,7 +641,7 @@ Redémarrer pour utiliser la nouvelle version.</translation>
     <message>
       <location line="+5"/>
       <source>Delete them now?</source>
-      <translation>Les supprimer maintenant ?</translation>
+      <translation>Faut-il les supprimer maintenant ?</translation>
     </message>
     <message>
       <location line="+12"/>
@@ -638,7 +656,65 @@ Redémarrer pour utiliser la nouvelle version.</translation>
       <translation>Jamais</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.py" line="+250"/>
+      <location filename="../../AddonManagerOptions.py" line="+95"/>
+      <source>Proxy test timed out: no connection made.</source>
+      <translation>Le test du proxy a expiré : aucune connexion établie.</translation>
+    </message>
+    <message>
+      <location line="+7"/>
+      <source>Proxy test returned an error: no connection made.
+</source>
+      <translation>Le test de proxy a renvoyé une erreur : aucune connexion établie.</translation>
+    </message>
+    <message>
+      <location line="+16"/>
+      <source>Proxy test succeeded, connection established.</source>
+      <translation>Le test du proxy a réussi, la connexion est établie.</translation>
+    </message>
+    <message>
+      <location line="+5"/>
+      <source>Proxy requires authentication. The Addon Manager does not support this.</source>
+      <translation>Le proxy nécessite une authentification. Le gestionnaire des extensions ne prend pas en charge cela.</translation>
+    </message>
+    <message>
+      <location line="+0"/>
+      <source>Proxy connection failed with code {}: {}.</source>
+      <translation>La connexion proxy a échoué avec le code {} : {}.</translation>
+    </message>
+    <message>
+      <location line="+102"/>
+      <source>Invalid hostname</source>
+      <translation>Nom d'hôte non valide</translation>
+    </message>
+    <message>
+      <location line="+10"/>
+      <location line="+20"/>
+      <location line="+38"/>
+      <source>No proxy</source>
+      <translation>Pas de proxy</translation>
+    </message>
+    <message>
+      <location line="-57"/>
+      <source>n/a</source>
+      <translation>non applicable</translation>
+    </message>
+    <message>
+      <location line="+5"/>
+      <source>proxy.example.com</source>
+      <translation>proxy.exemple.com</translation>
+    </message>
+    <message>
+      <location line="+34"/>
+      <source>System has no proxy</source>
+      <translation>Le système n'a pas de proxy.</translation>
+    </message>
+    <message>
+      <location line="+43"/>
+      <source>Testing proxy connection…</source>
+      <translation>Test de la connexion proxy…</translation>
+    </message>
+    <message>
+      <location line="+259"/>
       <source>Repository URL</source>
       <comment>Preferences header for custom repositories</comment>
       <translation>URL du dépôt</translation>
@@ -650,22 +726,7 @@ Redémarrer pour utiliser la nouvelle version.</translation>
       <translation>Nom de la branche</translation>
     </message>
     <message>
-      <location filename="../../NetworkManager.py" line="+213"/>
-      <source>Failed to parse proxy URL &apos;{}&apos;</source>
-      <translation>Échec de l'analyse de l'URL du proxy "{}".</translation>
-    </message>
-    <message>
-      <location line="+32"/>
-      <source>Parameter error: mutually exclusive proxy options set. Resetting to default.</source>
-      <translation>Erreur de paramètre : des options de proxy mutuellement exclusives ont été définies. Réinitialisation à la valeur par défaut.</translation>
-    </message>
-    <message>
-      <location line="+15"/>
-      <source>Parameter error: user proxy indicated, but no proxy provided. Resetting to default.</source>
-      <translation>Erreur de paramètre : le proxy de l'utilisateur est indiqué, mais aucun proxy n'est fourni. Réinitialisation à la valeur par défaut.</translation>
-    </message>
-    <message>
-      <location line="+214"/>
+      <location filename="../../NetworkManager.py" line="+403"/>
       <source>Addon Manager: Unexpected {} response from server</source>
       <translation>Gestionnaire des extensions : réponse inattendue {} du serveur</translation>
     </message>
@@ -675,7 +736,7 @@ Redémarrer pour utiliser la nouvelle version.</translation>
       <translation>Erreur avec la connexion chiffrée</translation>
     </message>
     <message>
-      <location filename="../../package_list.py" line="+194"/>
+      <location filename="../../package_list.py" line="+193"/>
       <source>Click for details about package {}</source>
       <translation>Cliquer pour plus de détails sur le paquet {}</translation>
     </message>
@@ -695,17 +756,12 @@ Redémarrer pour utiliser la nouvelle version.</translation>
       <translation>Mots-clés</translation>
     </message>
     <message>
-      <location line="+46"/>
-      <source>Maintainer</source>
-      <translation>Mainteneur</translation>
+      <location line="+51"/>
+      <source>Maintainer(s)</source>
+      <translation>Mainteneur(s)</translation>
     </message>
     <message>
-      <location line="+5"/>
-      <source>Maintainers:</source>
-      <translation>Mainteneurs :</translation>
-    </message>
-    <message>
-      <location line="+7"/>
+      <location line="+17"/>
       <source>Author</source>
       <translation>Auteur</translation>
     </message>
@@ -785,7 +841,7 @@ Redémarrer pour utiliser la nouvelle version.</translation>
       <translation>Version disponible</translation>
     </message>
     <message>
-      <location filename="../../Widgets/addonmanager_widget_addon_buttons.py" line="+170"/>
+      <location filename="../../Widgets/addonmanager_widget_addon_buttons.py" line="+169"/>
       <source>Install</source>
       <translation>Installer</translation>
     </message>
@@ -832,7 +888,7 @@ Redémarrer pour utiliser la nouvelle version.</translation>
     <message>
       <location line="+1"/>
       <source>Run</source>
-      <translation>Lancer</translation>
+      <translation>Exécuter</translation>
     </message>
     <message>
       <location line="+1"/>
@@ -847,7 +903,7 @@ Redémarrer pour utiliser la nouvelle version.</translation>
     <message>
       <location line="+2"/>
       <source>Addon Type</source>
-      <translation>Type d'extension</translation>
+      <translation>Type d'extensions</translation>
     </message>
     <message>
       <location line="+3"/>
@@ -943,7 +999,7 @@ Redémarrer pour utiliser la nouvelle version.</translation>
     <message>
       <location line="+9"/>
       <source>Changed to branch &apos;{}&apos; -- restart FreeCAD to use the addon</source>
-      <translation>Changé vers la branche « {} ». Redémarrer FreeCAD pour utiliser l'extension.</translation>
+      <translation>Remplacée par la branche « {} ». Redémarrer FreeCAD pour utiliser l'extension.</translation>
     </message>
     <message>
       <location line="+12"/>
@@ -978,12 +1034,12 @@ Redémarrer pour utiliser la nouvelle version.</translation>
     <message>
       <location line="+7"/>
       <source>Git tag &apos;{}&apos; checked out, no updates possible</source>
-      <translation>La balise de git "{}" a été retirée, aucune mise à jour possible.</translation>
+      <translation>La balise Git « { } » a été retirée, aucune mise à jour n'est possible.</translation>
     </message>
     <message>
       <location line="+10"/>
       <source>Currently on branch {}, name changed to {}</source>
-      <translation>Pour le moment sur la branche {}, le nom a été changé en {}</translation>
+      <translation>Actuellement sur la branche {}, le nom a été changé en {}.</translation>
     </message>
     <message>
       <location line="+8"/>
@@ -1003,7 +1059,7 @@ Redémarrer pour utiliser la nouvelle version.</translation>
     <message>
       <location line="+16"/>
       <source>WARNING: This addon is currently installed, but disabled. Use the &apos;enable&apos; button to re-enable.</source>
-      <translation>ATTENTION : cette extension est actuellement installée mais désactivée. Utilisez le bouton "Activer" pour la réactiver.</translation>
+      <translation>ATTENTION : cette extension est actuellement installée mais désactivée. Utiliser le bouton « Activer » pour réactiver la fonction.</translation>
     </message>
     <message>
       <location line="+1"/>
@@ -1013,12 +1069,12 @@ Redémarrer pour utiliser la nouvelle version.</translation>
     <message>
       <location filename="../../Widgets/addonmanager_widget_search.py" line="+68"/>
       <source>Filter is valid</source>
-      <translation>Le filtre est valide</translation>
+      <translation>Le filtre est valide.</translation>
     </message>
     <message>
       <location line="+9"/>
       <source>Filter regular expression is invalid</source>
-      <translation>L'expression régulière du filtre n'est pas valide</translation>
+      <translation>L'expression régulière du filtre n'est pas valide.</translation>
     </message>
     <message>
       <location line="+13"/>
@@ -1079,22 +1135,22 @@ Redémarrer pour utiliser la nouvelle version.</translation>
       <translation>Icône</translation>
     </message>
     <message>
-      <location line="+3"/>
+      <location filename="../../compact_view.py" line="+3"/>
       <source>&lt;b&gt;Package Name&lt;/b&gt;</source>
       <translation>&lt;b&gt;Nom du paquet&lt;/b&gt;</translation>
     </message>
     <message>
-      <location line="+1"/>
+      <location filename="../../compact_view.py" line="+1"/>
       <source>Version</source>
       <translation>Version</translation>
     </message>
     <message>
-      <location line="+3"/>
+      <location filename="../../compact_view.py" line="+3"/>
       <source>Description</source>
       <translation>Description</translation>
     </message>
     <message>
-      <location line="+3"/>
+      <location filename="../../compact_view.py" line="+3"/>
       <source>Update available</source>
       <translation>Mise à jour disponible</translation>
     </message>
@@ -1119,8 +1175,7 @@ Redémarrer pour utiliser la nouvelle version.</translation>
 Do you want the Addon Manager to install them automatically? Choose &quot;Ignore&quot; to install/update without installing the dependencies.</source>
       <translation>Cette installation/mise à jour comporte les dépendances obligatoires et facultatives suivantes.
 
-Voulez-vous que le gestionnaire d'extensions les installe automatiquement ? Choisissez « Ignorer »
-pour installer/mettre à jour sans installer les dépendances.</translation>
+Faut-il que le gestionnaire des extensions les installe automatiquement ? Choisir « Ignorer » pour installer/mettre à jour sans installer les dépendances.</translation>
     </message>
     <message>
       <source>FreeCAD Addons</source>
@@ -1143,11 +1198,11 @@ pour installer/mettre à jour sans installer les dépendances.</translation>
     </message>
     <message>
       <source>Addon Manager Warning</source>
-      <translation>Avertissement du gestionnaire d'extensions</translation>
+      <translation>Avertissement du gestionnaire des extensions</translation>
     </message>
     <message>
       <source>The Addon Manager provides access to an extensive library of useful third-party FreeCAD extensions. No guarantees can be made regarding their safety or functionality.</source>
-      <translation>Le gestionnaire d'extensions permet d'accéder à une vaste bibliothèque d'extensions FreeCAD tierces. Aucune garantie ne peut être donnée quant à leur sécurité ou leur fonctionnalité.</translation>
+      <translation>Le gestionnaire des extensions permet d'accéder à une vaste bibliothèque d'extensions tierces de FreeCAD. Aucune garantie ne peut être donnée quant à leur sécurité ou leur fonctionnalité.</translation>
     </message>
     <message>
       <source>Continue</source>
@@ -1167,7 +1222,7 @@ pour installer/mettre à jour sans installer les dépendances.</translation>
     </message>
     <message>
       <source>Update Addons</source>
-      <translation>Mise à jour des extensions</translation>
+      <translation>Mettre à jour les extensions</translation>
     </message>
     <message>
       <source>Addons with available updates</source>
@@ -1179,8 +1234,8 @@ pour installer/mettre à jour sans installer les dépendances.</translation>
     </message>
     <message>
       <source>(Note that addon authors sometimes do not update the version number on each update, so the available and installed versions may appear the same.)</source>
-      <translation>(Notez que les auteurs d'extensions ne mettent parfois pas à jour le numéro de version à chaque
-mise à jour, de sorte que les versions disponibles et installées peuvent sembler identiques.)</translation>
+      <translation>(Remarque : les auteurs d'extensions ne mettent parfois pas à jour le numéro de version à chaque
+mise à jour, de fait les versions disponibles et installées peuvent sembler identiques.)</translation>
     </message>
   </context>
   <context>
@@ -1237,39 +1292,23 @@ mise à jour, de sorte que les versions disponibles et installées peuvent sembl
     <name>Gui::Dialog::DlgSettingsAddonManager</name>
     <message>
       <source>Addon Manager Options</source>
-      <translation>Options du gestionnaire d'extensions</translation>
+      <translation>Options du gestionnaire des extensions</translation>
     </message>
     <message>
       <source>Hide addons without a license</source>
-      <translation>Cacher les extensions sans licence</translation>
+      <translation>Masquer les extensions sans licence</translation>
     </message>
     <message>
       <source>Hide addons with non-FSF free/libre license</source>
-      <translation>Masquer les extensions dont la licence n'est pas libre/libre selon la FSF</translation>
+      <translation>Masquer les extensions dont la licence n'est pas libre/libre selon la FSF.</translation>
     </message>
     <message>
       <source>Hide addons with non-OSI-approved license</source>
-      <translation>Masquer les extensions dont la licence n'est pas libre/libre selon l'OSI</translation>
+      <translation>Masquer les extensions dont la licence n'est pas libre/libre selon l'OSI.</translation>
     </message>
     <message>
       <source>Custom repositories</source>
       <translation>Dépôts personnalisés</translation>
-    </message>
-    <message>
-      <source>Proxy</source>
-      <translation>Proxy</translation>
-    </message>
-    <message>
-      <source>No proxy</source>
-      <translation>Pas de proxy</translation>
-    </message>
-    <message>
-      <source>User system proxy</source>
-      <translation>Proxy du système de l'utilisateur</translation>
-    </message>
-    <message>
-      <source>User-defined proxy</source>
-      <translation>Proxy défini par l'utilisateur</translation>
     </message>
     <message>
       <source>Score source URL</source>
@@ -1277,14 +1316,62 @@ mise à jour, de sorte que les versions disponibles et installées peuvent sembl
     </message>
     <message>
       <source>The URL for the addon score data (see Addon Manager wiki page for formatting and hosting details)</source>
-      <translation>L'URL pour les données de score de l'extension (voir la page wiki Gestionnaire d'extensions pour les détails de formatage et d'hébergement).</translation>
+      <translation>L'URL pour les données de score de l'extension (voir la page wiki Gestionnaire des extensions pour les détails de formatage et d'hébergement).</translation>
+    </message>
+    <message>
+      <source>Use a proxy server for access to addon data</source>
+      <translation>Utiliser un serveur proxy pour accéder aux données des extensions</translation>
+    </message>
+    <message>
+      <source>Proxy addon manager traffic</source>
+      <translation>Trafic du gestionnaire des extensions via un proxy</translation>
+    </message>
+    <message>
+      <source>Use the system&apos;s proxy settings</source>
+      <translation>Utiliser les paramètres proxy du système</translation>
+    </message>
+    <message>
+      <source>System</source>
+      <translation>Système</translation>
+    </message>
+    <message>
+      <source>Use custom proxy settings</source>
+      <translation>Utiliser des paramètres personnalisés de proxy</translation>
+    </message>
+    <message>
+      <source>Custom</source>
+      <translation>Personnalisé</translation>
+    </message>
+    <message>
+      <source>Host</source>
+      <translation>Hôte</translation>
+    </message>
+    <message>
+      <source>:</source>
+      <translation>:</translation>
+    </message>
+    <message>
+      <source>Port</source>
+      <translation>Port</translation>
+    </message>
+    <message>
+      <source>Test these proxy settings</source>
+      <translation>Tester ces paramètres du proxy</translation>
+    </message>
+    <message>
+      <source>Test Connection</source>
+      <translation>Tester la connexion</translation>
+    </message>
+    <message>
+      <source>Connection Test</source>
+      <translation>Test de connexion</translation>
     </message>
   </context>
   <context>
     <name>PackageDetails</name>
     <message>
       <source>Installs a macro or workbench</source>
-      <translation>Installe une macro ou un atelier</translation>
+      <translation>Installe une macro ou un atelier.</translation>
     </message>
     <message>
       <source>Install</source>
@@ -1315,15 +1402,15 @@ mise à jour, de sorte que les versions disponibles et installées peuvent sembl
     </message>
     <message>
       <source>The following Python packages have been installed locally by the Addon Manager to satisfy addon dependencies. Installation location</source>
-      <translation>Les paquets Python suivants ont été installés localement par le gestionnaire d'extensions pour satisfaire aux dépendances de l'extension. Emplacement de l'installation</translation>
+      <translation>Les paquets Python suivants ont été installés localement par le gestionnaire des extensions pour satisfaire aux dépendances de l'extension. Emplacement de l'installation :</translation>
     </message>
     <message>
       <source>Update in progress…</source>
-      <translation>Mise à jour en cours...</translation>
+      <translation>Mise à jour en cours…</translation>
     </message>
     <message>
       <source>An asterisk (*) in the &quot;Used by&quot; column indicates an optional dependency. Note that &apos;Used by&apos; only records direct imports in the addon. Other Python packages that those packages depend upon may have been installed as well.</source>
-      <translation>Un astérisque (*) dans la colonne "Utilisé par" indique une dépendance optionnelle. Notez que "Utilisé par" n'enregistre que les importations directes dans l'extension. D'autres paquets Python dont ces paquets dépendent peuvent également avoir été installés.</translation>
+      <translation>Un astérisque (*) dans la colonne « Utilisé par » indique une dépendance facultative. Remarque : « Utilisé par » n'enregistre que les importations directes dans l'extension. D'autres paquets Python dont ces paquets dépendent peuvent également avoir été installés.</translation>
     </message>
     <message>
       <source>Update All</source>
@@ -1343,7 +1430,7 @@ mise à jour, de sorte que les versions disponibles et installées peuvent sembl
     <message>
       <location line="+43"/>
       <source>&amp;Addon Manager</source>
-      <translation>&amp;Gestionnaire d'extensions</translation>
+      <translation>&amp;Gestionnaire des extensions</translation>
     </message>
     <message>
       <location line="+4"/>
@@ -1356,7 +1443,7 @@ mise à jour, de sorte que les versions disponibles et installées peuvent sembl
     <message>
       <location filename="../../addonmanager_toolbar_adapter.py" line="+45"/>
       <source>Auto-Created Macro Toolbar</source>
-      <translation>Barre d'outils de macro créée automatiquement</translation>
+      <translation>Barre d'outils des macros créée automatiquement</translation>
     </message>
   </context>
   <context>
@@ -1367,7 +1454,7 @@ mise à jour, de sorte que les versions disponibles et installées peuvent sembl
     </message>
     <message>
       <source>Add a toolbar button for this macro?</source>
-      <translation>Ajouter un bouton de barre d'outils pour cette macro ?</translation>
+      <translation>Faut-il ajouter un bouton de barre d'outils pour cette macro ?</translation>
     </message>
     <message>
       <source>Yes</source>
@@ -1390,7 +1477,7 @@ mise à jour, de sorte que les versions disponibles et installées peuvent sembl
     </message>
     <message>
       <source>Proxy requires authentication</source>
-      <translation>Ce proxy requiert une authentification</translation>
+      <translation>Ce proxy requiert une authentification.</translation>
     </message>
     <message>
       <source>Proxy</source>
@@ -1425,7 +1512,7 @@ mise à jour, de sorte que les versions disponibles et installées peuvent sembl
     </message>
     <message>
       <source>Select a toolbar to add this macro to</source>
-      <translation>Sélectionner une barre d'outils à laquelle ajouter cette macro</translation>
+      <translation>Sélectionner une barre d'outils pour y ajouter cette macro</translation>
     </message>
     <message>
       <source>Ask every time</source>
@@ -1440,7 +1527,7 @@ mise à jour, de sorte que les versions disponibles et installées peuvent sembl
     </message>
     <message>
       <source>Add a toolbar button for this macro?</source>
-      <translation>Ajouter un bouton de barre d'outils pour cette macro ?</translation>
+      <translation>Faut-il ajouter un bouton de barre d'outils pour cette macro ?</translation>
     </message>
     <message>
       <source>Yes</source>

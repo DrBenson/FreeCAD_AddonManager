@@ -339,7 +339,7 @@ Please restart to use the new version.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../addonmanager_python_deps.py" line="+299"/>
+        <location filename="../../addonmanager_python_deps.py" line="+304"/>
         <source>Package</source>
         <translation type="unfinished"></translation>
     </message>
@@ -516,13 +516,31 @@ Please restart to use the new version.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+42"/>
         <source>Failed to get addon score from &apos;{}&apos; -- sorting by score will fail
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+11"/>
+        <source>Failed to decode addon score from &apos;{}&apos; -- sorting by score will fail
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Failed to parse addon score from &apos;{}&apos; -- sorting by score will fail
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Failed to read addon score from &apos;{}&apos; -- sorting by score will fail
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+39"/>
         <location line="+13"/>
         <source>Checking for missing dependencies</source>
         <translation type="unfinished"></translation>
@@ -533,7 +551,7 @@ Please restart to use the new version.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../AddonManager.py" line="+281"/>
+        <location filename="../../AddonManager.py" line="+282"/>
         <source>Worker process {} is taking a long time to stop…</source>
         <translation type="unfinished"></translation>
     </message>
@@ -734,17 +752,12 @@ Please restart to use the new version.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+46"/>
-        <source>Maintainer</source>
+        <location line="+51"/>
+        <source>Maintainer(s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+5"/>
-        <source>Maintainers:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+17"/>
         <source>Author</source>
         <translation type="unfinished"></translation>
     </message>

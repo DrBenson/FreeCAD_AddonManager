@@ -5,7 +5,7 @@
     <name>AddCustomRepositoryDialog</name>
     <message>
       <source>Custom Repository</source>
-      <translation>Eigenes Projektarchiv</translation>
+      <translation>Benutzerdefiniertes Projektarchiv</translation>
     </message>
     <message>
       <source>Repository URL</source>
@@ -40,19 +40,19 @@
   <context>
     <name>AddonsInstaller</name>
     <message>
-      <location filename="../../Addon.py" line="+392"/>
+      <location filename="../../Addon.py" line="+395"/>
       <source>{}: Unrecognized internal workbench &apos;{}&apos;</source>
-      <translation>{}: Unbekannter interner Arbeitsbereich &apos;{}&apos;</translation>
+      <translation>{}: Unbekannter interner Arbeitsbereich „{}&apos;“</translation>
     </message>
     <message>
       <location line="+33"/>
       <source>Addon Developer Warning: Repository URL set in package.xml file for addon {} ({}) does not match the URL it was fetched from ({})</source>
-      <translation>Add-on Entwickler Warnung: Die in der Datei package.xml für das Add-on {} ({}) angegebene Repository-URL stimmt nicht mit der URL überein, von der es abgerufen wurde ({})</translation>
+      <translation>Addon-Entwickler-Warnung: Die in der Datei package.xml für das Addon {} ({}) angegebene Projektarchiv-URL stimmt nicht mit der URL überein, von der sie abgerufen wurde ({})</translation>
     </message>
     <message>
       <location line="+8"/>
       <source>Addon Developer Warning: Repository branch set in package.xml file for addon {} ({}) does not match the branch it was fetched from ({})</source>
-      <translation>Add-on Entwickler Warnung: Der in der package.xml-Datei für das Add-on {} ({}) angegebene Repository-Branch stimmt nicht mit dem Branch überein, aus dem es geholt wurde ({})</translation>
+      <translation>Addon-Entwickler-Warnung: Der in der package.xml-Datei für das Addon {} ({}) angegebene Projektarchiv-Zweig stimmt nicht mit dem Zweig überein, aus dem es geholt wurde ({})</translation>
     </message>
     <message>
       <location filename="../../addonmanager_connection_checker.py" line="+68"/>
@@ -62,7 +62,7 @@
     <message>
       <location line="+1"/>
       <source>Checking for connection to addons.freecad.org...</source>
-      <translation>Es wird versucht, eine Verbindung nach addons.freecad.org aufzubauen...</translation>
+      <translation>Verbindung zu addons.freecad.org wird überprüft...</translation>
     </message>
     <message>
       <location line="+26"/>
@@ -92,7 +92,7 @@
     <message>
       <location filename="../../addonmanager_git.py" line="+153"/>
       <source>Basic Git update failed with the following message:</source>
-      <translation>Reguläres Git Update mit folgenden Nachricht fehlgeschlagen:</translation>
+      <translation>Grundlegende Git-Aktualisierung ist mit der folgenden Meldung fehlgeschlagen:</translation>
     </message>
     <message>
       <location line="+8"/>
@@ -107,12 +107,12 @@
     <message>
       <location line="+141"/>
       <source>Git branch rename failed with the following message:</source>
-      <translation>Umbenennen des Git Branches mit der folgenden Nachricht fehlgeschlagen:</translation>
+      <translation>Umbenennen des Git-Zweigs mit der folgenden Nachricht fehlgeschlagen:</translation>
     </message>
     <message>
       <location filename="../../addonmanager_installer_gui.py" line="+530"/>
       <source>This addon requires Python packages that are not installed, and cannot be installed automatically. To use this addon you must install the following Python packages manually:</source>
-      <translation>Dieses Addon benötigt Python-Pakete, die nicht installiert sind und nicht automatisch installiert werden können. Um diesen Arbeitsbereich nutzen zu können, müssen die folgenden Python-Pakete manuell installiert werden:</translation>
+      <translation>Dieses Addon erfordert Python-Pakete, die nicht installiert sind und nicht automatisch installiert werden können. Um dieses Addon zu verwenden, müssen die folgenden Python-Pakete manuell installiert werden:</translation>
     </message>
     <message>
       <location line="+12"/>
@@ -127,12 +127,12 @@
     <message>
       <location line="-35"/>
       <source>Addon &apos;{}&apos; requires &apos;{}&apos;, which is not available in your copy of FreeCAD.</source>
-      <translation>Add-on &apos;{}&apos; benötigt &apos;{}&apos;, was in FreeCAD nicht verfügbar ist.</translation>
+      <translation>Das Addon „{}“ erfordert „{}“, das in dieser Version von FreeCAD nicht verfügbar ist.</translation>
     </message>
     <message>
       <location line="-441"/>
       <source>Installing &apos;{}&apos;</source>
-      <translation>&apos;{}&apos; wird installiert</translation>
+      <translation>Installieren von „{}&apos;“</translation>
     </message>
     <message>
       <location line="+407"/>
@@ -142,12 +142,12 @@
     <message>
       <location line="+12"/>
       <source>Requirement Cannot be Installed</source>
-      <translation>Erfordernis kann nicht installiert werden</translation>
+      <translation>Voraussetzung kann nicht installiert werden</translation>
     </message>
     <message>
       <location line="+27"/>
       <source>These addons require &apos;{}&apos;, which is not available in your copy of FreeCAD.</source>
-      <translation>Diese Addons erfordern &apos;{}&apos;, was in dieser Version von FreeCAD nicht zur Verfügung steht.</translation>
+      <translation>Diese Addons erfordern „{}“, das in dieser Version von FreeCAD nicht verfügbar ist.</translation>
     </message>
     <message>
       <location line="+9"/>
@@ -157,7 +157,7 @@
     <message>
       <location line="+11"/>
       <source>These addons require the following workbenches, which are not available in your copy of FreeCAD:</source>
-      <translation>Diese Addons erfordern die folgenden Arbeitsbereiche, die in dieser Version von FreeCAD nicht zur Verfügung stehen:</translation>
+      <translation>Diese Addons erfordern die folgenden Arbeitsbereiche, die in dieser Version von FreeCAD nicht verfügbar sind:</translation>
     </message>
     <message>
       <location line="+7"/>
@@ -224,7 +224,7 @@
     <message>
       <location line="+6"/>
       <source>Failed to execute pip, which may be missing from your Python installation. Please ensure your system has pip installed and try again. The failed command was:</source>
-      <translation>Die Ausführung von pip ist fehlgeschlagen, da sie möglicherweise nicht in der Python-Installation enthalten ist. Bitte sicherstellen, dass das System pip installiert hat und erneut versuchen. Der fehlgeschlagene Befehl war:</translation>
+      <translation>Die Ausführung von pip ist fehlgeschlagen. Möglicherweise fehlt pip in dieser Python-Installation. Sicherstellen, dass pip auf diesem System installiert ist, und es erneut versuchen. Der fehlgeschlagene Befehl war:</translation>
     </message>
     <message>
       <location line="+22"/>
@@ -244,7 +244,7 @@
     <message>
       <location line="+1"/>
       <source>Cancelling installation of &apos;{}&apos;</source>
-      <translation>Installation von &apos;{}&apos; abbrechen</translation>
+      <translation>Installation von „{}“ abbrechen</translation>
     </message>
     <message>
       <location line="+27"/>
@@ -286,12 +286,12 @@
     <message>
       <location filename="../../addonmanager_installer.py" line="+383"/>
       <source>Received {} response code from server</source>
-      <translation>{} Antwortcode vom Server erhalten</translation>
+      <translation>Antwortcode {} vom Server empfangen</translation>
     </message>
     <message>
       <location line="+184"/>
       <source>Failed to install macro {}</source>
-      <translation>Installieren des Makros {} fehlgeschlagen</translation>
+      <translation>Installation von Makro {} fehlgeschlagen</translation>
     </message>
     <message>
       <location line="+34"/>
@@ -318,17 +318,17 @@
     <message>
       <location line="+32"/>
       <source>Unable to open macro code URL {}</source>
-      <translation>Makro-Code kann nicht geöffnet werden URL {}</translation>
+      <translation>Makrocode-URL {} kann nicht geöffnet werden</translation>
     </message>
     <message>
-      <location line="+137"/>
+      <location line="+136"/>
       <source>Unable to fetch macro-specified file {} from {}</source>
-      <translation>Makrospezifizierte Datei {} von {} konnte nicht abgerufen werden</translation>
+      <translation>Die durch das Makro angegebene Datei {} konnte nicht aus {} abgerufen werden</translation>
     </message>
     <message>
       <location line="+8"/>
       <source>Could not locate macro-specified file {} (expected at {})</source>
-      <translation>Datei {} konnte nicht gefunden werden (erwartet um {})</translation>
+      <translation>Die durch das Makro angegebene Datei {} konnte nicht gefunden werden (erwartet an {})</translation>
     </message>
     <message>
       <location filename="../../addonmanager_package_details_controller.py" line="+8"/>
@@ -344,7 +344,7 @@ nach: {}
 Bitte neu starten, um die neue Version zu verwenden.</translation>
     </message>
     <message>
-      <location filename="../../addonmanager_python_deps.py" line="+300"/>
+      <location filename="../../addonmanager_python_deps.py" line="+304"/>
       <source>Package</source>
       <translation>Paket</translation>
     </message>
@@ -356,7 +356,7 @@ Bitte neu starten, um die neue Version zu verwenden.</translation>
     <message>
       <location line="+2"/>
       <source>Available Version</source>
-      <translation>Bereitgestellte Version</translation>
+      <translation>Verfügbare Version</translation>
     </message>
     <message>
       <location line="+2"/>
@@ -431,12 +431,12 @@ Bitte neu starten, um die neue Version zu verwenden.</translation>
     <message>
       <location line="+64"/>
       <source>Error while trying to remove macro file {}:</source>
-      <translation>Fehler beim Entfernen der Makrodatei {}:</translation>
+      <translation>Fehler beim Versuch, die installierte Makrodatei {} zu entfernen:</translation>
     </message>
     <message>
       <location filename="../../addonmanager_update_all_gui.py" line="+74"/>
       <source>Installing</source>
-      <translation>Wird installiert</translation>
+      <translation>Installieren</translation>
     </message>
     <message>
       <location line="+3"/>
@@ -464,7 +464,7 @@ Bitte neu starten, um die neue Version zu verwenden.</translation>
       <location line="+1"/>
       <source>Available Version</source>
       <comment>Column header</comment>
-      <translation>Bereitgestellte Version</translation>
+      <translation>Verfügbare Version</translation>
     </message>
     <message>
       <location line="+1"/>
@@ -479,26 +479,26 @@ Bitte neu starten, um die neue Version zu verwenden.</translation>
       <translation>Fertig</translation>
     </message>
     <message>
-      <location filename="../../addonmanager_workers_startup.py" line="+117"/>
+      <location filename="../../addonmanager_workers_startup.py" line="+116"/>
       <source>WARNING: Duplicate addon {} ignored</source>
-      <translation>WARNUNG: Duplizieren des Addons {} wird ignoriert</translation>
+      <translation>WARNUNG: Doppeltes Addon {} ignoriert</translation>
     </message>
     <message>
       <location line="+119"/>
       <source>WARNING: Custom addon &apos;{}&apos; is overriding the one in the official addon catalog
 </source>
-      <translation>WARNUNG: Das selbsterstellte Addon &apos;{}&apos; überschreibt das aus dem offiziellen Addon-Katalog
+      <translation>WARNUNG: Das benutzerdefinierte Addon „{}“ überschreibt das Addon im offiziellen Addon-Katalog
 </translation>
     </message>
     <message>
       <location line="+115"/>
       <source>Checking {} for update</source>
-      <translation>{} wird auf Aktualisierung geprüft</translation>
+      <translation>{} auf Aktualisierung prüfen</translation>
     </message>
     <message>
       <location line="+55"/>
       <source>Unable to fetch Git updates for workbench {}</source>
-      <translation>Git-Aktualisierungen für den Arbeitsbereich {} können nicht abgerufen werden</translation>
+      <translation>Git-Aktualisierungen für Arbeitsbereich {} können nicht abgerufen werden</translation>
     </message>
     <message>
       <location line="+13"/>
@@ -516,34 +516,55 @@ Bitte neu starten, um die neue Version zu verwenden.</translation>
       <translation>Fehler beim Abrufen des Codes für Makro &apos;{name}&apos;</translation>
     </message>
     <message>
-      <location line="+61"/>
+      <location line="+67"/>
       <source>Failed to get addon statistics from {} -- only sorting alphabetically will be accurate
 </source>
-      <translation>Das Abrufen der Addon-Statistiken von {} ist fehlgeschlagen, nur alphabetisches Sortieren wird genau sein
-</translation>
-    </message>
-    <message>
-      <location line="+41"/>
-      <source>Failed to get addon score from &apos;{}&apos; -- sorting by score will fail
-</source>
-      <translation>Das Abrufen der Addon-Bewertungen von &apos;{}&apos; ist fehlgeschlagen, Sortieren nach Bewertungen wird fehlschlagen
+      <translation>Die Addon-Statistiken konnten nicht von {} abgerufen werden – nur die alphabetische Sortierung ist korrekt
 </translation>
     </message>
     <message>
       <location line="+42"/>
+      <source>Failed to get addon score from &apos;{}&apos; -- sorting by score will fail
+</source>
+      <translation>Fehler beim Abrufen der Addon-Bewertung von „{}“ – Sortierung nach Bewertung wird fehlschlagen
+</translation>
+    </message>
+    <message>
+      <location line="+11"/>
+      <source>Failed to decode addon score from &apos;{}&apos; -- sorting by score will fail
+</source>
+      <translation>Das Dekodieren der Addon-Bewertung von &apos;{}&apos; ist fehlgeschlagen - Sortieren nach Bewertungen wird fehlschlagen
+</translation>
+    </message>
+    <message>
+      <location line="+7"/>
+      <source>Failed to parse addon score from &apos;{}&apos; -- sorting by score will fail
+</source>
+      <translation>Das Analysieren der Addon-Bewertung von &apos;{}&apos; ist fehlgeschlagen - Sortieren nach Bewertungen wird fehlschlagen
+</translation>
+    </message>
+    <message>
+      <location line="+7"/>
+      <source>Failed to read addon score from &apos;{}&apos; -- sorting by score will fail
+</source>
+      <translation>Das Lesen der Addon-Bewertung von &apos;{}&apos; ist fehlgeschlagen - Sortieren nach Bewertungen wird fehlschlagen
+</translation>
+    </message>
+    <message>
+      <location line="+39"/>
       <location line="+13"/>
       <source>Checking for missing dependencies</source>
-      <translation>Fehlende Abhängigkeiten werden gesucht</translation>
+      <translation>Auf fehlende Abhängigkeiten prüfen</translation>
     </message>
     <message>
       <location filename="../../addonmanager_workers_utility.py" line="+82"/>
       <source>Unable to read data from addons.freecad.org. The server may be down, or you may not be connected to the internet.</source>
-      <translation>Daten von addons.freecad.org konnten nicht gelesen werden. Es kann sein, dass der Server heruntergefahren ist oder dass keine Verbindung zum Internet besteht.</translation>
+      <translation>Es können keine Daten von addons.freecad.org gelesen werden. Der Server ist möglicherweise ausgefallen oder es besteht keine Verbindung mit dem Internet.</translation>
     </message>
     <message>
-      <location filename="../../AddonManager.py" line="+282"/>
+      <location filename="../../AddonManager.py" line="+281"/>
       <source>Worker process {} is taking a long time to stop…</source>
-      <translation>Arbeitsprozess {} braucht lange, um anzuhalten…</translation>
+      <translation>„worker“-Prozess {} benötigt sehr lange zum Beenden…</translation>
     </message>
     <message>
       <location line="-86"/>
@@ -559,7 +580,7 @@ Bitte neu starten, um die neue Version zu verwenden.</translation>
     <message>
       <location line="+133"/>
       <source>Restart FreeCAD for changes to take effect</source>
-      <translation>FreeCAD muss neu gestartet werden, damit die Änderungen wirksam werden</translation>
+      <translation>FreeCAD neu starten, damit die Änderungen wirksam werden</translation>
     </message>
     <message>
       <location line="+9"/>
@@ -590,7 +611,7 @@ Bitte neu starten, um die neue Version zu verwenden.</translation>
     <message>
       <location line="+13"/>
       <source>Checking dependencies</source>
-      <translation>Abhängigkeiten werden geprüft</translation>
+      <translation>Abhängigkeiten werden überprüft</translation>
     </message>
     <message>
       <location line="+12"/>
@@ -607,7 +628,7 @@ Bitte neu starten, um die neue Version zu verwenden.</translation>
       <location line="+27"/>
       <location line="+126"/>
       <source>Cannot launch a new installer until the previous one has finished</source>
-      <translation>Ein neues Installierungswerkzeug kann erst nach dem Beenden des vorherigen gestartet werden</translation>
+      <translation>Ein neues Installationsprogramm kann erst gestartet werden, wenn das vorherige abgeschlossen ist</translation>
     </message>
     <message>
       <location line="-66"/>
@@ -617,7 +638,7 @@ Bitte neu starten, um die neue Version zu verwenden.</translation>
     <message>
       <location line="+51"/>
       <source>Temporary installation of macro failed</source>
-      <translation>Makro konnte nicht temporär installiert werden</translation>
+      <translation>Temporäre Installation des Makros fehlgeschlagen</translation>
     </message>
     <message>
       <location line="+44"/>
@@ -627,7 +648,7 @@ Bitte neu starten, um die neue Version zu verwenden.</translation>
     <message>
       <location line="+5"/>
       <source>Delete them now?</source>
-      <translation>Sollen sie jetzt gelöscht werden?</translation>
+      <translation>Jetzt löschen?</translation>
     </message>
     <message>
       <location line="+12"/>
@@ -642,7 +663,66 @@ Bitte neu starten, um die neue Version zu verwenden.</translation>
       <translation>Nie</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.py" line="+250"/>
+      <location filename="../../AddonManagerOptions.py" line="+95"/>
+      <source>Proxy test timed out: no connection made.</source>
+      <translation>Proxy-Test abgelaufen: keine Verbindung hergestellt.</translation>
+    </message>
+    <message>
+      <location line="+7"/>
+      <source>Proxy test returned an error: no connection made.
+</source>
+      <translation>Proxy-Test hat einen Fehler zurückgegeben: keine Verbindung hergestellt.
+</translation>
+    </message>
+    <message>
+      <location line="+16"/>
+      <source>Proxy test succeeded, connection established.</source>
+      <translation>Proxy-Test erfolgreich, Verbindung hergestellt.</translation>
+    </message>
+    <message>
+      <location line="+5"/>
+      <source>Proxy requires authentication. The Addon Manager does not support this.</source>
+      <translation>Der Proxy erfordert eine Authentifizierung. Der Addon-Manager unterstützt dies nicht.</translation>
+    </message>
+    <message>
+      <location line="+0"/>
+      <source>Proxy connection failed with code {}: {}.</source>
+      <translation>Proxy-Verbindung fehlgeschlagen mit Code {}: {}.</translation>
+    </message>
+    <message>
+      <location line="+102"/>
+      <source>Invalid hostname</source>
+      <translation>Ungültiger Hostname</translation>
+    </message>
+    <message>
+      <location line="+10"/>
+      <location line="+20"/>
+      <location line="+38"/>
+      <source>No proxy</source>
+      <translation>Kein Proxy</translation>
+    </message>
+    <message>
+      <location line="-57"/>
+      <source>n/a</source>
+      <translation>n. a.</translation>
+    </message>
+    <message>
+      <location line="+5"/>
+      <source>proxy.example.com</source>
+      <translation>beispiel.proxy.com</translation>
+    </message>
+    <message>
+      <location line="+34"/>
+      <source>System has no proxy</source>
+      <translation>System hat keinen Proxy</translation>
+    </message>
+    <message>
+      <location line="+43"/>
+      <source>Testing proxy connection…</source>
+      <translation>Proxy-Verbindung wird geprüft…</translation>
+    </message>
+    <message>
+      <location line="+259"/>
       <source>Repository URL</source>
       <comment>Preferences header for custom repositories</comment>
       <translation>URL des Projektarchivs</translation>
@@ -654,22 +734,7 @@ Bitte neu starten, um die neue Version zu verwenden.</translation>
       <translation>Zweigname</translation>
     </message>
     <message>
-      <location filename="../../NetworkManager.py" line="+213"/>
-      <source>Failed to parse proxy URL &apos;{}&apos;</source>
-      <translation>Das Aufgliedern der Proxy-URL &apos;{}&apos; ist fehlgeschlagen</translation>
-    </message>
-    <message>
-      <location line="+32"/>
-      <source>Parameter error: mutually exclusive proxy options set. Resetting to default.</source>
-      <translation>Parameterfehler: sich gegenseitig ausschließende Proxy-Optionen eingestellt. Wird auf Standard zurückgesetzt.</translation>
-    </message>
-    <message>
-      <location line="+15"/>
-      <source>Parameter error: user proxy indicated, but no proxy provided. Resetting to default.</source>
-      <translation>Parameterfehler: Benutzerdefinierter Proxy ausgewählt, aber kein Proxy angegeben. Wird auf Standard zurückgesetzt.</translation>
-    </message>
-    <message>
-      <location line="+214"/>
+      <location filename="../../NetworkManager.py" line="+403"/>
       <source>Addon Manager: Unexpected {} response from server</source>
       <translation>Addon-Manager: Unerwartete {} Antwort vom Server</translation>
     </message>
@@ -679,7 +744,7 @@ Bitte neu starten, um die neue Version zu verwenden.</translation>
       <translation>Fehler mit verschlüsselter Verbindung</translation>
     </message>
     <message>
-      <location filename="../../package_list.py" line="+194"/>
+      <location filename="../../package_list.py" line="+193"/>
       <source>Click for details about package {}</source>
       <translation>Klicken für Details zum Paket {}</translation>
     </message>
@@ -699,17 +764,12 @@ Bitte neu starten, um die neue Version zu verwenden.</translation>
       <translation>Schlagwörter</translation>
     </message>
     <message>
-      <location line="+46"/>
-      <source>Maintainer</source>
+      <location line="+51"/>
+      <source>Maintainer(s)</source>
       <translation>Betreuer</translation>
     </message>
     <message>
-      <location line="+5"/>
-      <source>Maintainers:</source>
-      <translation>Betreuer:</translation>
-    </message>
-    <message>
-      <location line="+7"/>
+      <location line="+17"/>
       <source>Author</source>
       <translation>Autor</translation>
     </message>
@@ -789,7 +849,7 @@ Bitte neu starten, um die neue Version zu verwenden.</translation>
       <translation>Verfügbare Version</translation>
     </message>
     <message>
-      <location filename="../../Widgets/addonmanager_widget_addon_buttons.py" line="+170"/>
+      <location filename="../../Widgets/addonmanager_widget_addon_buttons.py" line="+169"/>
       <source>Install</source>
       <translation>Installieren</translation>
     </message>
@@ -821,7 +881,7 @@ Bitte neu starten, um die neue Version zu verwenden.</translation>
     <message>
       <location line="+2"/>
       <source>Override Built-In</source>
-      <translation>Die mitgelieferte Version überschreiben</translation>
+      <translation>Mitgelieferte Version überschreiben</translation>
     </message>
     <message>
       <location line="+4"/>
@@ -851,7 +911,7 @@ Bitte neu starten, um die neue Version zu verwenden.</translation>
     <message>
       <location line="+2"/>
       <source>Addon Type</source>
-      <translation>Erweiterungs-Typ</translation>
+      <translation>Addon-Typ</translation>
     </message>
     <message>
       <location line="+3"/>
@@ -907,7 +967,7 @@ Bitte neu starten, um die neue Version zu verwenden.</translation>
     <message>
       <location line="+1"/>
       <source>Check for Updates</source>
-      <translation>Nach Aktualisierungen suchen</translation>
+      <translation>Auf Aktualisierungen prüfen</translation>
     </message>
     <message>
       <location line="+1"/>
@@ -947,7 +1007,7 @@ Bitte neu starten, um die neue Version zu verwenden.</translation>
     <message>
       <location line="+9"/>
       <source>Changed to branch &apos;{}&apos; -- restart FreeCAD to use the addon</source>
-      <translation>Zum Zweig &apos;{}&apos; gewechselt, FreeCAD neu starten, um das Addon zu verwenden</translation>
+      <translation>Zu Zweig „{}“ geändert – FreeCAD neu starten, um das Addon zu verwenden</translation>
     </message>
     <message>
       <location line="+12"/>
@@ -987,27 +1047,27 @@ Bitte neu starten, um die neue Version zu verwenden.</translation>
     <message>
       <location line="+10"/>
       <source>Currently on branch {}, name changed to {}</source>
-      <translation>Derzeit auf Branch {}, Name geändert zu {}</translation>
+      <translation>Derzeit auf Zweig {}, Name geändert in {}</translation>
     </message>
     <message>
       <location line="+8"/>
       <source>Currently on branch {}, update available to version {}</source>
-      <translation>Derzeit auf Branch {}, Update verfügbar für Version {}</translation>
+      <translation>Derzeit auf Zweig {}, Aktualisierung auf Version {} verfügbar</translation>
     </message>
     <message>
       <location line="+6"/>
       <source>Update available to version {}</source>
-      <translation>Update verfügbar auf Version {}</translation>
+      <translation>Aktualisierung auf Version {} verfügbar</translation>
     </message>
     <message>
       <location line="+6"/>
       <source>This is the latest version available</source>
-      <translation>Dies ist die neueste verfügbare Version</translation>
+      <translation>Dies ist die aktuellste verfügbare Version</translation>
     </message>
     <message>
       <location line="+16"/>
       <source>WARNING: This addon is currently installed, but disabled. Use the &apos;enable&apos; button to re-enable.</source>
-      <translation>WARNUNG: Dieses Add-on ist derzeit installiert, aber deaktiviert. Die Schaltfläche "Aktivieren" verwenden, um es wieder zu aktivieren.</translation>
+      <translation>WARNUNG: Dieses Addon ist derzeit installiert, aber deaktiviert. Die Schaltfläche „Aktivieren“ verwenden, um es wieder zu aktivieren.</translation>
     </message>
     <message>
       <location line="+1"/>
@@ -1083,22 +1143,22 @@ Bitte neu starten, um die neue Version zu verwenden.</translation>
       <translation>Symbol</translation>
     </message>
     <message>
-      <location line="+3"/>
+      <location filename="../../compact_view.py" line="+3"/>
       <source>&lt;b&gt;Package Name&lt;/b&gt;</source>
       <translation>&lt;b&gt;Paketname&lt;/b&gt;</translation>
     </message>
     <message>
-      <location line="+1"/>
+      <location filename="../../compact_view.py" line="+1"/>
       <source>Version</source>
       <translation>Version</translation>
     </message>
     <message>
-      <location line="+3"/>
+      <location filename="../../compact_view.py" line="+3"/>
       <source>Description</source>
       <translation>Beschreibung</translation>
     </message>
     <message>
-      <location line="+3"/>
+      <location filename="../../compact_view.py" line="+3"/>
       <source>Update available</source>
       <translation>Aktualisierung verfügbar</translation>
     </message>
@@ -1121,9 +1181,9 @@ Bitte neu starten, um die neue Version zu verwenden.</translation>
       <source>This installation/update has the following required and optional dependencies.
 
 Do you want the Addon Manager to install them automatically? Choose &quot;Ignore&quot; to install/update without installing the dependencies.</source>
-      <translation>Diese Instsllation bzw. Aktualisierung hat die folgenden erforderlichen und optionalen Abhängigkeiten.
+      <translation>Diese Installation/Aktualisierung hat die folgenden erforderlichen und optionalen Abhängigkeiten.
 
-Soll der Addon-Manager sie automatisch installieren? &quot;Ignorieren&quot; auswählen, um die Installation bzw. die Aktualisierung durchzuführen, ohne die Abhängigkeiten zu installieren.</translation>
+Soll der Addon-Manager diese automatisch installieren? „Ignorieren“ wählen, um die Installation/Aktualisierung ohne Installation der Abhängigkeiten durchzuführen.</translation>
     </message>
     <message>
       <source>FreeCAD Addons</source>
@@ -1150,7 +1210,7 @@ Soll der Addon-Manager sie automatisch installieren? &quot;Ignorieren&quot; ausw
     </message>
     <message>
       <source>The Addon Manager provides access to an extensive library of useful third-party FreeCAD extensions. No guarantees can be made regarding their safety or functionality.</source>
-      <translation>Der Addon-Manager ermöglicht den Zugriff auf eine umfangreiche Bibliothek nützlicher FreeCAD-Erweiterungen von Drittanbietern. Es gibt aber keine Garantie für deren Sicherheit oder Funktionalität.</translation>
+      <translation>Der Addon Manager bietet Zugriff auf eine umfangreiche Bibliothek nützlicher FreeCAD-Erweiterungen von Drittanbietern. Es kann keine Garantie für deren Sicherheit oder Funktionalität übernommen werden.</translation>
     </message>
     <message>
       <source>Continue</source>
@@ -1174,7 +1234,7 @@ Soll der Addon-Manager sie automatisch installieren? &quot;Ignorieren&quot; ausw
     </message>
     <message>
       <source>Addons with available updates</source>
-      <translation>Addons mit bereitstehenden Aktualisierungen</translation>
+      <translation>Addons mit verfügbaren Aktualisierungen</translation>
     </message>
     <message>
       <source>Update Selected Addons</source>
@@ -1182,7 +1242,7 @@ Soll der Addon-Manager sie automatisch installieren? &quot;Ignorieren&quot; ausw
     </message>
     <message>
       <source>(Note that addon authors sometimes do not update the version number on each update, so the available and installed versions may appear the same.)</source>
-      <translation>(Man beachte, dass Autoren von Addons manchmal die Versionsnummer nicht bei jeder Aktualisierung anpassen, sodass es scheint, als wären die bereitstehende und die installierte Version identisch.)</translation>
+      <translation>(Man beachte, dass Addon-Autoren die Versionsnummer manchmal nicht bei jeder Aktualisierung aktualisieren, sodass die verfügbaren und installierten Versionen identisch erscheinen können.)</translation>
     </message>
   </context>
   <context>
@@ -1228,7 +1288,7 @@ Soll der Addon-Manager sie automatisch installieren? &quot;Ignorieren&quot; ausw
     </message>
     <message>
       <source>labelSort</source>
-      <translation>labelSort</translation>
+      <translation>Nach Beschriftung sortieren</translation>
     </message>
     <message>
       <source>UpdateAvailable</source>
@@ -1247,39 +1307,71 @@ Soll der Addon-Manager sie automatisch installieren? &quot;Ignorieren&quot; ausw
     </message>
     <message>
       <source>Hide addons with non-FSF free/libre license</source>
-      <translation>Addons mit Nicht-FSF-Free- oder Libre-Lizenz ausblenden</translation>
+      <translation>Addons mit nicht-FSF-Free/Libre-Lizenz ausblenden</translation>
     </message>
     <message>
       <source>Hide addons with non-OSI-approved license</source>
-      <translation>Addons mit nicht-OSI-anerkannter Lizenz ausblenden</translation>
+      <translation>Addons mit nicht OSI-anerkannter Lizenz ausblenden</translation>
     </message>
     <message>
       <source>Custom repositories</source>
-      <translation>Eigene Projektarchive</translation>
-    </message>
-    <message>
-      <source>Proxy</source>
-      <translation>Proxy</translation>
-    </message>
-    <message>
-      <source>No proxy</source>
-      <translation>Kein Proxy</translation>
-    </message>
-    <message>
-      <source>User system proxy</source>
-      <translation>Benutzer-System-Proxy</translation>
-    </message>
-    <message>
-      <source>User-defined proxy</source>
-      <translation>Benutzerdefinierter Proxy</translation>
+      <translation>Benutzerdefiniertes Projektarchiv</translation>
     </message>
     <message>
       <source>Score source URL</source>
-      <translation>Bewertung Quellen-URL</translation>
+      <translation>Bewertungs-Quellen-URL</translation>
     </message>
     <message>
       <source>The URL for the addon score data (see Addon Manager wiki page for formatting and hosting details)</source>
       <translation>Die URL für die Bewertungsdaten von Addons (siehe Dokumentation für Formatierungs- und Hosting-Details)</translation>
+    </message>
+    <message>
+      <source>Use a proxy server for access to addon data</source>
+      <translation>Einen Proxy-Server für den Zugriff auf Addon-Daten verwenden</translation>
+    </message>
+    <message>
+      <source>Proxy addon manager traffic</source>
+      <translation>Proxy-Addon-Manager-Datenverkehr</translation>
+    </message>
+    <message>
+      <source>Use the system&apos;s proxy settings</source>
+      <translation>Proxy-Einstellungen des Systems verwenden</translation>
+    </message>
+    <message>
+      <source>System</source>
+      <translation>System</translation>
+    </message>
+    <message>
+      <source>Use custom proxy settings</source>
+      <translation>Benutzerdefinierte Proxy-Einstellungen verwenden</translation>
+    </message>
+    <message>
+      <source>Custom</source>
+      <translation>Benutzerdefiniert</translation>
+    </message>
+    <message>
+      <source>Host</source>
+      <translation>Host-Rechner</translation>
+    </message>
+    <message>
+      <source>:</source>
+      <translation>:</translation>
+    </message>
+    <message>
+      <source>Port</source>
+      <translation>Port</translation>
+    </message>
+    <message>
+      <source>Test these proxy settings</source>
+      <translation>Diese Proxy-Einstellungen prüfen</translation>
+    </message>
+    <message>
+      <source>Test Connection</source>
+      <translation>Verbindung prüfen</translation>
+    </message>
+    <message>
+      <source>Connection Test</source>
+      <translation>Verbindungsprüfung</translation>
     </message>
   </context>
   <context>
@@ -1325,7 +1417,7 @@ Soll der Addon-Manager sie automatisch installieren? &quot;Ignorieren&quot; ausw
     </message>
     <message>
       <source>An asterisk (*) in the &quot;Used by&quot; column indicates an optional dependency. Note that &apos;Used by&apos; only records direct imports in the addon. Other Python packages that those packages depend upon may have been installed as well.</source>
-      <translation>Ein in der &quot;Verwendet von&quot; Spalte eingetragener Stern (*) zeigt eine optionale Abhängigkeit an. Es ist zu beachten, dass &apos;Verwendet von&apos; nur direkte Importe in das Addon aufzeichnet. Andere Python-Pakete, von denen diese Pakete abhängen, könnten ebenfalls installiert worden sein.</translation>
+      <translation>Ein Sternchen (*) in der Spalte „Verwendet von“ kennzeichnet eine optionale Abhängigkeit. Es ist zu beachten, dass „Verwendet von“ nur direkte Importe im Addon aufzeichnet. Andere Python-Pakete, von denen diese Pakete abhängig sind, wurden möglicherweise ebenfalls installiert.</translation>
     </message>
     <message>
       <source>Update All</source>
@@ -1404,7 +1496,7 @@ Soll der Addon-Manager sie automatisch installieren? &quot;Ignorieren&quot; ausw
     </message>
     <message>
       <source>Realm</source>
-      <translation>Gebiet</translation>
+      <translation>Bereich</translation>
     </message>
     <message>
       <source>Placeholder for proxy realm</source>

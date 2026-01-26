@@ -40,7 +40,7 @@
   <context>
     <name>AddonsInstaller</name>
     <message>
-      <location filename="../../Addon.py" line="+392"/>
+      <location filename="../../Addon.py" line="+395"/>
       <source>{}: Unrecognized internal workbench &apos;{}&apos;</source>
       <translation>{}: Nierozpoznane wewnętrzne środowisko pracy "{}"</translation>
     </message>
@@ -82,7 +82,7 @@
     <message>
       <location line="+19"/>
       <source>Installing required dependency {}</source>
-      <translation>Instalowanie wymaganej zależności {}</translation>
+      <translation>Instalowanie wymaganych zależności {}</translation>
     </message>
     <message>
       <location line="+10"/>
@@ -113,7 +113,8 @@ z następującym komunikatem:</translation>
     <message>
       <location filename="../../addonmanager_installer_gui.py" line="+530"/>
       <source>This addon requires Python packages that are not installed, and cannot be installed automatically. To use this addon you must install the following Python packages manually:</source>
-      <translation>Ten dodatek wymaga pakietów Python, które nie są zainstalowane i nie mogą być zainstalowane automatycznie. Aby użyć tego dodatku, musisz zainstalować samodzielnie następujące pakiety środowiska Python:</translation>
+      <translation>Ten dodatek wymaga pakietów Python, które nie są zainstalowane i nie mogą być zainstalowane automatycznie.
+Aby użyć tego dodatku, musisz zainstalować samodzielnie następujące pakiety środowiska Python:</translation>
     </message>
     <message>
       <location line="+12"/>
@@ -149,7 +150,8 @@ Aby użyć tego dodatku, musisz zainstalować samodzielnie następujące pakiety
     <message>
       <location line="+27"/>
       <source>These addons require &apos;{}&apos;, which is not available in your copy of FreeCAD.</source>
-      <translation>Wymagany pakiet "{}", który nie jest dostępny w twojej kopii FreeCAD.</translation>
+      <translation>Wymagany pakiet "{}",
+który nie jest dostępny w twojej kopii FreeCAD.</translation>
     </message>
     <message>
       <location line="+9"/>
@@ -174,7 +176,8 @@ Aby użyć tego dodatku, musisz zainstalować samodzielnie następujące pakiety
     <message>
       <location line="+5"/>
       <source>This addon (or one of its dependencies) requires Python {}, and your system is running {}. Installation cancelled.</source>
-      <translation>Ten dodatek (lub jedna jego zależność) wymaga środowiska Python.{}, a Twój system jest uruchomiony z wersją {}.
+      <translation>Ten dodatek (lub jedna jego zależność) wymaga środowiska Python.{},
+a Twój system jest uruchomiony z wersją {}.
 Instalacja anulowana.</translation>
     </message>
     <message>
@@ -192,7 +195,8 @@ Instalacja anulowana.</translation>
     <message>
       <location line="+29"/>
       <source>Dependencies could not be installed. Continue with installation anyway?</source>
-      <translation>Nie można było zainstalować zależności. Czy mimo to kontynuować instalację?</translation>
+      <translation>Nie można było zainstalować zależności.
+Czy mimo to kontynuować instalację?</translation>
     </message>
     <message>
       <location line="+25"/>
@@ -202,7 +206,7 @@ Instalacja anulowana.</translation>
     <message>
       <location line="+26"/>
       <source>Continue with installation anyway?</source>
-      <translation>Czy mimo to kontynuować instalację?</translation>
+      <translation>Czy mimo wszystko kontynuować instalację dodatku?</translation>
     </message>
     <message>
       <location line="-117"/>
@@ -327,7 +331,7 @@ i spróbuj ponownie. Polecenie, którego wykonanie się nie powiodło, to:</tran
       <translation>Nie można otworzyć adresu URL kodu makrodefinicji {}</translation>
     </message>
     <message>
-      <location line="+137"/>
+      <location line="+136"/>
       <source>Unable to fetch macro-specified file {} from {}</source>
       <translation>Nie można pobrać pliku określonego przez makrodefinicję {} z {}</translation>
     </message>
@@ -350,7 +354,7 @@ na: {}
 Uruchom ponownie, aby użyć nowej wersji.</translation>
     </message>
     <message>
-      <location filename="../../addonmanager_python_deps.py" line="+300"/>
+      <location filename="../../addonmanager_python_deps.py" line="+304"/>
       <source>Package</source>
       <translation>Pakiet</translation>
     </message>
@@ -377,7 +381,8 @@ Uruchom ponownie, aby użyć nowej wersji.</translation>
     <message>
       <location line="-124"/>
       <source>Failed to download data from {} -- received response code {}.</source>
-      <translation>Nie udało się pobrać danych z {} -- otrzymano kod odpowiedzi {}.</translation>
+      <translation>Nie udało się pobrać danych z {} -
+otrzymano kod odpowiedzi {}.</translation>
     </message>
     <message>
       <location filename="../../addonmanager_uninstaller_gui.py" line="-52"/>
@@ -433,7 +438,7 @@ Kontynuuję odinstalowywanie …</translation>
     <message>
       <location line="+14"/>
       <source>Error while trying to remove extra installed file {}</source>
-      <translation>Błąd podczas próby usunięcia dodatkowego zainstalowanego pliku {}</translation>
+      <translation>Błąd podczas próby usunięcia dodatkowo zainstalowanego pliku {}</translation>
     </message>
     <message>
       <location line="+64"/>
@@ -486,7 +491,7 @@ Kontynuuję odinstalowywanie …</translation>
       <translation>Gotowe</translation>
     </message>
     <message>
-      <location filename="../../addonmanager_workers_startup.py" line="+117"/>
+      <location filename="../../addonmanager_workers_startup.py" line="+116"/>
       <source>WARNING: Duplicate addon {} ignored</source>
       <translation>OSTRZEŻENIE: Duplikat dodatku {} pominięto</translation>
     </message>
@@ -523,7 +528,7 @@ Kontynuuję odinstalowywanie …</translation>
       <translation>Niepowodzenie nie udało się pobrać kodu dla makrodefinicji "{name}"</translation>
     </message>
     <message>
-      <location line="+61"/>
+      <location line="+67"/>
       <source>Failed to get addon statistics from {} -- only sorting alphabetically will be accurate
 </source>
       <translation>Nie udało się pobrać statystyk dodatku z {}
@@ -531,14 +536,39 @@ Kontynuuję odinstalowywanie …</translation>
 </translation>
     </message>
     <message>
-      <location line="+41"/>
+      <location line="+42"/>
       <source>Failed to get addon score from &apos;{}&apos; -- sorting by score will fail
 </source>
-      <translation>Nie udało się pobrać wyniku dodatku z "{}" - sortowanie według wyniku nie powiedzie się
+      <translation>Nie udało się pobrać wyniku dodatku z "{}"
+sortowanie według wyniku nie powiedzie się
 </translation>
     </message>
     <message>
-      <location line="+42"/>
+      <location line="+11"/>
+      <source>Failed to decode addon score from &apos;{}&apos; -- sorting by score will fail
+</source>
+      <translation>Nie udało się zdekodować wyniku dodatku z „{}”
+sortowanie według wyniku nie powiedzie się.
+</translation>
+    </message>
+    <message>
+      <location line="+7"/>
+      <source>Failed to parse addon score from &apos;{}&apos; -- sorting by score will fail
+</source>
+      <translation>Nie udało się przeanalizować wyniku dodatku z „{}”
+sortowanie według wyniku nie powiedzie się.
+</translation>
+    </message>
+    <message>
+      <location line="+7"/>
+      <source>Failed to read addon score from &apos;{}&apos; -- sorting by score will fail
+</source>
+      <translation>Nie udało się odczytać wyniku dodatku z „{}”
+sortowanie według wyniku nie powiedzie się.
+</translation>
+    </message>
+    <message>
+      <location line="+39"/>
       <location line="+13"/>
       <source>Checking for missing dependencies</source>
       <translation>Sprawdzanie wymaganych zależności</translation>
@@ -550,9 +580,10 @@ Kontynuuję odinstalowywanie …</translation>
 Serwer może być niedostępny lub nie masz połączenia z Internetem.</translation>
     </message>
     <message>
-      <location filename="../../AddonManager.py" line="+282"/>
+      <location filename="../../AddonManager.py" line="+281"/>
       <source>Worker process {} is taking a long time to stop…</source>
-      <translation>Zatrzymanie działającego procesu {} zajmuje dużo czasu …</translation>
+      <translation>Zatrzymanie działającego procesu {}
+zajmuje dużo czasu …</translation>
     </message>
     <message>
       <location line="-86"/>
@@ -652,7 +683,66 @@ Czy chcesz je teraz zainstalować?</translation>
       <translation>Nigdy</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.py" line="+250"/>
+      <location filename="../../AddonManagerOptions.py" line="+95"/>
+      <source>Proxy test timed out: no connection made.</source>
+      <translation>Przekroczono limit czasu testu proxy: nie nawiązano połączenia.</translation>
+    </message>
+    <message>
+      <location line="+7"/>
+      <source>Proxy test returned an error: no connection made.
+</source>
+      <translation>Test proxy zwrócił błąd: nie nawiązano połączenia.
+</translation>
+    </message>
+    <message>
+      <location line="+16"/>
+      <source>Proxy test succeeded, connection established.</source>
+      <translation>Test proxy zakończony powodzeniem, połączenie nawiązano.</translation>
+    </message>
+    <message>
+      <location line="+5"/>
+      <source>Proxy requires authentication. The Addon Manager does not support this.</source>
+      <translation>Proxy wymaga uwierzytelnienia. Menedżer dodatków nie obsługuje tej funkcji.</translation>
+    </message>
+    <message>
+      <location line="+0"/>
+      <source>Proxy connection failed with code {}: {}.</source>
+      <translation>Błąd połączenia przez proxy, kod {}: {}.</translation>
+    </message>
+    <message>
+      <location line="+102"/>
+      <source>Invalid hostname</source>
+      <translation>Nieprawidłowa nazwa hosta</translation>
+    </message>
+    <message>
+      <location line="+10"/>
+      <location line="+20"/>
+      <location line="+38"/>
+      <source>No proxy</source>
+      <translation>Bez serwera pośredniczącego</translation>
+    </message>
+    <message>
+      <location line="-57"/>
+      <source>n/a</source>
+      <translation>nie dotyczy</translation>
+    </message>
+    <message>
+      <location line="+5"/>
+      <source>proxy.example.com</source>
+      <translation>proxy.przykład.com</translation>
+    </message>
+    <message>
+      <location line="+34"/>
+      <source>System has no proxy</source>
+      <translation>System nie korzysta z serwera proxy.</translation>
+    </message>
+    <message>
+      <location line="+43"/>
+      <source>Testing proxy connection…</source>
+      <translation>Testowanie połączenia przez proxy …</translation>
+    </message>
+    <message>
+      <location line="+259"/>
       <source>Repository URL</source>
       <comment>Preferences header for custom repositories</comment>
       <translation>Adres URL repozytorium</translation>
@@ -664,22 +754,7 @@ Czy chcesz je teraz zainstalować?</translation>
       <translation>Nazwa gałęzi</translation>
     </message>
     <message>
-      <location filename="../../NetworkManager.py" line="+213"/>
-      <source>Failed to parse proxy URL &apos;{}&apos;</source>
-      <translation>Nie można przetworzyć adresu URL proxy '{}'</translation>
-    </message>
-    <message>
-      <location line="+32"/>
-      <source>Parameter error: mutually exclusive proxy options set. Resetting to default.</source>
-      <translation>Błąd parametru: ustawiono wzajemnie wykluczające się opcje serwera pośredniczącego. Resetowanie do wartości domyślnych.</translation>
-    </message>
-    <message>
-      <location line="+15"/>
-      <source>Parameter error: user proxy indicated, but no proxy provided. Resetting to default.</source>
-      <translation>Błąd parametru: wskazano serwer pośredniczący użytkownika, ale nie podano serwera pośredniczącego. Przywrócenie ustawień domyślnych.</translation>
-    </message>
-    <message>
-      <location line="+214"/>
+      <location filename="../../NetworkManager.py" line="+403"/>
       <source>Addon Manager: Unexpected {} response from server</source>
       <translation>Menedżer dodatków: Nieoczekiwana odpowiedź {} z serwera</translation>
     </message>
@@ -689,7 +764,7 @@ Czy chcesz je teraz zainstalować?</translation>
       <translation>Błąd z połączeniem szyfrowanym</translation>
     </message>
     <message>
-      <location filename="../../package_list.py" line="+194"/>
+      <location filename="../../package_list.py" line="+193"/>
       <source>Click for details about package {}</source>
       <translation>Kliknij, aby uzyskać informacje o pakiecie {}</translation>
     </message>
@@ -709,17 +784,12 @@ Czy chcesz je teraz zainstalować?</translation>
       <translation>Znaczniki</translation>
     </message>
     <message>
-      <location line="+46"/>
-      <source>Maintainer</source>
-      <translation>Opiekun</translation>
+      <location line="+51"/>
+      <source>Maintainer(s)</source>
+      <translation>Opiekunowie</translation>
     </message>
     <message>
-      <location line="+5"/>
-      <source>Maintainers:</source>
-      <translation>Opiekunowie:</translation>
-    </message>
-    <message>
-      <location line="+7"/>
+      <location line="+17"/>
       <source>Author</source>
       <translation>Autor</translation>
     </message>
@@ -799,7 +869,7 @@ Czy chcesz je teraz zainstalować?</translation>
       <translation>Wersja dostępna</translation>
     </message>
     <message>
-      <location filename="../../Widgets/addonmanager_widget_addon_buttons.py" line="+170"/>
+      <location filename="../../Widgets/addonmanager_widget_addon_buttons.py" line="+169"/>
       <source>Install</source>
       <translation>Zainstaluj</translation>
     </message>
@@ -831,7 +901,7 @@ Czy chcesz je teraz zainstalować?</translation>
     <message>
       <location line="+2"/>
       <source>Override Built-In</source>
-      <translation>Nadpisanie wbudowanego</translation>
+      <translation>Nadpisz wbudowane</translation>
     </message>
     <message>
       <location line="+4"/>
@@ -846,7 +916,7 @@ Czy chcesz je teraz zainstalować?</translation>
     <message>
       <location line="+1"/>
       <source>Run</source>
-      <translation>uruchom</translation>
+      <translation>Uruchom</translation>
     </message>
     <message>
       <location line="+1"/>
@@ -856,7 +926,7 @@ Czy chcesz je teraz zainstalować?</translation>
     <message>
       <location filename="../../Widgets/addonmanager_widget_filter_selector.py" line="-42"/>
       <source>Filter By…</source>
-      <translation>Filtruj według…</translation>
+      <translation>Filtruj według …</translation>
     </message>
     <message>
       <location line="+2"/>
@@ -872,7 +942,7 @@ Czy chcesz je teraz zainstalować?</translation>
     <message>
       <location line="-23"/>
       <source>Workbench</source>
-      <translation>Środowiska pracy</translation>
+      <translation>Środowisko pracy</translation>
     </message>
     <message>
       <location line="+4"/>
@@ -932,7 +1002,7 @@ Czy chcesz je teraz zainstalować?</translation>
     <message>
       <location line="+8"/>
       <source>See %n Update(s)…</source>
-      <translation>Sprawdź %n aktualizację(e)…</translation>
+      <translation>Sprawdź %n aktualizację(e) …</translation>
     </message>
     <message>
       <location line="+3"/>
@@ -957,7 +1027,8 @@ Czy chcesz je teraz zainstalować?</translation>
     <message>
       <location line="+9"/>
       <source>Changed to branch &apos;{}&apos; -- restart FreeCAD to use the addon</source>
-      <translation>Zmieniono na gałąź "{}" -- uruchom ponownie, aby korzystać z dodatku</translation>
+      <translation>Zmieniono na gałąź "{}"
+uruchom ponownie, aby korzystać z dodatku</translation>
     </message>
     <message>
       <location line="+12"/>
@@ -998,7 +1069,8 @@ Uruchom ponownie FreeCAD, aby zobaczyć zmiany.</translation>
     <message>
       <location line="+10"/>
       <source>Currently on branch {}, name changed to {}</source>
-      <translation>Obecnie w gałęzi {}, nazwa została zmieniona na {}</translation>
+      <translation>Obecnie w gałęzi {},
+nazwa została zmieniona na {}</translation>
     </message>
     <message>
       <location line="+8"/>
@@ -1038,7 +1110,7 @@ Uruchom ponownie FreeCAD, aby zobaczyć zmiany.</translation>
     <message>
       <location line="+13"/>
       <source>Search…</source>
-      <translation>Szukaj…</translation>
+      <translation>Szukaj …</translation>
     </message>
     <message>
       <location filename="../../Widgets/addonmanager_widget_view_control_bar.py" line="+144"/>
@@ -1094,22 +1166,22 @@ Uruchom ponownie FreeCAD, aby zobaczyć zmiany.</translation>
       <translation>Ikonka</translation>
     </message>
     <message>
-      <location line="+3"/>
+      <location filename="../../compact_view.py" line="+3"/>
       <source>&lt;b&gt;Package Name&lt;/b&gt;</source>
       <translation>&lt;b&gt;Nazwa pakietu&lt;/b&gt;</translation>
     </message>
     <message>
-      <location line="+1"/>
+      <location filename="../../compact_view.py" line="+1"/>
       <source>Version</source>
       <translation>Wersja</translation>
     </message>
     <message>
-      <location line="+3"/>
+      <location filename="../../compact_view.py" line="+3"/>
       <source>Description</source>
       <translation>Opis</translation>
     </message>
     <message>
-      <location line="+3"/>
+      <location filename="../../compact_view.py" line="+3"/>
       <source>Update available</source>
       <translation>Dostępna aktualizacja</translation>
     </message>
@@ -1132,10 +1204,10 @@ Uruchom ponownie FreeCAD, aby zobaczyć zmiany.</translation>
       <source>This installation/update has the following required and optional dependencies.
 
 Do you want the Addon Manager to install them automatically? Choose &quot;Ignore&quot; to install/update without installing the dependencies.</source>
-      <translation>Ta instalacja / aktualizacja ma następujące wymagane i opcjonalne zależności.
+      <translation>Ta instalacja / aktualizacja wymaga następujących zależności (obowiązkowych i opcjonalnych).
 
 Czy chcesz, aby Menedżer dodatków zainstalował je automatycznie?
-Wybierz „Ignoruj”, aby wykonać instalacje / aktualizacje bez instalowania zależności.</translation>
+Wybierz "Ignoruj", aby przeprowadzić instalację / aktualizację bez instalowania zależności.</translation>
     </message>
     <message>
       <source>FreeCAD Addons</source>
@@ -1162,8 +1234,8 @@ Wybierz „Ignoruj”, aby wykonać instalacje / aktualizacje bez instalowania z
     </message>
     <message>
       <source>The Addon Manager provides access to an extensive library of useful third-party FreeCAD extensions. No guarantees can be made regarding their safety or functionality.</source>
-      <translation>Menedżer dodatków zapewnia dostęp do obszernej biblioteki przydatnych rozszerzeń dla FreeCAD, od osób trzecich.
-Nie można zagwarantować ich bezpieczeństwa ani funkcjonalności.</translation>
+      <translation>Menedżer dodatków zapewnia dostęp do obszernej biblioteki użytecznych rozszerzeń FreeCAD pochodzących od firm trzecich.
+Nie można jednak udzielić żadnych gwarancji co do ich bezpieczeństwa ani poprawnego działania.</translation>
     </message>
     <message>
       <source>Continue</source>
@@ -1195,7 +1267,7 @@ Nie można zagwarantować ich bezpieczeństwa ani funkcjonalności.</translation
     </message>
     <message>
       <source>(Note that addon authors sometimes do not update the version number on each update, so the available and installed versions may appear the same.)</source>
-      <translation>(Należy pamiętać, że autorzy dodatków czasami nie aktualizują numeru wersji przy każdej aktualizacji, więc dostępne i zainstalowane wersje mogą wydawać się takie same)</translation>
+      <translation>(Należy pamiętać, że autorzy dodatków nie zawsze aktualizują numer wersji przy każdej zmianie, dlatego wersja dostępna i zainstalowana mogą wyglądać na identyczne.)</translation>
     </message>
   </context>
   <context>
@@ -1271,22 +1343,6 @@ Nie można zagwarantować ich bezpieczeństwa ani funkcjonalności.</translation
       <translation>Repozytoria użytkownika</translation>
     </message>
     <message>
-      <source>Proxy</source>
-      <translation>Serwer pośredniczący</translation>
-    </message>
-    <message>
-      <source>No proxy</source>
-      <translation>Bez serwera pośredniczącego</translation>
-    </message>
-    <message>
-      <source>User system proxy</source>
-      <translation>Użyj ustawień serwera pośredniczącego z systemu</translation>
-    </message>
-    <message>
-      <source>User-defined proxy</source>
-      <translation>Serwer pośredniczący zdefiniowany przez użytkownika</translation>
-    </message>
-    <message>
       <source>Score source URL</source>
       <translation>Adres URL źródła wyniku</translation>
     </message>
@@ -1294,6 +1350,54 @@ Nie można zagwarantować ich bezpieczeństwa ani funkcjonalności.</translation
       <source>The URL for the addon score data (see Addon Manager wiki page for formatting and hosting details)</source>
       <translation>Adres URL dla danych o punktacji dodatków
 (Szczegóły dotyczące formatowania i hostingu można znaleźć na stronie wiki Menedżera dodatków)</translation>
+    </message>
+    <message>
+      <source>Use a proxy server for access to addon data</source>
+      <translation>Użyj serwera proxy do uzyskiwania dostępu do danych dodatków</translation>
+    </message>
+    <message>
+      <source>Proxy addon manager traffic</source>
+      <translation>Przekieruj ruch Menedżera dodatków przez proxy</translation>
+    </message>
+    <message>
+      <source>Use the system&apos;s proxy settings</source>
+      <translation>Użyj systemowych ustawień proxy</translation>
+    </message>
+    <message>
+      <source>System</source>
+      <translation>System operacyjny</translation>
+    </message>
+    <message>
+      <source>Use custom proxy settings</source>
+      <translation>Użyj ustawień użytkownika serwera proxy</translation>
+    </message>
+    <message>
+      <source>Custom</source>
+      <translation>Niestandardowy</translation>
+    </message>
+    <message>
+      <source>Host</source>
+      <translation>Pochodzenia</translation>
+    </message>
+    <message>
+      <source>:</source>
+      <translation>:</translation>
+    </message>
+    <message>
+      <source>Port</source>
+      <translation>Port</translation>
+    </message>
+    <message>
+      <source>Test these proxy settings</source>
+      <translation>Przetestuj te ustawienia proxy</translation>
+    </message>
+    <message>
+      <source>Test Connection</source>
+      <translation>Przetestuj połączenie</translation>
+    </message>
+    <message>
+      <source>Connection Test</source>
+      <translation>Test połączenia</translation>
     </message>
   </context>
   <context>
@@ -1331,7 +1435,8 @@ Nie można zagwarantować ich bezpieczeństwa ani funkcjonalności.</translation
     </message>
     <message>
       <source>The following Python packages have been installed locally by the Addon Manager to satisfy addon dependencies. Installation location</source>
-      <translation>Następujące pakiety środowiska Python zostały zainstalowane lokalnie przez menedżera dodatków w celu spełnienia zależności dodatków. Lokalizacja plików instalacji</translation>
+      <translation>Następujące pakiety środowiska Python zostały zainstalowane lokalnie przez Menedżera dodatków w celu spełnienia zależności dodatków.
+Lokalizacja plików instalacji</translation>
     </message>
     <message>
       <source>Update in progress…</source>
@@ -1361,7 +1466,7 @@ Inne pakiety środowiska Python, od których te pakiety zależą, mogły równie
     <message>
       <location line="+43"/>
       <source>&amp;Addon Manager</source>
-      <translation>&amp;Menedżer dodatków</translation>
+      <translation>&amp;Menadżer dodatków</translation>
     </message>
     <message>
       <location line="+4"/>
@@ -1381,7 +1486,7 @@ Inne pakiety środowiska Python, od których te pakiety zależą, mogły równie
     <name>add_toolbar_button_dialog</name>
     <message>
       <source>Add Button</source>
-      <translation>Dodaj Przycisk</translation>
+      <translation>Dodaj przycisk</translation>
     </message>
     <message>
       <source>Add a toolbar button for this macro?</source>
@@ -1454,7 +1559,7 @@ Inne pakiety środowiska Python, od których te pakiety zależą, mogły równie
     <name>toolbar_button</name>
     <message>
       <source>Add Button</source>
-      <translation>Dodaj Przycisk</translation>
+      <translation>Dodaj przycisk</translation>
     </message>
     <message>
       <source>Add a toolbar button for this macro?</source>

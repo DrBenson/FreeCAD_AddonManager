@@ -23,6 +23,7 @@
 # ***************************************************************************
 
 """Worker thread classes for Addon Manager startup"""
+
 import hashlib
 import io
 import json
@@ -276,7 +277,7 @@ class CreateAddonListWorker(QtCore.QThread):
                 )
                 continue
             primary_branch_name = (
-                installed_branch_name if installed_branch_name else name_of_first_entry
+                installed_branch_name if installed_branch_name in branches else name_of_first_entry
             )
             for branch_display_name in branches:
                 if branch_display_name != primary_branch_name:
@@ -605,6 +606,7 @@ class GetAddonScoreWorker(QtCore.QThread):
         """Fetch the remote data and load it into the addons"""
 
         if self.url != "TEST":
+            json_result = {}
             fetch_result = NetworkManager.AM_NETWORK_MANAGER.blocking_get_with_retries(
                 self.url, self.ATTEMPT_TIMEOUT_MS, self.MAX_ATTEMPTS, self.RETRY_DELAY_MS
             )
@@ -618,8 +620,30 @@ class GetAddonScoreWorker(QtCore.QThread):
                     ).format(self.url)
                 )
                 return
-            text_result = fetch_result.data().decode("utf8")
-            json_result = json.loads(text_result)
+            try:
+                text_result = fetch_result.data().decode("utf8")
+                json_result = json.loads(text_result)
+            except UnicodeDecodeError:
+                fci.Console.PrintError(
+                    translate(
+                        "AddonsInstaller",
+                        "Failed to decode addon score from '{}' -- sorting by score will fail\n",
+                    ).format(self.url)
+                )
+            except json.JSONDecodeError:
+                fci.Console.PrintError(
+                    translate(
+                        "AddonsInstaller",
+                        "Failed to parse addon score from '{}' -- sorting by score will fail\n",
+                    ).format(self.url)
+                )
+            except RuntimeError:
+                fci.Console.PrintError(
+                    translate(
+                        "AddonsInstaller",
+                        "Failed to read addon score from '{}' -- sorting by score will fail\n",
+                    ).format(self.url)
+                )
         else:
             fci.Console.PrintWarning("Running score generation in TEST mode...\n")
             json_result = {}

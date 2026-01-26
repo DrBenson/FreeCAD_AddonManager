@@ -21,7 +21,7 @@
     <message>
       <location filename="../../addonmanager_uninstaller_gui.py" line="+126"/>
       <source>Finished removing {}</source>
-      <translation>Färdigställde borttagning {}</translation>
+      <translation>Färdig med borttagning av {}</translation>
     </message>
     <message>
       <location line="+14"/>
@@ -40,9 +40,9 @@
   <context>
     <name>AddonsInstaller</name>
     <message>
-      <location filename="../../Addon.py" line="+392"/>
+      <location filename="../../Addon.py" line="+395"/>
       <source>{}: Unrecognized internal workbench &apos;{}&apos;</source>
-      <translation>{}: Intern arbetsbänk &apos;{}&apos; känns inte igen</translation>
+      <translation>{}: Okänd intern arbetsbänk &apos;{}&apos;</translation>
     </message>
     <message>
       <location line="+33"/>
@@ -62,7 +62,7 @@
     <message>
       <location line="+1"/>
       <source>Checking for connection to addons.freecad.org...</source>
-      <translation>Kontrollerar för anslutning till addons.freecad.org...</translation>
+      <translation>Kontrollerar anslutningen till addons.freecad.org...</translation>
     </message>
     <message>
       <location line="+26"/>
@@ -77,12 +77,12 @@
     <message>
       <location line="+25"/>
       <source>Installation of optional package failed</source>
-      <translation>Installation av tillvalspaket misslyckades</translation>
+      <translation>Installationen av tillvalspaketet misslyckades</translation>
     </message>
     <message>
       <location line="+19"/>
       <source>Installing required dependency {}</source>
-      <translation>Installation av nödvändigt beroende {}</translation>
+      <translation>Installerar nödvändiga beroendet {}</translation>
     </message>
     <message>
       <location line="+10"/>
@@ -92,7 +92,7 @@
     <message>
       <location filename="../../addonmanager_git.py" line="+153"/>
       <source>Basic Git update failed with the following message:</source>
-      <translation>Basic Git-uppdateringen misslyckades med följande meddelande:</translation>
+      <translation>Grundläggande Git-uppdatering misslyckades med följande meddelande:</translation>
     </message>
     <message>
       <location line="+8"/>
@@ -102,7 +102,7 @@
     <message>
       <location line="+105"/>
       <source>Failed to clone {} into {} using Git</source>
-      <translation>Misslyckades med att klona {} till {} med Git</translation>
+      <translation>Kloning av {} till {} med Git misslyckades</translation>
     </message>
     <message>
       <location line="+141"/>
@@ -112,7 +112,7 @@
     <message>
       <location filename="../../addonmanager_installer_gui.py" line="+530"/>
       <source>This addon requires Python packages that are not installed, and cannot be installed automatically. To use this addon you must install the following Python packages manually:</source>
-      <translation>Det här tillägget kräver Python-paket som inte är installerade och inte kan installeras automatiskt. För att använda det här tillägget måste du installera följande Python-paket manuellt:</translation>
+      <translation>Detta tillägg kräver Python-paket som inte är installerade och som inte kan installeras automatiskt. För att kunna använda detta tillägg måste du installera följande Python-paket manuellt:</translation>
     </message>
     <message>
       <location line="+12"/>
@@ -137,7 +137,7 @@
     <message>
       <location line="+407"/>
       <source>These addons require Python packages that are not installed, and cannot be installed automatically. To use them you must install the following Python packages manually:</source>
-      <translation>Dessa tillägg kräver Python-paket som inte är installerade och som inte kan installeras automatiskt. För att använda dem måste du installera följande Python-paket manuellt:</translation>
+      <translation>Dessa tillägg kräver Python-paket som inte är installerade och som inte kan installeras automatiskt. För att kunna använda dem måste du installera följande Python-paket manuellt:</translation>
     </message>
     <message>
       <location line="+12"/>
@@ -147,7 +147,7 @@
     <message>
       <location line="+27"/>
       <source>These addons require &apos;{}&apos;, which is not available in your copy of FreeCAD.</source>
-      <translation>Dessa tillägg kräver &apos;{}&apos;, som inte är tillgängligt i din kopia av FreeCAD.</translation>
+      <translation>Dessa tillägg kräver &apos;{}&apos;, vilket inte finns tillgängliga i din version av FreeCAD.</translation>
     </message>
     <message>
       <location line="+9"/>
@@ -157,7 +157,7 @@
     <message>
       <location line="+11"/>
       <source>These addons require the following workbenches, which are not available in your copy of FreeCAD:</source>
-      <translation>Dessa tillägg kräver följande arbetsbänkar, som inte är tillgängliga i din kopia av FreeCAD:</translation>
+      <translation>Dessa tillägg kräver följande arbetsbänkar, som inte finns tillgängliga i din version av FreeCAD:</translation>
     </message>
     <message>
       <location line="+7"/>
@@ -172,7 +172,7 @@
     <message>
       <location line="+5"/>
       <source>This addon (or one of its dependencies) requires Python {}, and your system is running {}. Installation cancelled.</source>
-      <translation>Det här tillägget (eller ett av dess beroenden) kräver Python {}, och ditt system kör {}. Installationen avbröts.</translation>
+      <translation>Detta tillägg (eller ett av dess beroenden) kräver Python {}, och ditt system kör {}. Installationen avbruten.</translation>
     </message>
     <message>
       <location line="+53"/>
@@ -189,7 +189,7 @@
     <message>
       <location line="+29"/>
       <source>Dependencies could not be installed. Continue with installation anyway?</source>
-      <translation>Beroenden kunde inte installeras. Fortsätt med installationen ändå?</translation>
+      <translation>Beroenden kunde inte installeras. Vill du fortsätta med installationen ändå?</translation>
     </message>
     <message>
       <location line="+25"/>
@@ -199,12 +199,12 @@
     <message>
       <location line="+26"/>
       <source>Continue with installation anyway?</source>
-      <translation>Fortsätta med installationen ändå?</translation>
+      <translation>Fortsätt med installationen ändå?</translation>
     </message>
     <message>
       <location line="-117"/>
       <source>Optional dependency on {} ignored because it is not in the allow-list</source>
-      <translation>Valfritt beroende av {} ignoreras eftersom det inte finns med i allow-listan</translation>
+      <translation>Valfritt beroende av {} ignoreras eftersom den inte finns med i tillåtna-listan</translation>
     </message>
     <message>
       <location line="+55"/>
@@ -224,7 +224,7 @@
     <message>
       <location line="+6"/>
       <source>Failed to execute pip, which may be missing from your Python installation. Please ensure your system has pip installed and try again. The failed command was:</source>
-      <translation>Misslyckades med att exekvera pip, som kan saknas i din Python-installation. Kontrollera att pip finns installerat i ditt system och försök igen. Det misslyckade kommandot var:</translation>
+      <translation>Misslyckades med att köra pip, som kanske saknas i din Python-installation. Se till att pip är installerat på ditt system och försök igen. Det misslyckade kommandot var:</translation>
     </message>
     <message>
       <location line="+22"/>
@@ -265,7 +265,7 @@
     <message>
       <location line="+2"/>
       <source>Failed to install {}</source>
-      <translation>Misslyckades med installationen {}</translation>
+      <translation>Installationen av {} misslyckades</translation>
     </message>
     <message>
       <location line="+113"/>
@@ -286,18 +286,18 @@
     <message>
       <location filename="../../addonmanager_installer.py" line="+383"/>
       <source>Received {} response code from server</source>
-      <translation>Mottog {} svarskod från servern</translation>
+      <translation>Tog emot svarskod {} från servern</translation>
     </message>
     <message>
       <location line="+184"/>
       <source>Failed to install macro {}</source>
-      <translation>Misslyckades med att installera makro {}</translation>
+      <translation>Misslyckades med att installera makrot {}</translation>
     </message>
     <message>
       <location line="+34"/>
       <source>Failed to create installation manifest file:
 </source>
-      <translation>Misslyckades med att skapa installationsmanifestfil:
+      <translation>Misslyckades med att skapa installationsmanifestfilen:
 </translation>
     </message>
     <message>
@@ -318,17 +318,17 @@
     <message>
       <location line="+32"/>
       <source>Unable to open macro code URL {}</source>
-      <translation>Det går inte att öppna makrokodens URL {}</translation>
+      <translation>Kunde inte öppna makrokodens URL {}</translation>
     </message>
     <message>
-      <location line="+137"/>
+      <location line="+136"/>
       <source>Unable to fetch macro-specified file {} from {}</source>
-      <translation>Det går inte att hämta den makroangivna filen {} från {}</translation>
+      <translation>Kunde inte hämta den makroangivna filen {} från {}</translation>
     </message>
     <message>
       <location line="+8"/>
       <source>Could not locate macro-specified file {} (expected at {})</source>
-      <translation>Det gick inte att hitta den makroangivna filen {} (förväntades vid {})</translation>
+      <translation>Kunde inte hitta den makroangivna filen {} (förväntades vid {})</translation>
     </message>
     <message>
       <location filename="../../addonmanager_package_details_controller.py" line="+8"/>
@@ -344,7 +344,7 @@ till: {}
 Starta om för att använda den nya versionen.</translation>
     </message>
     <message>
-      <location filename="../../addonmanager_python_deps.py" line="+300"/>
+      <location filename="../../addonmanager_python_deps.py" line="+304"/>
       <source>Package</source>
       <translation>Paket</translation>
     </message>
@@ -371,7 +371,7 @@ Starta om för att använda den nya versionen.</translation>
     <message>
       <location line="-124"/>
       <source>Failed to download data from {} -- received response code {}.</source>
-      <translation>Misslyckades med att ladda ner data från {} - fick svarskod {}.</translation>
+      <translation>Misslyckades med att hämta ner data från {} – svarskod {} mottagen.</translation>
     </message>
     <message>
       <location filename="../../addonmanager_uninstaller_gui.py" line="-52"/>
@@ -381,7 +381,7 @@ Starta om för att använda den nya versionen.</translation>
     <message>
       <location line="+1"/>
       <source>Are you sure you want to uninstall {}?</source>
-      <translation>Är du säker att du vill avinstallera {}?</translation>
+      <translation>Är du säker på att du vill avinstallera {}?</translation>
     </message>
     <message>
       <location line="+10"/>
@@ -396,7 +396,7 @@ Starta om för att använda den nya versionen.</translation>
     <message>
       <location line="+25"/>
       <source>Uninstall complete</source>
-      <translation>Avinstallation slutförd</translation>
+      <translation>Avinstallationen är klar</translation>
     </message>
     <message>
       <location line="+14"/>
@@ -416,7 +416,7 @@ Starta om för att använda den nya versionen.</translation>
     <message>
       <location line="+26"/>
       <source>Execution of addon&apos;s uninstall.py script failed. Proceeding with uninstall…</source>
-      <translation>Exekvering av skriptet uninstall.py för tillägget misslyckades. Fortsätter med avinstallationen…</translation>
+      <translation>Körningen av tilläggets uninstall.py-skript misslyckades. Fortsätter med avinstallationen…</translation>
     </message>
     <message>
       <location line="+19"/>
@@ -426,12 +426,12 @@ Starta om för att använda den nya versionen.</translation>
     <message>
       <location line="+14"/>
       <source>Error while trying to remove extra installed file {}</source>
-      <translation>Fel vid försök att ta bort extra installerad fil {}</translation>
+      <translation>Fel vid försök att ta bort extra installerade filen {}</translation>
     </message>
     <message>
       <location line="+64"/>
       <source>Error while trying to remove macro file {}:</source>
-      <translation>Fel vid försök att ta bort makrofil {}:</translation>
+      <translation>Fel vid försök att ta bort makrofilen {}:</translation>
     </message>
     <message>
       <location filename="../../addonmanager_update_all_gui.py" line="+74"/>
@@ -479,15 +479,15 @@ Starta om för att använda den nya versionen.</translation>
       <translation>Klar</translation>
     </message>
     <message>
-      <location filename="../../addonmanager_workers_startup.py" line="+117"/>
+      <location filename="../../addonmanager_workers_startup.py" line="+116"/>
       <source>WARNING: Duplicate addon {} ignored</source>
-      <translation>VARNING: Duplicerat tillägg {} ignoreras</translation>
+      <translation>VARNING: Dubblett av tillägget {} ignorerades</translation>
     </message>
     <message>
       <location line="+119"/>
       <source>WARNING: Custom addon &apos;{}&apos; is overriding the one in the official addon catalog
 </source>
-      <translation>VARNING: Anpassat tillägg &apos;{}&apos; åsidosätter det som finns i den officiella tilläggskatalogen
+      <translation>VARNING: Anpassade tillägget &apos;{}&apos; åsidosätter det som finns i den officiella tilläggskatalogen
 </translation>
     </message>
     <message>
@@ -498,7 +498,7 @@ Starta om för att använda den nya versionen.</translation>
     <message>
       <location line="+55"/>
       <source>Unable to fetch Git updates for workbench {}</source>
-      <translation>Det går inte att hämta Git-uppdateringar för arbetsbänken {}</translation>
+      <translation>Misslyckades med att hämta Git-uppdateringar för arbetsbänken {}</translation>
     </message>
     <message>
       <location line="+13"/>
@@ -516,21 +516,42 @@ Starta om för att använda den nya versionen.</translation>
       <translation>Misslyckades med att hämta kod för makro &apos;{name}&apos;</translation>
     </message>
     <message>
-      <location line="+61"/>
+      <location line="+67"/>
       <source>Failed to get addon statistics from {} -- only sorting alphabetically will be accurate
 </source>
-      <translation>Misslyckades med att hämta addon-statistik från {} -- endast sortering i alfabetisk ordning kommer att vara korrekt
-</translation>
-    </message>
-    <message>
-      <location line="+41"/>
-      <source>Failed to get addon score from &apos;{}&apos; -- sorting by score will fail
-</source>
-      <translation>Misslyckades med att få tilläggsbetyg från &apos;{}&apos; - sortering efter betyg kommer att misslyckas
+      <translation>Misslyckades med att hämta tilläggsstatistik från {} – endast alfabetisk sortering kommer att vara korrekt
 </translation>
     </message>
     <message>
       <location line="+42"/>
+      <source>Failed to get addon score from &apos;{}&apos; -- sorting by score will fail
+</source>
+      <translation>Misslyckades med att hämta tilläggets betyg från &apos;{}&apos; – sortering efter betyg kommer att misslyckas
+</translation>
+    </message>
+    <message>
+      <location line="+11"/>
+      <source>Failed to decode addon score from &apos;{}&apos; -- sorting by score will fail
+</source>
+      <translation>Misslyckades med att avkoda tilläggets betyg från &apos;{}&apos; -- sortering efter betyg kommer att misslyckas
+</translation>
+    </message>
+    <message>
+      <location line="+7"/>
+      <source>Failed to parse addon score from &apos;{}&apos; -- sorting by score will fail
+</source>
+      <translation>Misslyckades med att tolka tilläggets betyg från &apos;{}&apos; -- sortering efter betyg kommer att misslyckas
+</translation>
+    </message>
+    <message>
+      <location line="+7"/>
+      <source>Failed to read addon score from &apos;{}&apos; -- sorting by score will fail
+</source>
+      <translation>Misslyckades med att läsa tilläggets betyg från &apos;{}&apos; -- sortering efter betyg kommer att misslyckas
+</translation>
+    </message>
+    <message>
+      <location line="+39"/>
       <location line="+13"/>
       <source>Checking for missing dependencies</source>
       <translation>Kontrollerar saknade beroenden</translation>
@@ -538,10 +559,10 @@ Starta om för att använda den nya versionen.</translation>
     <message>
       <location filename="../../addonmanager_workers_utility.py" line="+82"/>
       <source>Unable to read data from addons.freecad.org. The server may be down, or you may not be connected to the internet.</source>
-      <translation>Det går inte att läsa data från addons.freecad.org. Servern kan vara nere, eller så kanske du inte är ansluten till internet.</translation>
+      <translation>Kunde inte läsa data från addons.freecad.org. Servern kan vara nere eller så kanske du inte är ansluten till internet.</translation>
     </message>
     <message>
-      <location filename="../../AddonManager.py" line="+282"/>
+      <location filename="../../AddonManager.py" line="+281"/>
       <source>Worker process {} is taking a long time to stop…</source>
       <translation>Arbetsprocessen {} tar lång tid att stoppa…</translation>
     </message>
@@ -607,7 +628,7 @@ Starta om för att använda den nya versionen.</translation>
       <location line="+27"/>
       <location line="+126"/>
       <source>Cannot launch a new installer until the previous one has finished</source>
-      <translation>Det går inte att starta ett nytt installationsprogram förrän det föregående har avslutats</translation>
+      <translation>Kan inte starta ett nytt installationsprogram förrän det föregående har avslutats</translation>
     </message>
     <message>
       <location line="-66"/>
@@ -642,7 +663,66 @@ Starta om för att använda den nya versionen.</translation>
       <translation>Aldrig</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.py" line="+250"/>
+      <location filename="../../AddonManagerOptions.py" line="+95"/>
+      <source>Proxy test timed out: no connection made.</source>
+      <translation>Proxytestet har tagit för lång tid: ingen anslutning har etablerats.</translation>
+    </message>
+    <message>
+      <location line="+7"/>
+      <source>Proxy test returned an error: no connection made.
+</source>
+      <translation>Proxytestet returnerade ett fel: ingen anslutning etablerad.
+</translation>
+    </message>
+    <message>
+      <location line="+16"/>
+      <source>Proxy test succeeded, connection established.</source>
+      <translation>Proxytestet lyckades, anslutning etablerad.</translation>
+    </message>
+    <message>
+      <location line="+5"/>
+      <source>Proxy requires authentication. The Addon Manager does not support this.</source>
+      <translation>Proxyn kräver autentisering. Tilläggshanterare saknar stöd för detta.</translation>
+    </message>
+    <message>
+      <location line="+0"/>
+      <source>Proxy connection failed with code {}: {}.</source>
+      <translation>Proxyanslutningen misslyckades med kod {}: {}.</translation>
+    </message>
+    <message>
+      <location line="+102"/>
+      <source>Invalid hostname</source>
+      <translation>Ogiltigt värdnamn</translation>
+    </message>
+    <message>
+      <location line="+10"/>
+      <location line="+20"/>
+      <location line="+38"/>
+      <source>No proxy</source>
+      <translation>Ingen proxy</translation>
+    </message>
+    <message>
+      <location line="-57"/>
+      <source>n/a</source>
+      <translation>inte tillgänglig</translation>
+    </message>
+    <message>
+      <location line="+5"/>
+      <source>proxy.example.com</source>
+      <translation>proxy.exempel.se</translation>
+    </message>
+    <message>
+      <location line="+34"/>
+      <source>System has no proxy</source>
+      <translation>Systemet har ingen proxy</translation>
+    </message>
+    <message>
+      <location line="+43"/>
+      <source>Testing proxy connection…</source>
+      <translation>Testar proxyanslutning…</translation>
+    </message>
+    <message>
+      <location line="+259"/>
       <source>Repository URL</source>
       <comment>Preferences header for custom repositories</comment>
       <translation>URL till arkiv</translation>
@@ -654,22 +734,7 @@ Starta om för att använda den nya versionen.</translation>
       <translation>Grenens namn</translation>
     </message>
     <message>
-      <location filename="../../NetworkManager.py" line="+213"/>
-      <source>Failed to parse proxy URL &apos;{}&apos;</source>
-      <translation>Misslyckades med att tolka proxy-URL &apos;{}&apos;</translation>
-    </message>
-    <message>
-      <location line="+32"/>
-      <source>Parameter error: mutually exclusive proxy options set. Resetting to default.</source>
-      <translation>Parameterfel: ömsesidigt exklusiva proxyalternativ inställda. Återställer till standard.</translation>
-    </message>
-    <message>
-      <location line="+15"/>
-      <source>Parameter error: user proxy indicated, but no proxy provided. Resetting to default.</source>
-      <translation>Parameterfel: användarproxy angiven, men ingen proxy angiven. Återställer till standard.</translation>
-    </message>
-    <message>
-      <location line="+214"/>
+      <location filename="../../NetworkManager.py" line="+403"/>
       <source>Addon Manager: Unexpected {} response from server</source>
       <translation>Tilläggshanterare: Oväntat {}-svar från servern</translation>
     </message>
@@ -679,7 +744,7 @@ Starta om för att använda den nya versionen.</translation>
       <translation>Fel med krypterad anslutning</translation>
     </message>
     <message>
-      <location filename="../../package_list.py" line="+194"/>
+      <location filename="../../package_list.py" line="+193"/>
       <source>Click for details about package {}</source>
       <translation>Klicka för mer information om paketet {}</translation>
     </message>
@@ -699,17 +764,12 @@ Starta om för att använda den nya versionen.</translation>
       <translation>Taggar</translation>
     </message>
     <message>
-      <location line="+46"/>
-      <source>Maintainer</source>
+      <location line="+51"/>
+      <source>Maintainer(s)</source>
       <translation>Underhållsansvarig</translation>
     </message>
     <message>
-      <location line="+5"/>
-      <source>Maintainers:</source>
-      <translation>Underhållsansvariga:</translation>
-    </message>
-    <message>
-      <location line="+7"/>
+      <location line="+17"/>
       <source>Author</source>
       <translation>Upphovsperson</translation>
     </message>
@@ -789,7 +849,7 @@ Starta om för att använda den nya versionen.</translation>
       <translation>Tillgänglig version</translation>
     </message>
     <message>
-      <location filename="../../Widgets/addonmanager_widget_addon_buttons.py" line="+170"/>
+      <location filename="../../Widgets/addonmanager_widget_addon_buttons.py" line="+169"/>
       <source>Install</source>
       <translation>Installera</translation>
     </message>
@@ -816,12 +876,12 @@ Starta om för att använda den nya versionen.</translation>
     <message>
       <location line="-5"/>
       <source>Switch to Branch</source>
-      <translation>Byt till gren</translation>
+      <translation>Växla till gren</translation>
     </message>
     <message>
       <location line="+2"/>
       <source>Override Built-In</source>
-      <translation>Åsidosätt inbyggd</translation>
+      <translation>Åsidosätt inbyggda</translation>
     </message>
     <message>
       <location line="+4"/>
@@ -841,7 +901,7 @@ Starta om för att använda den nya versionen.</translation>
     <message>
       <location line="+1"/>
       <source>Return to Package List</source>
-      <translation>Gå tillbaka till paketlistan</translation>
+      <translation>Återgå till paketlistan</translation>
     </message>
     <message>
       <location filename="../../Widgets/addonmanager_widget_filter_selector.py" line="-42"/>
@@ -877,7 +937,7 @@ Starta om för att använda den nya versionen.</translation>
     <message>
       <location line="+4"/>
       <source>Bundle</source>
-      <translation>Bundle</translation>
+      <translation>Paket</translation>
     </message>
     <message>
       <location line="+4"/>
@@ -942,17 +1002,17 @@ Starta om för att använda den nya versionen.</translation>
     <message>
       <location line="+5"/>
       <source>This addon will be enabled when restarting FreeCAD</source>
-      <translation>Detta tillägg kommer att aktiveras när FreeCAD startas om</translation>
+      <translation>Detta tillägg aktiveras när FreeCAD startas om</translation>
     </message>
     <message>
       <location line="+9"/>
       <source>Changed to branch &apos;{}&apos; -- restart FreeCAD to use the addon</source>
-      <translation>Ändrad till grenen &apos;{}&apos; -- starta om FreeCAD för att använda tillägget</translation>
+      <translation>Ändrade till grenen &apos;{}&apos; -- starta om FreeCAD för att använda tillägget</translation>
     </message>
     <message>
       <location line="+12"/>
       <source>This addon has been updated. Restart FreeCAD to see changes.</source>
-      <translation>Detta tillägg har uppdaterats. Starta om FreeCAD för att se förändringar.</translation>
+      <translation>Detta tillägg har uppdaterats. Starta om FreeCAD för att se ändringarna.</translation>
     </message>
     <message>
       <location line="+12"/>
@@ -987,7 +1047,7 @@ Starta om för att använda den nya versionen.</translation>
     <message>
       <location line="+10"/>
       <source>Currently on branch {}, name changed to {}</source>
-      <translation>För närvarande på gren {}, namnändrat till {}</translation>
+      <translation>För närvarande på gren {}, namnändrad till {}</translation>
     </message>
     <message>
       <location line="+8"/>
@@ -1033,7 +1093,7 @@ Starta om för att använda den nya versionen.</translation>
       <location filename="../../Widgets/addonmanager_widget_view_control_bar.py" line="+144"/>
       <source>Alphabetical</source>
       <comment>Sort order</comment>
-      <translation>Alfabetisk</translation>
+      <translation>Alfabetiskt</translation>
     </message>
     <message>
       <location line="+3"/>
@@ -1083,28 +1143,28 @@ Starta om för att använda den nya versionen.</translation>
       <translation>Ikon</translation>
     </message>
     <message>
-      <location line="+3"/>
+      <location filename="../../compact_view.py" line="+3"/>
       <source>&lt;b&gt;Package Name&lt;/b&gt;</source>
       <translation>&lt;b&gt;Paketets namn&lt;/b&gt;</translation>
     </message>
     <message>
-      <location line="+1"/>
+      <location filename="../../compact_view.py" line="+1"/>
       <source>Version</source>
       <translation>Version</translation>
     </message>
     <message>
-      <location line="+3"/>
+      <location filename="../../compact_view.py" line="+3"/>
       <source>Description</source>
       <translation>Beskrivning</translation>
     </message>
     <message>
-      <location line="+3"/>
+      <location filename="../../compact_view.py" line="+3"/>
       <source>Update available</source>
       <translation>Uppdatering tillgänglig</translation>
     </message>
     <message>
       <source>&lt;b&gt;Package name&lt;/b&gt;</source>
-      <translation>&lt;b&gt;Paketets namn&lt;/b&gt;</translation>
+      <translation>&lt;b&gt;Paketnamn&lt;/b&gt;</translation>
     </message>
     <message>
       <source>UpdateAvailable</source>
@@ -1123,7 +1183,7 @@ Starta om för att använda den nya versionen.</translation>
 Do you want the Addon Manager to install them automatically? Choose &quot;Ignore&quot; to install/update without installing the dependencies.</source>
       <translation>Denna installation/uppdatering har följande nödvändiga och valfria beroenden.
 
-Vill du att Tilläggshanterare ska installera dem automatiskt? Välj &quot;Ignorera&quot; för att installera/uppdatera utan att installera beroendena.</translation>
+Vill du att Tilläggshanterare ska installera dem automatiskt? Välj &quot;Ignorera&quot; för att installera/uppdatera utan att installera beroenden.</translation>
     </message>
     <message>
       <source>FreeCAD Addons</source>
@@ -1182,7 +1242,7 @@ Vill du att Tilläggshanterare ska installera dem automatiskt? Välj &quot;Ignor
     </message>
     <message>
       <source>(Note that addon authors sometimes do not update the version number on each update, so the available and installed versions may appear the same.)</source>
-      <translation>(Observera att addon-skapare ibland inte uppdaterar versionsnumret vid varje uppdatering, så de tillgängliga och installerade versionerna kan se likadana ut)</translation>
+      <translation>(Observera att tilläggsskapare ibland inte uppdaterar versionsnumret vid varje uppdatering, så de tillgängliga och installerade versionerna kan se likadana ut.)</translation>
     </message>
   </context>
   <context>
@@ -1224,7 +1284,7 @@ Vill du att Tilläggshanterare ska installera dem automatiskt? Välj &quot;Ignor
     </message>
     <message>
       <source>&lt;h1&gt;Package name&lt;/h1&gt;</source>
-      <translation>&lt;h1&gt;Paketets namn&lt;/h1&gt;</translation>
+      <translation>&lt;h1&gt;Paketnamn&lt;/h1&gt;</translation>
     </message>
     <message>
       <source>labelSort</source>
@@ -1247,31 +1307,15 @@ Vill du att Tilläggshanterare ska installera dem automatiskt? Välj &quot;Ignor
     </message>
     <message>
       <source>Hide addons with non-FSF free/libre license</source>
-      <translation>Dölj tillägg med icke-FSF free/libre-licens</translation>
+      <translation>Dölj tillägg med licenser som inte är FSF-fria/libre</translation>
     </message>
     <message>
       <source>Hide addons with non-OSI-approved license</source>
-      <translation>Dölj tillägg med icke-OSI-godkänd licens</translation>
+      <translation>Dölj tillägg med licenser som inte är godkända av OSI</translation>
     </message>
     <message>
       <source>Custom repositories</source>
       <translation>Anpassade arkiv</translation>
-    </message>
-    <message>
-      <source>Proxy</source>
-      <translation>Proxy</translation>
-    </message>
-    <message>
-      <source>No proxy</source>
-      <translation>Ingen proxy</translation>
-    </message>
-    <message>
-      <source>User system proxy</source>
-      <translation>Användarens systemproxy</translation>
-    </message>
-    <message>
-      <source>User-defined proxy</source>
-      <translation>Användardefinierad proxy</translation>
     </message>
     <message>
       <source>Score source URL</source>
@@ -1281,12 +1325,60 @@ Vill du att Tilläggshanterare ska installera dem automatiskt? Välj &quot;Ignor
       <source>The URL for the addon score data (see Addon Manager wiki page for formatting and hosting details)</source>
       <translation>URL för tilläggsbetygdata (se wikisidan Tilläggshanterare för information om formatering och hosting)</translation>
     </message>
+    <message>
+      <source>Use a proxy server for access to addon data</source>
+      <translation>Använd en proxyserver för åtkomst till tilläggsdata</translation>
+    </message>
+    <message>
+      <source>Proxy addon manager traffic</source>
+      <translation>Proxytrafik för tilläggshanterare</translation>
+    </message>
+    <message>
+      <source>Use the system&apos;s proxy settings</source>
+      <translation>Använd systemets proxyinställningar</translation>
+    </message>
+    <message>
+      <source>System</source>
+      <translation>System</translation>
+    </message>
+    <message>
+      <source>Use custom proxy settings</source>
+      <translation>Använd anpassade proxyinställningar</translation>
+    </message>
+    <message>
+      <source>Custom</source>
+      <translation>Anpassad</translation>
+    </message>
+    <message>
+      <source>Host</source>
+      <translation>Värd</translation>
+    </message>
+    <message>
+      <source>:</source>
+      <translation>:</translation>
+    </message>
+    <message>
+      <source>Port</source>
+      <translation>Port</translation>
+    </message>
+    <message>
+      <source>Test these proxy settings</source>
+      <translation>Testa dessa proxyinställningar</translation>
+    </message>
+    <message>
+      <source>Test Connection</source>
+      <translation>Testa anslutning</translation>
+    </message>
+    <message>
+      <source>Connection Test</source>
+      <translation>Anslutningstest</translation>
+    </message>
   </context>
   <context>
     <name>PackageDetails</name>
     <message>
       <source>Installs a macro or workbench</source>
-      <translation>Installerar ett makro eller en arbetsbänk</translation>
+      <translation>Installerar ett makro eller arbetsbänk</translation>
     </message>
     <message>
       <source>Install</source>
@@ -1325,7 +1417,7 @@ Vill du att Tilläggshanterare ska installera dem automatiskt? Välj &quot;Ignor
     </message>
     <message>
       <source>An asterisk (*) in the &quot;Used by&quot; column indicates an optional dependency. Note that &apos;Used by&apos; only records direct imports in the addon. Other Python packages that those packages depend upon may have been installed as well.</source>
-      <translation>En asterisk (*) i kolumnen &quot;Används av&quot; anger ett valfritt beroende. Observera att &quot;Används av&quot; endast registrerar direkt import i tillägget. Andra Python-paket som dessa paket är beroende av kan också ha installerats.</translation>
+      <translation>En asterisk (*) i kolumnen &quot;Används av&quot; indikerar ett valfritt beroende. Observera att &quot;Används av&quot; endast registrerar direkta importer i tillägget. Andra Python-paket som dessa paket är beroende av kan också ha installerats.</translation>
     </message>
     <message>
       <source>Update All</source>
@@ -1358,7 +1450,7 @@ Vill du att Tilläggshanterare ska installera dem automatiskt? Välj &quot;Ignor
     <message>
       <location filename="../../addonmanager_toolbar_adapter.py" line="+45"/>
       <source>Auto-Created Macro Toolbar</source>
-      <translation>Verktygsfält för automatiskt skapade makron</translation>
+      <translation>Automatiskt skapad makroverktygsfält</translation>
     </message>
   </context>
   <context>
@@ -1427,7 +1519,7 @@ Vill du att Tilläggshanterare ska installera dem automatiskt? Välj &quot;Ignor
     </message>
     <message>
       <source>Select a toolbar to add this macro to</source>
-      <translation>Välj ett verktygsfält att lägga till detta makro i</translation>
+      <translation>Välj ett verktygsfält för att lägga till detta makro</translation>
     </message>
     <message>
       <source>Ask every time</source>
