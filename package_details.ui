@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string notr="true">Form</string>
+   <string >Form</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
@@ -26,7 +26,7 @@
      <item>
       <widget class="QToolButton" name="buttonRefresh">
        <property name="text">
-        <string notr="true">…</string>
+        <string >…</string>
        </property>
       </widget>
      </item>
@@ -86,7 +86,7 @@
    <item>
     <widget class="QLabel" name="labelInstallationDetails">
      <property name="text">
-      <string notr="true">Installation details go here</string>
+      <string >Installation details go here</string>
      </property>
      <property name="wordWrap">
       <bool>true</bool>

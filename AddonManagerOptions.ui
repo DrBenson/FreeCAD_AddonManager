@@ -120,14 +120,14 @@
      <item>
       <widget class="QToolButton" name="addCustomRepositoryButton">
        <property name="text">
-        <string notr="true">…</string>
+        <string >…</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QToolButton" name="removeCustomRepositoryButton">
        <property name="text">
-        <string notr="true">…</string>
+        <string >…</string>
        </property>
       </widget>
      </item>
