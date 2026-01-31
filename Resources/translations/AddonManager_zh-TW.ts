@@ -7,10 +7,10 @@
     <extra-po-header-po_revision_date></extra-po-header-po_revision_date>
     <extra-po-header-pot_creation_date></extra-po-header-pot_creation_date>
     <extra-po-header-project_id_version>FreeCAD AddonManager Language Translations v1.1.0</extra-po-header-project_id_version>
-    <extra-po-header-x_generator>Poedit 3.6</extra-po-header-x_generator>
+    <extra-po-header-x_generator>Poedit 3.8</extra-po-header-x_generator>
     <extra-po-header_comment>#
 # Translators:
-# DrBenson &lt;Benson.Dr@GMail.com&gt;, 2025
+# DrBenson &lt;Benson.Dr@GMail.com&gt;, 2026
 #
     </extra-po-header_comment>
     <extra-po-headers>Project-Id-Version,POT-Creation-Date,PO-Revision-Date,Last-Translator,Language-Team,Language,MIME-Version,Content-Type,Content-Transfer-Encoding,Plural-Forms,X-Language,X-Source-Language,X-Qt-Contexts,X-Generator</extra-po-headers>
@@ -695,24 +695,24 @@ Please restart to use the new version.</source>
 </translation>
     </message>
     <message>
-        <location filename="../../../../../../../../media/ERP/sources/FreeCAD/FreeCAD_AddonManager/addonmanager_workers_startup.py" line="628"/>
+        <location filename="../../../../FreeCAD_AddonManager/addonmanager_workers_startup.py" line="628"/>
         <source>Failed to decode addon score from &apos;{}&apos; -- sorting by score will fail
 </source>
-        <translation>無法從 &apos;{}&apos; 解碼 附加元件 評價分數 -- 按評價排序將失敗
+        <translation>無法從「{}」解讀 附加元件 評價分數 -- 按評價排序將失敗
 </translation>
     </message>
     <message>
-        <location filename="../../../../../../../../media/ERP/sources/FreeCAD/FreeCAD_AddonManager/addonmanager_workers_startup.py" line="635"/>
+        <location filename="../../../../FreeCAD_AddonManager/addonmanager_workers_startup.py" line="635"/>
         <source>Failed to parse addon score from &apos;{}&apos; -- sorting by score will fail
 </source>
-        <translation>無法從 &apos;{}&apos; 解析 附加元件 評價分數 -- 按評價排序將失敗
+        <translation>無法從「{}」解析 附加元件 評價分數 -- 按評價排序將失敗
 </translation>
     </message>
     <message>
-        <location filename="../../../../../../../../media/ERP/sources/FreeCAD/FreeCAD_AddonManager/addonmanager_workers_startup.py" line="642"/>
+        <location filename="../../../../FreeCAD_AddonManager/addonmanager_workers_startup.py" line="642"/>
         <source>Failed to read addon score from &apos;{}&apos; -- sorting by score will fail
 </source>
-        <translation>無法從 &apos;{}&apos; 取得 附加元件 評價分數 -- 按評價排序將失敗
+        <translation>無法從「{}」取得 附加元件 評價分數 -- 按評價排序將失敗
 </translation>
     </message>
     <message>
@@ -782,7 +782,7 @@ Please restart to use the new version.</source>
         <translation>維護者:</translation>
     </message>
     <message>
-        <location filename="../../../../../../../../media/ERP/sources/FreeCAD/FreeCAD_AddonManager/package_list.py" line="402"/>
+        <location filename="../../../../FreeCAD_AddonManager/package_list.py" line="402"/>
         <source>Maintainer(s)</source>
         <translation>維護者</translation>
     </message>
