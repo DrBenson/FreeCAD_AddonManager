@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="zh_TW" sourcelanguage="en_US">
+<TS version="2.1" language="zh-TW" sourcelanguage="en_US">
     <extra-po-header-language>zh_TW</extra-po-header-language>
     <extra-po-header-language_team></extra-po-header-language_team>
     <extra-po-header-last_translator>DrBenson &lt;Benson.Dr@GMail.com&gt;</extra-po-header-last_translator>
@@ -407,6 +407,11 @@ Please restart to use the new version.</source>
 從: {}
 到: {}
 請重新啟動以使用新版本.</translation>
+    </message>
+    <message>
+        <location filename="../../../../../../FreeCAD-1.2.0/FreeCAD_AddonManager/AddonManager.py" line="183"/>
+        <source>Addon Manager v</source>
+        <translation>附加元件管理員 版本</translation>
     </message>
     <message>
         <location filename="../../../../../../FreeCAD-1.2.0/FreeCAD_AddonManager/AddonManager.py" line="305"/>
@@ -860,11 +865,6 @@ Please restart to use the new version.</source>
         <location filename="../../../../../../FreeCAD-1.2.0/FreeCAD_AddonManager/package_list.py" line="512"/>
         <source>Available version</source>
         <translation>可用版本</translation>
-    </message>
-    <message>
-        <location filename="../../../../../../FreeCAD-1.2.0/FreeCAD_AddonManager/AddonManager.py" line="183"/>
-        <source>Addon Manager v</source>
-        <translation>附加元件管理員 版本</translation>
     </message>
     <message>
         <location filename="../../../../../../FreeCAD-1.2.0/FreeCAD_AddonManager/NetworkManager.py" line="213"/>
